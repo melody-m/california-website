@@ -1,0 +1,20 @@
+.intro{
+
+    background-color: $color-three;
+
+    &__map{
+        width: 45rem;
+        height: 45rem;
+        background-color: antiquewhite;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__text{
+        width: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 3rem;
+
+    }
+}

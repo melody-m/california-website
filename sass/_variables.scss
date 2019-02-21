@@ -1,0 +1,31 @@
+//COLORS
+
+$color-grey-light:#cccccc;
+$color-grey-medium:#999999;
+$color-grey-dark:#666666;
+
+$color-one:#074684;
+$color-two: #0ea5c6;
+$color-three: #a0edf7;
+
+
+//MARGINS
+
+.margin-bottom-small{
+    margin-bottom: 2rem;
+}
+.margin-bottom-medium{
+    margin-bottom: 4rem;
+}
+.margin-bottom-big{
+    margin-bottom: 18rem;
+}
+
+.left{
+    margin-left: 3rem;
+    text-align: left
+}
+.right{
+    margin-right: 3rem;
+    text-align: right;
+}

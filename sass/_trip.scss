@@ -1,0 +1,57 @@
+
+
+.trip{
+    width: 140rem;
+    margin: 0 auto;
+   
+
+    &__right{
+        float: right;
+    }
+    &__left{
+        float: left;
+    }
+
+    &__icon{
+        width: 10rem;
+        height: 10rem;  
+        margin: 2rem;  
+        display: inline-block; 
+    }
+
+    &__photo{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+        
+        &--img1{
+            width: 90rem;
+            height: 52.5rem;
+        }
+        &--img2{
+            width: 69rem;
+            height: 65rem;
+        }
+    }
+    &__desc{
+        display: inline-block;
+        vertical-align: middle;
+        
+        &--1{
+            width: 40rem;
+            
+        };
+        &--2{
+            width: 60rem;
+        };
+
+    }
+    &__btn{
+        float: right;
+        margin-top: 4rem;
+        padding: 1rem;
+        color: $color-two;
+        text-transform: uppercase;
+        border : 1px solid $color-two;
+    }
+}

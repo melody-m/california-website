@@ -1,0 +1,211 @@
+.margin-bottom-small {
+  margin-bottom: 2rem; }
+
+.margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.margin-bottom-big {
+  margin-bottom: 18rem; }
+
+.left {
+  margin-left: 3rem;
+  text-align: left; }
+
+.right {
+  margin-right: 3rem;
+  text-align: right; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: grey;
+  font-size: 1.6rem; }
+
+h1 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 6rem; }
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+h3 {
+  font-family: 'Major Mono Display', monospace;
+  text-transform: lowercase;
+  font-size: 2.2rem; }
+
+.intro__text {
+  text-align: justify; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: azure; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+
+.intro {
+  background-color: #a0edf7; }
+  .intro__map {
+    width: 45rem;
+    height: 45rem;
+    background-color: antiquewhite;
+    display: inline-block;
+    vertical-align: middle; }
+  .intro__text {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 3rem; }
+
+.landpage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(../img/landpage.jpg);
+  background-size: cover;
+  background-position: center; }
+  .landpage__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    color: white; }
+
+h1 {
+  padding: 1rem;
+  border-bottom: 2px solid white; }
+
+.trip {
+  width: 140rem;
+  margin: 0 auto; }
+  .trip__right {
+    float: right; }
+  .trip__left {
+    float: left; }
+  .trip__icon {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+    display: inline-block; }
+  .trip__photo {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right; }
+    .trip__photo--img1 {
+      width: 90rem;
+      height: 52.5rem; }
+    .trip__photo--img2 {
+      width: 69rem;
+      height: 65rem; }
+  .trip__desc {
+    display: inline-block;
+    vertical-align: middle; }
+    .trip__desc--1 {
+      width: 40rem; }
+    .trip__desc--2 {
+      width: 60rem; }
+  .trip__btn {
+    float: right;
+    margin-top: 4rem;
+    padding: 1rem;
+    color: #0ea5c6;
+    text-transform: uppercase;
+    border: 1px solid #0ea5c6; }
+
+.dropdown {
+  background-color: azure;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  transition: all .5s ease-out; }
+  .dropdown__closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 4rem;
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 15; }
+  .dropdown__wipe {
+    background-color: grey;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .8s ease-out; }
+  .dropdown__sideBar {
+    width: 30%;
+    height: 100%;
+    background-color: aquamarine;
+    float: left;
+    transition: all .5s ease-out;
+    position: relative; }
+    .dropdown__sideBar--content {
+      height: 70%; }
+    .dropdown__sideBar--weather {
+      height: 30%;
+      background-color: beige; }
+  .dropdown__sideBarBox {
+    width: 100%;
+    height: 100%;
+    float: left; }
+  .dropdown__sideContent {
+    width: 70%;
+    height: 100%;
+    float: left; }
+  .dropdown__gallery {
+    width: 100%;
+    height: 60%;
+    background-color: lightpink;
+    position: relative; }
+  .dropdown__accomodation {
+    width: 100%;
+    height: 40%; }
+  .dropdown__hotel {
+    width: 50%;
+    height: 100%;
+    background-color: lightgrey;
+    float: left;
+    position: relative; }
+  .dropdown__food {
+    width: 50%;
+    height: 100%;
+    background-color: lightskyblue;
+    float: left;
+    position: relative; }
+
+.slideDown {
+  height: 100vh;
+  z-index: 10; }
+
+.width {
+  width: 100%; }
+
+.slideSideBar {
+  width: 0; }

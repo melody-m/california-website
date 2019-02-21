@@ -1,0 +1,19 @@
+.landpage{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/landpage.jpg);
+    @include background;
+
+
+    &__title{
+        @include absCenter;
+        top: 40%;
+        color: white;
+    }
+}
+
+h1{
+    padding:1rem;
+    border-bottom: 2px solid white;
+}
