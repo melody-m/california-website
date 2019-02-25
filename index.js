@@ -8,65 +8,136 @@ wipeArr= Array.from(wipe);
 
 const closeBtn = document.querySelector('.dropdown__closeBtn');
 
-const nextBtn = document.querySelector('.arrow__right');
-const previousBtn = document.querySelector('.arrow__left');
+const exploreBtn  = document.getElementById('explore-1');
 
-const stop1 = document.getElementById('stop-1');
-const stop2 = document.getElementById('stop-2');
+const stop1 = document.getElementById('dropdown-1');
 
+const containerOn = document.querySelectorAll('.off');
+const containerHidden = document.querySelectorAll('.hidden');
 
-// explore.addEventListener('click', () => {    
-//     dropdown.classList.add('slideDown');
-//     closeBtn.style.visibility = 'visible';
+const sideBar = document.querySelector('.dropdown__sideBar');
 
-//     dropdown.addEventListener('transitionend',() => {
-
-//         for(let i=0; i < wipeArr.length; i++){
-//             ((i) => {
-//                 setTimeout(() => {
-//                     wipeArr[i].classList.replace('width','slideSideBar'); 
-//                 }, 200*i);                           
-//             })(i);
-//         }
-//     });
-// });
+const triangle = document.querySelectorAll('.dropdown__triangle');
 
 
-// closeBtn.addEventListener('click', () => {
-//     dropdown.classList.toggle('slideDown');
-//     closeBtn.style.visibility = 'hidden';
-// })
+//
+const galleryImg = document.querySelectorAll('.gallery__img');
+const galleryImgArr= Array.from(galleryImg);
+const galleryBtn = document.querySelectorAll('.gallery__imgBtn');
+const galleryBtnArr = Array.from(galleryBtn)
 
-//****************************************** Stops slider ************************************************* */
+let indexImg = 0;
+let interval = null;
 
-// const stops = document.querySelectorAll('.container');
-// const stopsArr = Array.from(stops);
 
-// let previousStop = -1;
-// let currentStop = 0;
-// let nextStop = 1;
 
-// nextBtn.addEventListener('click', () => {
+
+function slideDown(){
+    
+    containerOn.forEach((cur) => {
+        cur.classList.replace('off','on');
+    })
+    containerHidden.forEach((cur) => {
+        cur.classList.replace('hidden','visible');
+    })
+    
+    dropdown.classList.add('slideDown');
+    closeBtn.style.visibility = 'visible';
+
+    dropdown.addEventListener('transitionend',() => {
+
+        for(let i=0; i < wipeArr.length; i++){
+            ((i) => {
+                setTimeout(() => {
+                    wipeArr[i].classList.replace('width','slideSideBar'); 
+                }, 200*i);                           
+            })(i);
+        }
+        triangle.forEach((cur) =>{
+            cur.style.transform = 'translateX(0)';
+        });
+    });
+}
+
+function exploreSlider(){
+    //Slide down pannel
+    slideDown();
+
+    //Set auto gallery
+
+    interval = setInterval(() => {
+        displayGallery(indexImg);
+        if(indexImg < galleryImgArr.length-1){
+            indexImg ++;
+        } else {
+            indexImg = 0;
+        }
+    },3000);   
+}
+
+function closeSlider(){
+
+    // Slider goes up, auto gallery stops
+
+    containerHidden.forEach((cur) => {
+        cur.classList.replace('visible','hidden');
+    })
+    containerOn.forEach((cur) => {
+        cur.classList.replace('on','off');
+    })
+    dropdown.classList.toggle('slideDown');    
+    closeBtn.style.visibility = 'hidden';
+    clearInterval(interval);
+}
+
+
+function displayGallery(index) {   
+    galleryImgArr.forEach((cur) =>{       
+        if(!cur.classList.contains('hidden')){
+            cur.classList.add('hidden');
+        }
+    });    
+    galleryImgArr[index].classList.replace('hidden','visible');
         
-//     if (currentStop < stopsArr.length -1){
-//         stopsArr[currentStop].classList.replace('current', 'previous');
-//         stopsArr[nextStop].classList.replace('next', 'current');
-//         currentStop ++;
-//         nextStop = currentStop + 1;
-//         previousStop = currentStop - 1;
-//     }
-// });
+}
 
-// previousBtn.addEventListener('click', () => {
+function btnScaleUp(e){
+    galleryBtnArr.forEach((cur) =>{
+        if(cur != e.target){
+            cur.classList.remove('scaleUp');
+        }
+    })
+    e.target.classList.add('scaleUp');
+}
 
-//     if (currentStop != 0){
-//         stopsArr[currentStop].classList.replace('current', 'next');
-//         stopsArr[previousStop].classList.replace('previous', 'current');
-//         currentStop --;
-//         nextStop = currentStop + 1;
-//         previousStop = currentStop - 1;
-//     }    
-// });
+function setEventListeners() {
+    exploreBtn.addEventListener('click', exploreSlider);
+
+    closeBtn.addEventListener('click', closeSlider);
+    
+    galleryBtnArr.forEach((cur, i) =>{    
+        cur.addEventListener('click', (e) => {             
+            btnScaleUp(e);
+            clearInterval(interval);     
+            displayGallery(i);    
+        });
+    });
+
+}
+
+function init(){
+    setEventListeners();
+}
+
+init();
+
+
+
+
+/********************************************************************************************************** */
+
+
+
 
 /******************************************************************************************************************************* */
 
@@ -78,35 +149,33 @@ const stop2 = document.getElementById('stop-2');
 //   } , {capture: false, passive: true});
 
 
-var path = document.getElementById("path");
-var path2 = document.getElementById("path2");
+// var path = document.getElementById("path");
+// var path2 = document.getElementById("path2");
 
-var length = path.getTotalLength();
+// var length = path.getTotalLength();
  
 
-path.style.strokeDasharray = length;
-path.style.strokeDashoffset = length;
+// path.style.strokeDasharray = length;
+// path.style.strokeDashoffset = length;
 
-path2.style.strokeDasharray = length;
-path2.style.strokeDashoffset = length;
+// // path2.style.strokeDasharray = length;
+// // path2.style.strokeDashoffset = length;
 
+// function drawPath() {//start and end scroll
+// var scrollpercent = (document.documentElement.scrollTop - 300) / 900;
+//   var draw = length * scrollpercent;  
+//   path.style.strokeDashoffset = length - draw;  
+// }
 
-window.addEventListener("scroll", draw);
+// function drawPath2() {//if starts at 800px
+//     var scrollpercent = (document.documentElement.scrollTop - 900) / 1200;
+//       var draw = length * scrollpercent;  
+//       path2.style.strokeDashoffset = length - draw;  
+//     }
 
-function draw(){
-    drawPath();
-    drawPath2();
-}
+// function draw(){
+//   drawPath();
+//   // drawPath2();
+// }
 
-
-function drawPath() {//start and end scroll
-var scrollpercent = (document.documentElement.scrollTop - 300) / 900;
-  var draw = length * scrollpercent;  
-  path.style.strokeDashoffset = length - draw;  
-}
-
-function drawPath2() {//if starts at 800px
-    var scrollpercent = (document.documentElement.scrollTop - 900) / 1200;
-      var draw = length * scrollpercent;  
-      path2.style.strokeDashoffset = length - draw;  
-    }
+// window.addEventListener("scroll", draw);
