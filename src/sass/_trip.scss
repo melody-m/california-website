@@ -1,0 +1,97 @@
+
+
+.trip{
+    width: 140rem;
+    margin: 0 auto;
+   
+
+    &__right{
+        float: right;
+    }
+    &__left{
+        float: left;
+    }
+
+    &__icon{
+        width: 10rem;
+        height: 10rem;  
+        margin: 2rem;  
+        display: inline-block; 
+    }
+
+    &__photo{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+        
+        &--img1{
+            width: 90rem;
+            height: 54.8rem;
+        }
+        &--img2{
+            width: 90rem;
+            height: 43.3rem;
+        }
+        &--img3{
+            width: 82rem;
+            height: 63.7rem;
+        }
+        &--img4{
+            width: 69.4rem;
+            height: 65rem;
+        }
+        &--img5{
+            width: 90rem;
+            height: 61.2rem;
+        }
+        &--img6{
+            width: 90rem;
+            height: 60.5rem;
+        }
+        &--img7{
+            width: 90rem;
+            height: 57.4rem;
+        }
+        &--img8{
+            width: 90rem;
+            height: 56.8rem;
+        }
+        &--img9{
+            width: 95rem;
+            height: 45.7rem;
+        }
+        &--img9{
+            width: 90rem;
+            height: 59.6rem;
+        }
+    }
+    &__desc{
+        display: inline-block;
+        vertical-align: middle;
+        
+        &--1{
+            width: 40rem;
+            
+        };
+        &--2{
+            width: 40rem;
+        };
+        &--6{
+            width: 40rem;
+        };
+        &--8{
+            width: 40rem;
+        };
+        &--10{
+            width: 40rem;
+        };
+    }
+    &__btn{
+        float: right;
+        margin-top: 4rem;
+        padding: 1rem;
+        color: $color-two;
+        text-transform: uppercase;
+        border : 1px solid $color-two;
+    }
+}
