@@ -1,73 +1,116 @@
-console.log('start');
 
-const explore = document.querySelector('.trip__btn');
-const dropdown = document.querySelector('.dropdown');
+class Slider {
+    constructor(id) {
+        this.dropdown = document.getElementById(id);
+        this.contOn = this.dropdown.querySelectorAll('.off');
+        this.contHid = this.dropdown.querySelectorAll('.hidden');
+        this.wipe = this.dropdown.querySelectorAll('.dropdown__wipe');
+        this.wipeArr= Array.from(this.wipe);
+        this.corner = this.dropdown.querySelectorAll('.dropdown__triangle');
+        this.closeBtn = this.dropdown.querySelector('.dropdown__closeBtn');
+        this.gallery = this.dropdown.querySelectorAll('.gallery__img');
+        this.galleryArr = Array.from(this.gallery);
+        this.galleryBtn = this.dropdown.querySelectorAll('.gallery__imgBtn');
+        this.galleryBtnArr = Array.from(this.galleryBtn);
+    }
 
-const wipe = document.querySelectorAll('.dropdown__wipe');
-const wipeArr= Array.from(wipe);
-
-const closeBtn = document.querySelector('.dropdown__closeBtn');
-
-const exploreBtn  = document.getElementById('explore-1');
-
-const stop1 = document.getElementById('dropdown-1');
-
-const containerOn = document.querySelectorAll('.off');
-const containerHidden = document.querySelectorAll('.hidden');
-
-const sideBar = document.querySelector('.dropdown__sideBar');
-
-const triangle = document.querySelectorAll('.dropdown__triangle');
-
-
-//
-const galleryImg = document.querySelectorAll('.gallery__img');
-const galleryImgArr= Array.from(galleryImg);
-const galleryBtn = document.querySelectorAll('.gallery__imgBtn');
-const galleryBtnArr = Array.from(galleryBtn)
-
-let indexImg = 0;
-let interval = null;
-
-
-
-
-function slideDown(){
-    
-    containerOn.forEach((cur) => {
-        cur.classList.replace('off','on');
-    })
-    containerHidden.forEach((cur) => {
-        cur.classList.replace('hidden','visible');
-    })
-    
-    dropdown.classList.add('slideDown');
-    closeBtn.style.visibility = 'visible';
-
-    dropdown.addEventListener('transitionend',() => {
-
-        for(let i=0; i < wipeArr.length; i++){
+    displayCont(){
+        this.contOn.forEach((cur) => {
+            cur.classList.toggle('off');
+        })        
+    }
+    opacityCont(){
+        this.contHid.forEach((cur) => {
+            cur.classList.toggle('hidden');
+        })
+    }
+    slideDown(){
+        this.dropdown.classList.toggle('slideDown');
+    }
+    closeBtnOn(){ //TO IMPROVE
+        this.closeBtn.style.visibility = 'visible';
+    }
+    closeBtnOff(){
+        this.closeBtn.style.visibility = 'hidden';
+    }
+    wipeOff(){
+        for(let i=0; i < this.wipeArr.length; i++){
             ((i) => {
                 setTimeout(() => {
-                    wipeArr[i].classList.replace('width','slideSideBar'); 
+                    this.wipeArr[i].classList.replace('width','slideSideBar'); //replace width 100% by slidesidebar 0%
                 }, 200*i);                           
             })(i);
         }
-        triangle.forEach((cur) =>{
+    }
+
+    wipeOn(){
+        
+        this.wipeArr.forEach((cur) => {
+            // cur.style.transition = "all .5s";
+            cur.classList.replace('slideSideBar','width'); 
+        })     
+    }
+
+    cornerSlide(){
+        this.corner.forEach((cur) =>{                      
             cur.style.transform = 'translateX(0)';
-        });
-    });
+        });  
+    }
+
 }
 
-function exploreSlider(){
-    //Slide down pannel
-    slideDown();
+//DOM FOR EVENT LISTENER
+export const exploreDOM = {
+    btnExplore : document.querySelectorAll('.trip__btn'),
+    dropExplore : document.querySelectorAll('.dropdown'), 
+    closeExplore: document.querySelectorAll('.dropdown__closeBtn') 
+}
+
+export const explore = new Map();
+
+let indexImg = 0;
+let interval = null;
+let sliderOn =[];
+
+//FUNCTIONS
+
+export function getMatch(){
+    for (let i=0; i < exploreDOM.dropExplore.length; i++){
+        explore.set(exploreDOM.btnExplore[i].id, exploreDOM.dropExplore[i].id)
+    }
+}
+
+function slideDown(sliderObj){  
+    
+        sliderObj.displayCont();
+        sliderObj.opacityCont();
+        sliderObj.slideDown();
+        sliderObj.closeBtnOn();
+
+        setTimeout(()=>{
+            sliderObj.wipeOff();
+            sliderObj.cornerSlide();  
+        }, 300);
+}
+
+
+
+export function exploreSlider(id){    
+
+    //Create new Slider object
+
+    const slider = new Slider(id);
+    sliderOn.push(slider); // keep track of slider currently on
+
+    //Slide down pannel with all animations
+    slideDown(slider);
 
     //Set auto gallery
-
+    
     interval = setInterval(() => {
+        console.log('img');
         displayGallery(indexImg);
-        if(indexImg < galleryImgArr.length-1){
+        if(indexImg < sliderOn[0].galleryArr.length-1){
             indexImg ++;
         } else {
             indexImg = 0;
@@ -75,30 +118,37 @@ function exploreSlider(){
     },3000);   
 }
 
-function closeSlider(){
+export function closeSlider(){
 
-    // Slider goes up, auto gallery stops
+    //Select slider obj stored in array and kick animations
+    
+    sliderOn[0].wipeOn();
 
-    containerHidden.forEach((cur) => {
-        cur.classList.replace('visible','hidden');
-    })
-    containerOn.forEach((cur) => {
-        cur.classList.replace('on','off');
-    })
-    dropdown.classList.toggle('slideDown');    
-    closeBtn.style.visibility = 'hidden';
-    clearInterval(interval);
+    setTimeout(()=>{
+        sliderOn[0].slideDown();
+        sliderOn[0].closeBtnOff();    
+        sliderOn[0].opacityCont();
+        sliderOn[0].displayCont();
+    }, 300);
+
+    
+    setTimeout(() =>{
+        sliderOn.pop();     //remove object from array so that only one slider obj at any time -
+        clearInterval(interval);   //clear interval to stop auto gallery
+    },1500);   
+
 }
 
 
 function displayGallery(index) {   
-    galleryImgArr.forEach((cur) =>{       
+
+    //console.log(sliderOn[0].galleryArr);
+    sliderOn[0].galleryArr.forEach((cur) =>{       
         if(!cur.classList.contains('hidden')){
             cur.classList.add('hidden');
         }
     });    
-    galleryImgArr[index].classList.replace('hidden','visible');
-        
+    sliderOn[0].galleryArr[index].classList.replace('hidden','visible');        
 }
 
 function btnScaleUp(e){
@@ -110,21 +160,50 @@ function btnScaleUp(e){
     e.target.classList.add('scaleUp');
 }
 
-function setEventListeners() {
-    exploreBtn.addEventListener('click', exploreSlider);
-
-    closeBtn.addEventListener('click', closeSlider);
-    
-    galleryBtnArr.forEach((cur, i) =>{    
-        cur.addEventListener('click', (e) => {             
-            btnScaleUp(e);
-            clearInterval(interval);     
-            displayGallery(i);    
-        });
-    });
+function getID(e){
+    const fullID = e.target.id;
+    const splitID = fullID.split('-');
+    const ID = splitID[1]; 
+    return ID;
 
 }
 
-export function init(){
-    setEventListeners();
-}
+//////////////////////
+
+
+// function setEventListeners() {
+
+//     // 1) set button matching dropdown
+//     getMatch();
+
+//     exploreDOM.btnExplore.forEach((cur) => {
+//         cur.addEventListener('click', (e) => {
+
+//             //2) Find button id and retrieve matching dropdown
+//             const target = e.target.id;
+//             const dropID = explore.get(target); 
+            
+//             exploreSlider(dropID);
+//         })
+//     })
+
+//     exploreDOM.closeExplore.forEach((cur) => {
+//         cur.addEventListener('click', closeSlider)
+//     });     
+// }
+
+// export function init(){
+//     setEventListeners();
+// }
+
+
+
+////////////////////////////////////////////////////////////////////
+
+    // galleryBtnArr.forEach((cur, i) =>{    
+    //     cur.addEventListener('click', (e) => {             
+    //         btnScaleUp(e);
+    //         clearInterval(interval);     
+    //         displayGallery(i);    
+    //     });
+    // });
