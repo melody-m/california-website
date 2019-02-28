@@ -258,27 +258,19 @@
 .width{
     width: 100%;
 }
-
 .slideSideBar{
     width: 0
 }
 
-.visible{    
-    opacity: 1;
-}
 .hidden{    
     opacity: 0;
+}
+.off{
+    visibility: hidden;
 }
 
 .scaleUp{
     transform: scale(1.3);
-}
-
-.off{
-    visibility: hidden;
-}
-.on{
-    visibility: visible;
 }
 
 @keyframes fadeIn

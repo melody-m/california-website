@@ -1,91 +1,101 @@
+.roadtrip{
+    position: relative; 
+    width: 100vw;
+}
 
+.test{
+    position: absolute;
+    top: 872px;
+    left: 1059.09375px;
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    z-index: 500;
+}
 
-.trip{
-    width: 140rem;
+.trip{    
     margin: 0 auto;
-   
+    padding-top: 40rem;
+    position: relative; 
+    padding-left: 6rem;
 
-    &__right{
-        float: right;
+    &__container{
+        transition : all .5s ease-out;
+        transform: translateY(50%);
     }
-    &__left{
-        float: left;
+    
+    &__flexContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__icon{
-        width: 10rem;
-        height: 10rem;  
-        margin: 2rem;  
-        display: inline-block; 
+        width: 16rem;
+        height: 16rem;  
+        margin: 0 auto; 
+        margin-bottom: 5rem;
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        transform: translate(-50%, -50%);         
+    }
+
+    &__infoBox{
+        width: 30rem;  
+        padding-right: 6rem     ;
+        overflow: hidden;
+
+    }
+    &__dash{
+        width:4rem;
+        border-bottom: 1px solid $color-two;
+        position: absolute;
+        top: 0;
+        left: -12rem;
+        z-index: -20;
+    }
+    &__info{  
+        
+        float : right;
+        transform: translateX(-100%);        
+        transition : all .6s ease-out;
+       
+
+        &--full{
+            text-align: left;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed $color-two;
+        }
+        &--dist{
+            position: relative;
+            text-align: left;
+            padding-top: 2rem;
+        }
+        &--title{
+            text-align: center;
+            color: $color-two;
+            padding-bottom: 1rem;
+        }        
     }
 
     &__photo{
-        display: inline-block;
-        vertical-align: middle;
-        text-align: right;
-        
-        &--img1{
-            width: 90rem;
-            height: 54.8rem;
-        }
-        &--img2{
-            width: 90rem;
-            height: 43.3rem;
-        }
-        &--img3{
-            width: 82rem;
-            height: 63.7rem;
-        }
-        &--img4{
-            width: 69.4rem;
-            height: 65rem;
-        }
-        &--img5{
-            width: 90rem;
-            height: 61.2rem;
-        }
-        &--img6{
-            width: 90rem;
-            height: 60.5rem;
-        }
-        &--img7{
-            width: 90rem;
-            height: 57.4rem;
-        }
-        &--img8{
-            width: 90rem;
-            height: 56.8rem;
-        }
-        &--img9{
-            width: 95rem;
-            height: 45.7rem;
-        }
-        &--img9{
-            width: 90rem;
-            height: 59.6rem;
-        }
+        width: 50%;     
+                
+        &--img{
+            width: 100%;         
+        }       
     }
     &__desc{
-        display: inline-block;
-        vertical-align: middle;
+        position: relative; 
+        margin: 3rem;
+        padding: 5rem 0;
+        border-top: 1px solid $color-grey-light;       
+        width: 25%;
         
-        &--1{
-            width: 40rem;
-            
-        };
-        &--2{
-            width: 40rem;
-        };
-        &--6{
-            width: 40rem;
-        };
-        &--8{
-            width: 40rem;
-        };
-        &--10{
-            width: 40rem;
-        };
     }
+
     &__btn{
         float: right;
         margin-top: 4rem;
@@ -94,4 +104,8 @@
         text-transform: uppercase;
         border : 1px solid $color-two;
     }
+}
+
+.rightInline{
+    text-align: right;
 }

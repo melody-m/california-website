@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    
 
     <div class="landpage">
         <div class="landpage__title">
@@ -22,7 +21,7 @@
         
     </div>
 
-    <section class="intro clearfix margin-bottom-big">
+    <section class="intro clearfix">
 
         <div class="intro__map"></div>
         <div class="intro__text">
@@ -41,17 +40,27 @@
     </section>
 
 
-    <section class="trip">
+    <section class="roadtrip clearfix">
+        <div class="progress">
+            <div class="progress__container clearfix"></div>
+                <div class="progress__dot progress__dot--1"></div>                           
+            </div>   
+        </div>
 
-            <div class="trip__left margin-bottom-big">
-                <div class="trip__icon"><img src="img/1.svg" alt="1"></div>
-                <div class="trip__container">
+
+        <div class="trip clearfix">          
+
+
+            <div class="trip__container hidden" id ="trip-1">
+                
+                <div class="trip__flexContainer">
         
                     <div class="trip__photo">
-                        <img src="img/marina.png" alt="marina del rey photo" class="trip__photo--img1">
+                        <img src="img/marina.png" alt="marina del rey photo" class="trip__photo--img">
                     </div>
-                    <div class="trip__desc trip__desc--1 left">
-                        <div class="trip__subtitle margin-bottom-medium"><h3>Starting point : Los Angeles</h3></div>
+                    <div class="trip__desc left">
+                        <div class="trip__icon" id ="tripIcon-1"><img src="img/1.svg" alt="1"></div>
+                        <div class="trip__subtitle margin-bottom-medium"><h3>Starting point : <br>Los Angeles</h3></div>
                         <div class="trip__text">
                             <p>There is a lot to see and do in Los Angeles. We recommend that you stop in Marina Del Rey, just a stone throw
                                 away from the airport, one of the biggest marina in the world, full of incredible yachts.                         
@@ -62,15 +71,31 @@
                             </p>
                         </div> 
                         <div><button class="trip__btn btn" id= "explore-1">Explore &rarr;</button></div>               
+                    </div>             
+                    
+                    <div class="trip__infoBox">
+                        <div class="trip__info hidden">
+                            <div class="trip__info--full">
+                                <p class="trip__info--title">In total</p>
+                                <p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
+                            </div>
+                            <div class="trip__info--dist">
+                                <div class="trip__dash"></div>
+                                <p class="trip__info--title">Since the last point</p>
+                                <p></p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
+                            </div>                       
+                        </div>
                     </div>
+                   
+                    
+                    
                 </div>
             </div>
 
-            <div class="trip__right margin-bottom-big">
-                <div class="trip__container">
-                    <div class="trip__desc trip__desc--2 right">
+            <div class="trip__container hidden margin-top-big">
+                <div class="trip__flexContainer">
+                    <div class="trip__desc right">
                         <div class="trip__icon"><img src="img/2.svg" alt="2"></div>
-
                         <div class="trip__subtitle margin-bottom-medium"><h3>Santa Monica</h3></div>
                         <div class="trip__text">
                             <p> With its “Baywatch” beaches, white sand and old-fashioned Pier, it is a really nice spot to spend a day. 
@@ -85,20 +110,32 @@
                     </div>
 
                     <div class="trip__photo">
-                        <img src="img/santa-monica.png" alt="santa monica photo" class="trip__photo--img2">
-                    </div>                         
+                        <img src="img/santa-monica.png" alt="santa monica photo" class="trip__photo--img">
+                    </div>   
+
+                    <div class="trip__infoBox">
+                        <div class="trip__info hidden">
+                            <div class="trip__info--full">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                            <div class="trip__info--dist">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                        </div> 
+                    </div>                                
                 </div>
             </div>
 
 
-            <div class="trip__left margin-bottom-big">
-                <div class="trip__icon"><img src="img/3.svg" alt="1"></div>
-                <div class="trip__container">
+            <div class="trip__container hidden margin-top-big">
+                
+                <div class="trip__flexContainer">
         
                     <div class="trip__photo">
-                        <img src="img/malibu.png" alt="malibu photo" class="trip__photo--img3">
+                        <img src="img/malibu.png" alt="malibu photo" class="trip__photo--img">
                     </div>
-                    <div class="trip__desc trip__desc--1 left">
+                    <div class="trip__desc left">
+                            <div class="trip__icon"><img src="img/3.svg" alt="3"></div>
                         <div class="trip__subtitle margin-bottom-medium"><h3>Malibu</h3></div>
                         <div class="trip__text">
                             <p> Malibu has incredible beaches, more natural than the slightly artificial look of the Santa Monica ones.
@@ -111,14 +148,23 @@
                         </div> 
                         <div><button class="trip__btn btn" id= "explore-3">Explore &rarr;</button></div>               
                     </div>
+                    <div class="trip__infoBox">
+                        <div class="trip__info hidden">
+                            <div class="trip__info--full">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                            <div class="trip__info--dist">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                        </div> 
+                    </div>      
                 </div>
             </div>
 
-            <div class="trip__right margin-bottom-big">
-                <div class="trip__container">
-                    <div class="trip__desc trip__desc--2 right">
-                        <div class="trip__icon"><img src="img/4.svg" alt="2"></div>
-
+            <div class="trip__container hidden margin-top-big">
+                <div class="trip__flexContainer">
+                    <div class="trip__desc right">
+                        <div class="trip__icon"><img src="img/4.svg" alt="4"></div>
                         <div class="trip__subtitle margin-bottom-medium"><h3>Santa Barbara</h3></div>
                         <div class="trip__text">
                             <p> Santa Barbara has a really nice vibe, a perfect mix between casual beach, history and city attractions. 
@@ -135,19 +181,29 @@
                     </div>
 
                     <div class="trip__photo">
-                        <img src="img/santa-barbara.png" alt="santa monica photo" class="trip__photo--img4">
-                    </div>                         
+                        <img src="img/santa-barbara.png" alt="santa monica photo" class="trip__photo--img">
+                    </div>  
+                    <div class="trip__infoBox">
+                        <div class="trip__info hidden">
+                            <div class="trip__info--full">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                            <div class="trip__info--dist">
+                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                            </div>
+                        </div> 
+                    </div>                            
                 </div>
             </div>
 
-            <div class="trip__left margin-bottom-big">
-                    <div class="trip__icon"><img src="img/5.svg" alt="1"></div>
-                    <div class="trip__container">
-            
+            <div class="trip__container hidden margin-top-big">
+                    
+                    <div class="trip__flexContainer">            
                         <div class="trip__photo">
-                            <img src="img/morro-bay.png" alt="malibu photo" class="trip__photo--img5">
+                            <img src="img/morro-bay.png" alt="malibu photo" class="trip__photo--img">
                         </div>
-                        <div class="trip__desc trip__desc--1 left">
+                        <div class="trip__desc left">
+                                <div class="trip__icon"><img src="img/5.svg" alt="5"></div>
                             <div class="trip__subtitle margin-bottom-medium"><h3>Morro Bay</h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -166,14 +222,23 @@
                             </div> 
                             <div><button class="trip__btn btn" id= "explore-5">Explore &rarr;</button></div>               
                         </div>
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>      
                     </div>
                 </div>
 
-                <div class="trip__right margin-bottom-big">
-                    <div class="trip__container">
-                        <div class="trip__desc trip__desc--6 right">
-                            <div class="trip__icon"><img src="img/6.svg" alt="2"></div>
-    
+                <div class="trip__container hidden margin-top-big">
+                    <div class="trip__flexContainer">
+                        <div class="trip__desc right">
+                            <div class="trip__icon"><img src="img/6.svg" alt="6"></div>    
                             <div class="trip__subtitle margin-bottom-medium"><h3>Cambria and San Simeon </h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -191,19 +256,30 @@
                         </div>
     
                         <div class="trip__photo">
-                            <img src="img/san-simeon.png" alt="santa monica photo" class="trip__photo--img6">
-                        </div>                         
+                            <img src="img/san-simeon.png" alt="santa monica photo" class="trip__photo--img">
+                        </div> 
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>                            
                     </div>
                 </div>
 
-                <div class="trip__left margin-bottom-big">
-                    <div class="trip__icon"><img src="img/7.svg" alt="7"></div>
-                    <div class="trip__container">
+                <div class="trip__container hidden margin-top-big">
+                    
+                    <div class="trip__flexContainer">
             
                         <div class="trip__photo">
-                            <img src="img/big-sur.png" alt="malibu photo" class="trip__photo--img7">
+                            <img src="img/big-sur.png" alt="malibu photo" class="trip__photo--img">
                         </div>
-                        <div class="trip__desc trip__desc--1 left">
+                        <div class="trip__desc left">
+                            <div class="trip__icon"><img src="img/7.svg" alt="7"></div>
                             <div class="trip__subtitle margin-bottom-medium"><h3>Big Sur</h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -218,14 +294,23 @@
                             </div> 
                             <div><button class="trip__btn btn" id= "explore-7">Explore &rarr;</button></div>               
                         </div>
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>      
                     </div>
                 </div>
 
-                <div class="trip__right margin-bottom-big">
-                    <div class="trip__container">
-                        <div class="trip__desc trip__desc--8 right">
-                            <div class="trip__icon"><img src="img/8.svg" alt="8"></div>
-    
+                <div class="trip__container hidden margin-top-big">
+                    <div class="trip__flexContainer">
+                        <div class="trip__desc right">
+                            <div class="trip__icon"><img src="img/8.svg" alt="8"></div>    
                             <div class="trip__subtitle margin-bottom-medium"><h3>Monterey Bay</h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -241,19 +326,30 @@
                         </div>
     
                         <div class="trip__photo">
-                            <img src="img/monterey.png" alt="Monterey Bay photo" class="trip__photo--img8">
-                        </div>                         
+                            <img src="img/monterey.png" alt="Monterey Bay photo" class="trip__photo--img">
+                        </div> 
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>                              
                     </div>
                 </div>
 
-                <div class="trip__left margin-bottom-big">
-                    <div class="trip__icon"><img src="img/9.svg" alt="1"></div>
-                    <div class="trip__container">
+                <div class="trip__container hidden margin-top-big">
+                    
+                    <div class="trip__flexContainer">
             
                         <div class="trip__photo">
-                            <img src="img/santa-cruz.png" alt="santa-cruz photo" class="trip__photo--img9">
+                            <img src="img/santa-cruz.png" alt="santa-cruz photo" class="trip__photo--img">
                         </div>
-                        <div class="trip__desc trip__desc--1 left">
+                        <div class="trip__desc left">
+                            <div class="trip__icon"><img src="img/9.svg" alt="9"></div>
                             <div class="trip__subtitle margin-bottom-medium"><h3>Santa Cruz</h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -268,14 +364,23 @@
                             </div> 
                             <div><button class="trip__btn btn" id= "explore-9">Explore &rarr;</button></div>               
                         </div>
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>      
                     </div>
                 </div>
 
-                <div class="trip__right margin-bottom-big">
-                    <div class="trip__container">
-                        <div class="trip__desc trip__desc--10 right">
-                            <div class="trip__icon"><img src="img/10.svg" alt="10"></div>
-    
+                <div class="trip__container hidden margin-top-big">
+                    <div class="trip__flexContainer">
+                        <div class="trip__desc right">
+                            <div class="trip__icon"><img src="img/10.svg" alt="10"></div>    
                             <div class="trip__subtitle margin-bottom-medium"><h3>San Francisco</h3></div>
                             <div class="trip__text">
                                 <p> 
@@ -291,11 +396,21 @@
                         </div>
     
                         <div class="trip__photo">
-                            <img src="img/san-fran.png" alt="San Francisco photo" class="trip__photo--img10">
-                        </div>                         
+                            <img src="img/san-fran.png" alt="San Francisco photo" class="trip__photo--img">
+                        </div> 
+                        <div class="trip__infoBox">
+                            <div class="trip__info hidden">
+                                <div class="trip__info--full">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                                <div class="trip__info--dist">
+                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                </div>
+                            </div> 
+                        </div>                              
                     </div>
                 </div>
-
+        </div>
     </section>
 
 
@@ -1333,17 +1448,3 @@
 </body>
 </html>
 
-
-
-
-<!-- TOTAL 10 h 38 min (474 miles) -->
-
-<!-- Santa Monica 28 min (8.3 mi)
-malibu 30 min (18.4 mi)
-santa barbara 1 h 13 min (66.9 mi)
-Morro Bay 1 h 55 min (120 mi)
-cambria 26 min (20.7 mi)
-Big Sur 2 h 31 min (89.3 mi)
-monterey 1 h 7 min (28.4 mi)
-santa cruz 50 min (43.6 mi)
-san fran 1 h 39 min (78.2 mi -->

@@ -50,3 +50,24 @@ h4{
     font-size: 2.2rem;
     line-height: 3rem;
 }
+
+.trip{
+    &__info{
+        font-family: 'Major Mono Display', monospace;
+        text-transform: lowercase;
+        font-size: 3.5rem;
+
+        &--title{
+            font-family: 'Open Sans', sans-serif;
+            text-transform: none;
+            font-style: italic;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.mini{
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+}

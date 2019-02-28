@@ -2,12 +2,6 @@ import * as sliderView from './views/sliderView';
 import * as weatherView from './views/weatherView';
 import Weather from './models/Weather';
 
-// import Recipe from './models/Recipe';
-// import List from './models/List';
-// import Likes from './models/Likes';
-// import * as listView from './views/listView';
-// import * as likesView from './views/likesView';
-// import { elements, renderLoader, clearLoader } from './views/base';
 /********************************************************************************************************** */
 
 const exploreDOM = sliderView.exploreDOM;
@@ -55,6 +49,69 @@ async function forecast(cityID,dropID){
 }
 
 /*************************************** */
+
+// Function throttle to reduce number of calls
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
+}
+
+const tripCont = document.querySelectorAll('.trip__container');
+const tripIcon = document.querySelectorAll('.trip__icon');
+const tripInfo = document.querySelectorAll('.trip__info');
+
+
+const tripMatch = new Map();
+
+function getTripMatch(){
+    for (let i=0; i < tripCont.length; i++){
+        tripMatch.set(tripIcon[i], tripCont[i])
+    }
+}
+
+function isInViewport(elem){
+    //get position data of element in the page
+    let bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+function displayTrip(){
+    //set icon - container match in map
+    getTripMatch();
+
+    tripIcon.forEach((cur) => {
+        if (isInViewport(cur)) {
+            //get the container associated to icon
+            const box = tripMatch.get(cur);
+            box.classList.remove('hidden');
+            box.style.transform = 'translate(0)';
+        }
+    })
+
+    tripInfo.forEach((cur) => {
+        if (isInViewport(cur)) {
+            cur.classList.remove('hidden');
+            cur.style.transform = 'translateX(0)';
+        }
+    })
+}
+
+
+window.addEventListener('scroll', throttle(displayTrip, 200));
+
+
+
+/*************************************** */  
 
 function setEventListeners() {
 
