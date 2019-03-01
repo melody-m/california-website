@@ -5,13 +5,14 @@
   margin-bottom: 4rem; }
 
 .margin-top-big {
-  margin-top: 40rem; }
+  margin-top: 25rem; }
 
 .left {
   text-align: left; }
 
 .right {
-  text-align: right; }
+  text-align: right;
+  float: right; }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -34,21 +35,52 @@ h3 {
   font-family: 'Major Mono Display', monospace;
   text-transform: lowercase;
   font-size: 3rem;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 5rem; }
 
 h4 {
   font-family: 'Open Sans', sans-serif;
+  font-variant: small-caps;
+  letter-spacing: .18rem;
   font-weight: 300;
   font-size: 2.2rem; }
 
 .intro__text {
   text-align: justify; }
 
+.intro__info {
+  text-align: center; }
+  .intro__info--title {
+    font-family: 'Open Sans', sans-serif;
+    font-variant: small-caps;
+    letter-spacing: .18rem;
+    font-weight: 300;
+    font-size: 2.5rem; }
+  .intro__info--num {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    font-size: 3rem; }
+
 .dropdown__triangle--title {
   font-family: 'Major Mono Display', monospace;
   text-transform: lowercase;
   font-size: 2.2rem;
   line-height: 3rem; }
+
+.dropdown__spots--content {
+  font-weight: 300; }
+
+.dropdown__food--content {
+  font-weight: 300; }
+
+.weather__desc {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-align: center; }
+
+.weather__temp {
+  font-size: 2rem;
+  text-align: center; }
 
 .trip__info {
   font-family: 'Major Mono Display', monospace;
@@ -76,8 +108,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  background-color: azure; }
+  box-sizing: border-box; }
 
 .clearfix::after {
   content: "";
@@ -90,18 +121,26 @@ body {
   cursor: pointer; }
 
 .intro {
-  background-color: #a0edf7; }
+  background-color: #b3e0ff;
+  border-top: 1px solid #074684;
+  border-bottom: 1px solid #074684;
+  display: flex;
+  align-items: center;
+  color: #074684; }
   .intro__map {
-    width: 45rem;
+    width: 60.1rem;
     height: 45rem;
     background-color: antiquewhite;
-    display: inline-block;
-    vertical-align: middle; }
+    border-right: 1px dashed #074684; }
   .intro__text {
     width: 50%;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 3rem; }
+    margin: 0 auto;
+    padding: 2rem; }
+  .intro__info {
+    width: 30rem;
+    border-left: 1px dashed #074684; }
+    .intro__info--title {
+      margin-bottom: 2rem; }
 
 .landpage {
   width: 100vw;
@@ -127,8 +166,8 @@ h1 {
 .progress {
   width: 30rem;
   height: 100%;
-  border-left: 2px solid #0ea5c6;
-  background-image: linear-gradient(to left, rgba(14, 165, 198, 0.3), rgba(14, 165, 198, 0.1));
+  border-left: 2px solid #429bda;
+  background-color: #e5f3fc;
   position: absolute;
   top: 0;
   right: 0;
@@ -141,7 +180,7 @@ h1 {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 2px solid #0ea5c6;
+    border: 2px solid #429bda;
     background-color: white; }
     .progress__dot--1 {
       position: fixed;
@@ -175,12 +214,13 @@ h1 {
 
 .trip {
   margin: 0 auto;
-  padding-top: 40rem;
-  position: relative;
-  padding-left: 6rem; }
+  padding-top: 30rem;
+  position: relative; }
   .trip__container {
     transition: all .5s ease-out;
-    transform: translateY(50%); }
+    transform: translateY(50%);
+    padding-bottom: 20rem;
+    padding-left: 6rem; }
   .trip__flexContainer {
     display: flex;
     flex-wrap: wrap;
@@ -201,31 +241,37 @@ h1 {
     overflow: hidden; }
   .trip__dash {
     width: 4rem;
-    border-bottom: 1px solid #0ea5c6;
+    border-bottom: 1px solid #1e98ee;
     position: absolute;
     top: 0;
-    left: -12rem;
+    left: -9.5rem;
     z-index: -20; }
   .trip__info {
     float: right;
     transform: translateX(-100%);
     transition: all .6s ease-out; }
     .trip__info--full {
+      color: #1e98ee;
       text-align: left;
       padding-bottom: 1rem;
-      border-bottom: 1px dashed #0ea5c6; }
+      border-bottom: 1px dashed #074684; }
     .trip__info--dist {
+      color: #1e98ee;
       position: relative;
       text-align: left;
       padding-top: 2rem; }
     .trip__info--title {
       text-align: center;
-      color: #0ea5c6;
+      color: #074684;
       padding-bottom: 1rem; }
   .trip__photo {
     width: 50%; }
     .trip__photo--img {
       width: 100%; }
+    .trip__photo--line {
+      width: 50%;
+      margin-top: 4rem;
+      border-bottom: 1px solid #cccccc; }
   .trip__desc {
     position: relative;
     margin: 3rem;
@@ -236,9 +282,12 @@ h1 {
     float: right;
     margin-top: 4rem;
     padding: 1rem;
-    color: #0ea5c6;
+    color: #1e98ee;
     text-transform: uppercase;
-    border: 1px solid #0ea5c6; }
+    border: 1px solid #1e98ee;
+    transition: all .3s; }
+    .trip__btn:hover {
+      transform: scale(1.2); }
 
 .rightInline {
   text-align: right; }
@@ -254,9 +303,10 @@ h1 {
   .dropdown__closeBtn {
     position: absolute;
     top: 2rem;
-    right: 2rem;
+    right: 4rem;
     font-size: 4rem;
     visibility: hidden;
+    color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -273,17 +323,18 @@ h1 {
     width: 30%;
     height: 100%;
     color: #999999;
-    background-color: #eef4f6;
+    background-color: #e5f3fc;
     text-align: justify;
     float: left;
     transition: all .5s ease-out;
     position: relative; }
     .dropdown__sideBar--content {
       height: 70%;
-      padding: 6rem; }
+      padding: 4rem; }
     .dropdown__sideBar--weather {
       height: 30%;
-      text-align: center; }
+      text-align: center;
+      background-color: white; }
   .dropdown__sideBarBox {
     width: 100%;
     height: 100%;
@@ -299,14 +350,22 @@ h1 {
     position: relative; }
   .dropdown__accomodation {
     width: 100%;
-    height: 40%; }
+    height: 40%;
+    display: flex; }
+  .dropdown__icon {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+    .dropdown__icon--img {
+      width: 100%; }
   .dropdown__triangle {
     position: absolute;
     top: 0;
     left: 0;
     width: 40%;
     height: 65%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
     transform: translateX(-100%);
     transition: all 1s;
@@ -318,55 +377,73 @@ h1 {
       left: 2rem;
       text-align: left;
       z-index: 50; }
+    .dropdown__triangle--icon {
+      margin-top: 1.5rem; }
   .dropdown__spots {
     width: 50%;
     height: 100%;
-    padding: 6rem;
+    padding: 3rem;
     text-align: justify;
-    background-color: lightgrey;
-    float: left;
+    color: white;
+    background-color: #429bda;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
     position: relative;
     overflow: hidden; }
     .dropdown__spots--title {
-      text-align: right; }
+      text-align: right;
+      margin-bottom: 3rem; }
     .dropdown__spots--content {
-      width: 80%;
-      float: right; }
+      width: 70%;
+      padding: 0 2rem;
+      font-weight: 300; }
   .dropdown__list {
     list-style: none; }
   .dropdown__food {
     width: 50%;
     height: 100%;
     padding: 6rem;
-    background-color: lightskyblue;
-    float: left;
+    background-color: #074684;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     position: relative;
     text-align: right;
     overflow: hidden; }
     .dropdown__food--content {
-      display: table;
-      float: right; }
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-end; }
     .dropdown__food--title {
       display: inline;
       padding-right: 2rem; }
     .dropdown__food--left {
-      width: 50%;
-      padding: 1rem;
-      display: table-cell;
-      vertical-align: middle; }
+      width: 50%; }
+      .dropdown__food--left ul {
+        padding: 2rem; }
     .dropdown__food--right {
-      width: 50%;
-      padding: 1rem;
-      display: table-cell;
-      vertical-align: middle; }
+      width: 50%; }
+      .dropdown__food--right ul {
+        border-left: 1px solid #999999;
+        padding: 2rem; }
 
 .weather__title {
   padding: 2rem 0; }
 
 .weather__day {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   display: inline-block; }
+
+.weather__icon {
+  margin-bottom: 1rem; }
+
+.weather__desc {
+  margin-bottom: 1rem; }
 
 .gallery__img {
   width: 100%;

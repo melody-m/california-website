@@ -3,16 +3,15 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<g>
-	<path fill="#CCCCCC" stroke="#CCCCCC" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" d="M97.979,51.934
-		C96.95,33.436,79.646,40.718,79.646,40.718c0.874-22.439-19.414-22.04-19.414-22.04C38.121,20.027,40.026,34.03,39.723,33.76
-		c-9.908-8.89-22.511,2.025-23.095,11.204c-1.241,19.573,15.737,21.114,15.737,21.114h51.579
-		C83.944,66.078,96.198,64.705,97.979,51.934z"/>
-</g>
-<g>
-	<path fill="#FFFFFF" stroke="#CCCCCC" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" d="M92.83,69.059
-		C91.7,48.762,72.716,56.753,72.716,56.753c0.958-24.62-21.302-24.182-21.302-24.182C27.152,34.05,29.243,49.415,28.911,49.117
-		C18.04,39.364,4.211,51.34,3.571,61.411C2.208,82.887,20.837,84.578,20.837,84.578H77.43C77.43,84.578,90.876,83.071,92.83,69.059z
-		"/>
-</g>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M65.084,53.833
+	c3.5-22.333-17.243-23.132-17.243-23.132C34.922,29.954,29.5,38.938,29.25,43.875"/>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M77.043,34.786
+	c3.09-19.718-15.225-20.423-15.225-20.423c-11.406-0.659-16.193,5.272-16.415,9.631"/>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M79.084,52.167
+	c0,0,11.313-1.231,12.729-11.381c-0.819-14.697-14.565-8.914-14.565-8.914"/>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M46.25,25.5
+	c-5.5-10.625-22.688-2.25-23.125,8.125c-0.313,4,1.063,7.875,1.063,7.875"/>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M31.5,47.583
+	C25.75,34.75,8.938,43.5,8.603,54.357c-1.118,17.613,14.161,19,14.161,19h46.417c0,0,11.024-1.234,12.631-12.729
+	c-0.931-16.646-16.498-10.096-16.498-10.096"/>
 </svg>

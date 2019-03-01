@@ -28,6 +28,10 @@ const days = {
     day3Strg : `${day3.year}-${months[day3.month - 1]}-${daysArr[day3.day-1]} 12:00:00`,  
 }
 
+function formatTemp(num){
+    const tempCalc = (num - 273.15).toFixed(2);
+    return tempCalc;
+}
 
 
 export default class Weather {
@@ -43,24 +47,62 @@ export default class Weather {
              
             //console.log(res);
 
-            //1) Create forecast array and add today's weather
+            //1) Create forecast array and add today's weather/desc/temp
             this.weatherFrcst = [res.data.list[0].weather[0].icon];
+            this.weatherDesc = [res.data.list[0].weather[0].description];    
+
+            const temp =  `${formatTemp(res.data.list[0].main.temp)}&deg;C`; // temperature conversion
+            this.weatherTemp = [temp];
+
     
             res.data.list.forEach((cur) => {      
                 //2) Loop through the list of forecast and push in array weather for next 2 days at 12.00        
     
                 if(cur.dt_txt === days.day2Strg){
                     this.weatherFrcst.push(cur.weather[0].icon);       //icon: "02d"             
+                    this.weatherDesc.push(cur.weather[0].description); 
+
+                     //3)convert temp in Celcius from Kelvin                    
+                     const temp2=`${formatTemp(cur.main.temp)}&deg;C`;
+                     this.weatherTemp.push(temp2);
+
                 } else if(cur.dt_txt === days.day3Strg){
                     this.weatherFrcst.push(cur.weather[0].icon);                    
+                    this.weatherDesc.push(cur.weather[0].description); 
+
+                    //3)convert temp in Celcius from Kelvin
+                    const temp2=`${formatTemp(cur.main.temp)}&deg;C`;
+                    this.weatherTemp.push(temp2);
                 }        
             });
-
-            return this.weatherFrcst; //array of weather forecast icons
-
+           
         } catch (error) {
             console.log(error);
             alert('Something went wrong :(');
         }
     }
 }
+
+
+
+export const citiesObj = {
+    wLosAngeles : new Weather('5368381'),
+    wMalibu : new Weather('4586163'),
+    wMorroBay : new Weather('5374920'),
+    wMonterey : new Weather('5374376'),
+    wSantaCruz : new Weather('5393068'),
+    wSanFran : new Weather('5391997'),
+}
+
+export const cityForecast = new Map();
+
+cityForecast.set('explore-1', citiesObj.wLosAngeles);
+cityForecast.set('explore-2', citiesObj.wLosAngeles);
+cityForecast.set('explore-3', citiesObj.wMalibu);
+cityForecast.set('explore-4', citiesObj.wMalibu);
+cityForecast.set('explore-5', citiesObj.wMorroBay);
+cityForecast.set('explore-6', citiesObj.wMorroBay);
+cityForecast.set('explore-7', citiesObj.wMonterey);
+cityForecast.set('explore-8', citiesObj.wMonterey);
+cityForecast.set('explore-9', citiesObj.wSantaCruz);
+cityForecast.set('explore-10', citiesObj.wSanFran);

@@ -1,20 +1,33 @@
 .intro{
 
     background-color: $color-three;
+    border-top: 1px solid $color-one;
+    border-bottom: 1px solid $color-one;
+    display: flex;
+    align-items: center;
+    color: $color-one;
+    
 
     &__map{
-        width: 45rem;
+        width: 60.1rem;
         height: 45rem;
         background-color: antiquewhite;
-        display: inline-block;
-        vertical-align: middle;
+        border-right: 1px dashed $color-one;
     }
 
     &__text{
         width: 50%;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 3rem;
+        margin: 0 auto; 
+        padding: 2rem;      
+    }
 
+    &__info{
+        width: 30rem;
+        border-left: 1px dashed $color-one;
+
+        &--title{
+            margin-bottom: 2rem;
+            
+        }
     }
 }

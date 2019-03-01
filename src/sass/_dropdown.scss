@@ -13,9 +13,10 @@
     &__closeBtn{
         position: absolute;
         top:2rem;
-        right:2rem;
+        right:4rem;
         font-size: 4rem;
         visibility: hidden;
+        color: white;
 
         background-color:transparent;
         border: none;
@@ -47,12 +48,13 @@
 
         &--content{
             height: 70%;
-            padding: 6rem;
+            padding: 4rem;
             
         }
         &--weather{
             height: 30%;
             text-align: center;
+            background-color:white;
         }
     }
     &__sideBarBox{
@@ -72,21 +74,31 @@
 
     &__gallery{
         width: 100%;
-        height: 60%;
-        //background-color: lightpink;
+        height: 60%;       
         position: relative;
     }
     &__accomodation{
         width: 100%;
         height: 40%;
+        display: flex;
     }
+    &__icon{
+        width: 15rem;
+        height: 15rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        &--img{
+            width: 100%;
+        }
+    }
+
     &__triangle{
         position: absolute;
         top:0;
         left:0;
         width: 40%;
         height: 65%;
-        background-color: rgba(white, .5);
+        background-color: rgba(white, .3);
         clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
         transform: translateX(-100%);
         transition: all 1s;
@@ -99,28 +111,40 @@
             top: 2rem;
             left: 2rem;
             text-align: left;
-            z-index: 50;            
+            z-index: 50;        
+        }
+        &--icon{
+            margin-top: 1.5rem;
         }
     }
 
     &__spots{
         width:50%;
         height: 100%;
-        padding: 6rem;        
+        padding: 3rem;        
         text-align: justify;
-        background-color: lightgrey;
-        float:left;
+        color: white;
+        background-color:  $color-five;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        // float:left;
         position: relative;
         overflow: hidden;
         
         &--title{            
             text-align: right;  
+            margin-bottom: 3rem;
                      
         }
         &--content{
-            width: 80%;
-            float: right;
-           
+            width: 70%;
+            // float: right;  
+            padding: 0 2rem;  
+            font-weight: 300;
         }
     }
     &__list{
@@ -131,16 +155,22 @@
         width:50%;
         height: 100%;
         padding: 6rem;        
-        background-color: lightskyblue;
-        float:left;
+        background-color: $color-one;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
         position: relative;
         text-align: right;
         overflow: hidden;
     
 
         &--content{
-            display: table;            
-            float: right;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-end;
         }
         &--title{           
             display: inline;           
@@ -148,16 +178,20 @@
             padding-right: 2rem;
         }
         &--left{
-            width: 50%;
-            padding: 1rem;
-            display: table-cell;
-            vertical-align: middle;
+            width: 50%;                      
+
+            & ul{
+                
+                padding: 2rem;
+            }
         }
         &--right{
-            width: 50%;
-            padding: 1rem;
-            display: table-cell;
-            vertical-align: middle;
+            width: 50%;           
+
+            & ul{
+                border-left: 1px solid $color-grey-medium;
+                padding: 2rem;
+            }
 
         }
     }
@@ -168,11 +202,15 @@
         padding: 2rem 0;
     }
     &__day{
-        width: 10rem;
-        height: 10rem;
-        display: inline-block;        
-        //background-color: aquamarine;
-
+        width: 12rem;
+        height: 12rem;
+        display: inline-block;   
+    }
+    &__icon{
+        margin-bottom: 1rem;
+    }
+    &__desc{
+        margin-bottom: 1rem;
     }
 }
 .gallery{

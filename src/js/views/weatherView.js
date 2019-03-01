@@ -1,54 +1,69 @@
 
-
-
-const weatherDOM = {
-    today: document.querySelector('.weather__day--1'),
-    tomorrow: document.querySelector('.weather__day--2'),
-    next: document.querySelector('.weather__day--3')
-}
-
 const weatherDesc = new Map();
-weatherDesc.set('01d','url(../img/icons/clearSky.svg)')
-weatherDesc.set('01n','url(../img/icons/clearSky.svg)')
-weatherDesc.set('02d','url(../img/icons/fewClouds.svg)')
-weatherDesc.set('02n','url(../img/icons/fewClouds.svg)')
-weatherDesc.set('03d','url(../img/icons/scatteredClouds.svg)')
-weatherDesc.set('03n','url(../img/icons/scatteredClouds.svg)')
-weatherDesc.set('04d','url(../img/icons/brokenClouds.svg)')
-weatherDesc.set('04n','url(../img/icons/brokenClouds.svg)')
-weatherDesc.set('09d','url(../img/icons/showerRain.svg)')
-weatherDesc.set('09n','url(../img/icons/showerRain.svg)')
-weatherDesc.set('10d','url(../img/icons/rain.svg)')
-weatherDesc.set('10n','url(../img/icons/rain.svg)')
-weatherDesc.set('11d','url(../img/icons/thunderstorm.svg)')
-weatherDesc.set('11n','url(../img/icons/thunderstorm.svg)')
-weatherDesc.set('13d','url(../img/icons/snow.svg)')
-weatherDesc.set('13n','url(../img/icons/snow.svg)')
-weatherDesc.set('50d','url(../img/icons/mist.svg)')
-weatherDesc.set('50n','url(../img/icons/mist.svg)')
+
+weatherDesc.set('01d','img/icons/clearSky.svg')
+weatherDesc.set('01n','img/icons/clearSky.svg')
+weatherDesc.set('02d','img/icons/fewClouds.svg')
+weatherDesc.set('02n','img/icons/fewClouds.svg')
+weatherDesc.set('03d','img/icons/scatteredClouds.svg')
+weatherDesc.set('03n','img/icons/scatteredClouds.svg')
+weatherDesc.set('04d','img/icons/brokenClouds.svg')
+weatherDesc.set('04n','img/icons/brokenClouds.svg')
+weatherDesc.set('09d','img/icons/showerRain.svg')
+weatherDesc.set('09n','img/icons/showerRain.svg')
+weatherDesc.set('10d','img/icons/rain.svg')
+weatherDesc.set('10n','img/icons/rain.svg')
+weatherDesc.set('11d','img/icons/thunderstorm.svg')
+weatherDesc.set('11n','img/icons/thunderstorm.svg')
+weatherDesc.set('13d','img/icons/snow.svg')
+weatherDesc.set('13n','img/icons/snow.svg')
+weatherDesc.set('50d','img/icons/mist.svg')
+weatherDesc.set('50n','img/icons/mist.svg')
 
 const imgArr = [];
 
-export function displayIcon(arr,id){
+export const renderLoader = (element) => {
+
+    const weatherBox = element.querySelector('.dropdown__sideBar--weather');
+    const loader = `
+        <div class="loader">Loading ...</div>
+    `;
+    weatherBox.insertAdjacentHTML('beforeend', loader);
+};
+
+export const clearLoader = (element) => {
+
+    const loader = element.querySelector(`.loader`);
+    if (loader) loader.parentElement.removeChild(loader);
+}
+
+export function displayIcon(arr,container){
     
     //Loop through array and get matching weather icon url from map 
    
     arr.forEach((cur) =>{
         const imgUrl = weatherDesc.get(cur); // get key matching cur
-        imgArr.push(imgUrl);//push urls      
-    })     
+        imgArr.push(imgUrl);//push urls     
+    })        
     
-    const dropdown = document.getElementById(id);
     
-    //Select weather div under the selected dropdown
+    //Select weather div under the selected dropdown and assign img
 
-    const day1BG = dropdown.querySelector('.weather__day--1');
-    const day2BG = dropdown.querySelector('.weather__day--2');
-    const day3BG = dropdown.querySelector('.weather__day--3');
+    const days = container.querySelectorAll('.weather__day'); 
 
-    //display url for each 
-    day1BG.style.backgroundImage = imgArr[0];
-    day2BG.style.backgroundImage = imgArr[1];
-    day3BG.style.backgroundImage = imgArr[2];
+    days.forEach((cur, i)=>{
+        cur.style.backgroundImage = imgArr[i];
+        cur.insertAdjacentHTML('beforeend', `<div class="weather__icon"><img src="${imgArr[i]}" alt=""></div>`);
+    }) 
+}
+
+export function displayInfo(arrDesc, arrTemp,container){
+    
+    const days = container.querySelectorAll('.weather__day');   
+
+    days.forEach((cur, i)=>{
+        cur.insertAdjacentHTML('beforeend', `<div class="weather__desc">${arrDesc[i]}</div>`);
+        cur.insertAdjacentHTML('beforeend', `<div class="weather__temp">${arrTemp[i]}</div>`);
+    }) 
 
 }

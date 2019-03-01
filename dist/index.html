@@ -23,7 +23,11 @@
 
     <section class="intro clearfix">
 
-        <div class="intro__map"></div>
+        <div class="intro__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d1394074.5866598743!2d-119.10702171873577!3d35.63106874295843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2sLos+Angeles+International+Airport!3m2!1d33.9415889!2d-118.40853!4m5!1s0x80c2a4cec2910019%3A0xb4170ab5ff23f5ab!2sSanta+Monica%2C+CA%2C+USA!3m2!1d34.0194543!2d-118.49119119999999!4m5!1s0x80e81da9f908d63f%3A0x93b72d71b2ea8c5a!2sMalibu%2C+CA%2C+USA!3m2!1d34.0259216!2d-118.7797571!4m5!1s0x80e914c76f2d83d5%3A0xc8d13a64d7ba7648!2sSanta+Barbara%2C+CA%2C+USA!3m2!1d34.4208305!2d-119.69819009999999!4m5!1s0x80ece10bb9b5aa93%3A0xaa1be219c181970c!2sMorro+Bay%2C+CA%2C+USA!3m2!1d35.3659445!2d-120.84999239999999!4m5!1s0x80ecd77a7b67481f%3A0xc4fd49cb873a8956!2sCambria%2C+CA%2C+USA!3m2!1d35.5641381!2d-121.0807468!4m5!1s0x808de8a7780e4d77%3A0x37e8d859caefac61!2sBig+Sur%2C+CA%2C+USA!3m2!1d36.3614749!2d-121.85626099999999!4m5!1s0x808de45270b5fb91%3A0xee484909d84a3d5e!2sMonterey%2C+CA%2C+USA!3m2!1d36.600237799999995!2d-121.8946761!4m5!1s0x808e441b7c36d549%3A0x52ca104b2ad7f985!2sSanta+Cruz%2C+CA%2C+USA!3m2!1d36.9741171!2d-122.03079629999999!4m5!1s0x808f778c55555555%3A0xe47189ad9eeadec8!2sSan+Francisco+International+Airport+Station!3m2!1d37.615982699999996!2d-122.392477!5e0!3m2!1sen!2suk!4v1551457261012"
+                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
         <div class="intro__text">
             <p>                
                 The Pacific Coast Highway (PCH) was first started in the 1930s, 
@@ -37,6 +41,15 @@
                 of California.
             </p>
         </div>
+      
+        <div class="intro__info">
+            <div class="intro__info--dist">                
+                <p class="intro__info--title">&ndash; Total distance &ndash;</p>
+                <p class="intro__info--num">~ 460 <span class="mini">miles</span></p>
+                <p class="intro__info--num">~ 10h00<span class="mini">min</span></p>
+            </div>                       
+        </div>
+
     </section>
 
 
@@ -48,19 +61,25 @@
         </div>
 
 
-        <div class="trip clearfix">          
+        <div class="trip clearfix">   
+            <div class="trip__flag"></div>       
 
 
-            <div class="trip__container hidden" id ="trip-1">
+            <div class="trip__container hidden">
                 
                 <div class="trip__flexContainer">
         
                     <div class="trip__photo">
                         <img src="img/marina.png" alt="marina del rey photo" class="trip__photo--img">
+                        <div class="trip__photo--line"></div>
                     </div>
                     <div class="trip__desc left">
                         <div class="trip__icon" id ="tripIcon-1"><img src="img/1.svg" alt="1"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>Starting point : <br>Los Angeles</h3></div>
+                        <div class="trip__subtitle margin-bottom-medium">
+                            <h3>Starting point : 
+                                <br>                                
+                                &mdash; Los Angeles &mdash;</h3>
+                        </div>
                         <div class="trip__text">
                             <p>There is a lot to see and do in Los Angeles. We recommend that you stop in Marina Del Rey, just a stone throw
                                 away from the airport, one of the biggest marina in the world, full of incredible yachts.                         
@@ -76,12 +95,12 @@
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
-                                <p class="trip__info--title">In total</p>
+                                <p class="trip__info--title">&ndash; In total &ndash;</p>
                                 <p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
                             </div>
                             <div class="trip__info--dist">
                                 <div class="trip__dash"></div>
-                                <p class="trip__info--title">Since the last point</p>
+                                <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
                                 <p></p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
                             </div>                       
                         </div>
@@ -91,12 +110,12 @@
                     
                 </div>
             </div>
-
+            <div class="trip__flag"></div>
             <div class="trip__container hidden margin-top-big">
                 <div class="trip__flexContainer">
                     <div class="trip__desc right">
                         <div class="trip__icon"><img src="img/2.svg" alt="2"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>Santa Monica</h3></div>
+                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Monica &mdash;</h3></div>
                         <div class="trip__text">
                             <p> With its “Baywatch” beaches, white sand and old-fashioned Pier, it is a really nice spot to spend a day. 
                                 It is quite easy to walk around in Santa Monica, you can also hire a bike, you'll see lots of people
@@ -111,32 +130,37 @@
 
                     <div class="trip__photo">
                         <img src="img/santa-monica.png" alt="santa monica photo" class="trip__photo--img">
+                        <div class="trip__photo--line right"></div>
                     </div>   
 
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                <p>28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span></p>                               
                             </div>
                             <div class="trip__info--dist">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <div class="trip__dash"></div>
+                                <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                <p></p>28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span></p>
                             </div>
                         </div> 
                     </div>                                
                 </div>
             </div>
 
-
+            <div class="trip__flag"></div>
             <div class="trip__container hidden margin-top-big">
                 
                 <div class="trip__flexContainer">
         
                     <div class="trip__photo">
                         <img src="img/malibu.png" alt="malibu photo" class="trip__photo--img">
+                        <div class="trip__photo--line"></div>
                     </div>
                     <div class="trip__desc left">
                             <div class="trip__icon"><img src="img/3.svg" alt="3"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>Malibu</h3></div>
+                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Malibu &mdash;</h3></div>
                         <div class="trip__text">
                             <p> Malibu has incredible beaches, more natural than the slightly artificial look of the Santa Monica ones.
                                 Follow the signs to Point Dume and you’ll find a beautiful sandy beach, headlands, cliffs and rocky coves. 
@@ -151,21 +175,25 @@
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                <p>58 <span class="mini">min</span><br>26.5 <span class="mini">mi</span></p>                               
                             </div>
                             <div class="trip__info--dist">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <div class="trip__dash"></div>
+                                <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                <p></p>30 <span class="mini">min</span><br>18.4 <span class="mini">mi</span></p>
                             </div>
                         </div> 
-                    </div>      
+                    </div>                 
                 </div>
             </div>
 
+            <div class="trip__flag"></div>
             <div class="trip__container hidden margin-top-big">
                 <div class="trip__flexContainer">
                     <div class="trip__desc right">
                         <div class="trip__icon"><img src="img/4.svg" alt="4"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>Santa Barbara</h3></div>
+                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Barbara &mdash;</h3></div>
                         <div class="trip__text">
                             <p> Santa Barbara has a really nice vibe, a perfect mix between casual beach, history and city attractions. 
 
@@ -182,29 +210,35 @@
 
                     <div class="trip__photo">
                         <img src="img/santa-barbara.png" alt="santa monica photo" class="trip__photo--img">
+                        <div class="trip__photo--line right"></div>
                     </div>  
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                <p>2h11 <span class="mini">min</span><br>93.4 <span class="mini">mi</span></p>                               
                             </div>
                             <div class="trip__info--dist">
-                                28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                <div class="trip__dash"></div>
+                                <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                <p></p>1h13 <span class="mini">min</span><br>66.9 <span class="mini">mi</span></p>
                             </div>
                         </div> 
-                    </div>                            
+                    </div>                                  
                 </div>
             </div>
 
+            <div class="trip__flag"></div>
             <div class="trip__container hidden margin-top-big">
                     
                     <div class="trip__flexContainer">            
                         <div class="trip__photo">
                             <img src="img/morro-bay.png" alt="malibu photo" class="trip__photo--img">
+                            <div class="trip__photo--line"></div>
                         </div>
                         <div class="trip__desc left">
                                 <div class="trip__icon"><img src="img/5.svg" alt="5"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>Morro Bay</h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Morro Bay &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                     
@@ -225,21 +259,25 @@
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>4h06 <span class="mini">min</span><br>213.4 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>1h55 <span class="mini">min</span><br>120 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>      
+                        </div>                 
                     </div>
                 </div>
 
+                <div class="trip__flag"></div>
                 <div class="trip__container hidden margin-top-big">
                     <div class="trip__flexContainer">
                         <div class="trip__desc right">
                             <div class="trip__icon"><img src="img/6.svg" alt="6"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>Cambria and San Simeon </h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Cambria and San Simeon &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                     On the way into Cambria, stop at the Piedras Blancas Friends of the Elephant Seal rookery, 
@@ -257,30 +295,36 @@
     
                         <div class="trip__photo">
                             <img src="img/san-simeon.png" alt="santa monica photo" class="trip__photo--img">
+                            <div class="trip__photo--line right"></div>
                         </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>4h32 <span class="mini">min</span><br>234.1 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>26 <span class="mini">min</span><br>20.7 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>                            
+                        </div>                                       
                     </div>
                 </div>
 
+                <div class="trip__flag"></div>
                 <div class="trip__container hidden margin-top-big">
                     
                     <div class="trip__flexContainer">
             
                         <div class="trip__photo">
                             <img src="img/big-sur.png" alt="malibu photo" class="trip__photo--img">
+                            <div class="trip__photo--line"></div>
                         </div>
                         <div class="trip__desc left">
                             <div class="trip__icon"><img src="img/7.svg" alt="7"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>Big Sur</h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Big Sur &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                     
@@ -297,21 +341,25 @@
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>7h03 <span class="mini">min</span><br>323.4 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>2h31 <span class="mini">min</span><br>89.3 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>      
+                        </div>                   
                     </div>
                 </div>
-
+                
+                <div class="trip__flag"></div>
                 <div class="trip__container hidden margin-top-big">
                     <div class="trip__flexContainer">
                         <div class="trip__desc right">
                             <div class="trip__icon"><img src="img/8.svg" alt="8"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>Monterey Bay</h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Monterey Bay &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                     On your way to Monterey, check out the stunning Point Lobos State Natural Reserve and chill at the Old Fisherman’s Wharf. 
@@ -327,30 +375,34 @@
     
                         <div class="trip__photo">
                             <img src="img/monterey.png" alt="Monterey Bay photo" class="trip__photo--img">
+                            <div class="trip__photo--line right"></div>
                         </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>8h10 <span class="mini">min</span><br>351.8 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>1h07 <span class="mini">min</span><br>28.4 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>                              
+                        </div>                                           
                     </div>
                 </div>
 
-                <div class="trip__container hidden margin-top-big">
-                    
-                    <div class="trip__flexContainer">
-            
+                <div class="trip__flag"></div>
+                <div class="trip__container hidden margin-top-big">                    
+                    <div class="trip__flexContainer">            
                         <div class="trip__photo">
                             <img src="img/santa-cruz.png" alt="santa-cruz photo" class="trip__photo--img">
+                            <div class="trip__photo--line"></div>
                         </div>
                         <div class="trip__desc left">
                             <div class="trip__icon"><img src="img/9.svg" alt="9"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>Santa Cruz</h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Cruz &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                 Santa Cruz is a friendly beach town with gorgeous redwood trees and waves that surfers from all over flock to ride. 
@@ -367,21 +419,25 @@
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>9h00 <span class="mini">min</span><br>395.4 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>50 <span class="mini">min</span><br>43.6 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>      
+                        </div>                 
                     </div>
                 </div>
 
+                <div class="trip__flag"></div>
                 <div class="trip__container hidden margin-top-big">
                     <div class="trip__flexContainer">
                         <div class="trip__desc right">
                             <div class="trip__icon"><img src="img/10.svg" alt="10"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>San Francisco</h3></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; San Francisco &mdash;</h3></div>
                             <div class="trip__text">
                                 <p> 
                                 Take a drive over the Golden Gate Bridge and you’ll feel like you’ve well and truly arrived in San Francisco.
@@ -397,17 +453,21 @@
     
                         <div class="trip__photo">
                             <img src="img/san-fran.png" alt="San Francisco photo" class="trip__photo--img">
+                            <div class="trip__photo--line right"></div>
                         </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <p class="trip__info--title">&ndash; In total &ndash;</p>
+                                    <p>10h04 <span class="mini">min</span><br>456.5 <span class="mini">mi</span></p>                               
                                 </div>
                                 <div class="trip__info--dist">
-                                    28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span>
+                                    <div class="trip__dash"></div>
+                                    <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
+                                    <p></p>1h04 <span class="mini">min</span><br>61.1 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
-                        </div>                              
+                        </div>                                        
                     </div>
                 </div>
         </div>
@@ -429,7 +489,8 @@
             <div class="dropdown__wipe width"></div>
             <div class="dropdown__sideBarBox">
                 <div class="dropdown__sideBar--content">
-                    <h3 class="margin-bottom-medium">Los Angeles</h3>
+                    <div class="dropdown__icon"><img src="img/1grey.svg" alt="1" class="dropdown__icon--img"></div>
+                    <h3 class="margin-bottom-medium">&mdash; Los Angeles &mdash;</h3>
                     <p>Roughly six miles north of Los Angeles International Airport sits Marina del Rey, 
                     a charming coastal community with sailboats, beaches, and bike paths. 
                     Head towards Hollywood, on the way you'll go through Beverly Hills, take Rodeo Drive to go down Sunset Boulevard.
@@ -441,7 +502,7 @@
                     </p>
                 </div>
                 <div class="dropdown__sideBar--weather">
-                    <div class="weather__title"><h4>Weather forecast in Los Angeles</h4></div>
+                    <div class="weather__title"><h4>&ndash; Weather forecast in Los Angeles &ndash;</h4></div>
                     <div class="weather__day weather__day--1"></div>
                     <div class="weather__day weather__day--2"></div>
                     <div class="weather__day weather__day--3"></div>
@@ -460,7 +521,7 @@
                     </div>
 
                     <div class="dropdown__spots--content">
-                        <div class="dropdown__spots--title"><h4 class="margin-bottom-small">The Old LA Zoo</h4></div>
+                        <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; The Old LA Zoo &ndash;</h4></div>
                         <p>
                             Tucked inside the expansive Griffith Park property, the Old LA Zoo 
                             is essentially exactly what it sounds like: a series of ruins remaining from the former Los Angeles Zoo. 
@@ -479,7 +540,7 @@
 
                     <div class="dropdown__food--content">
                             <div class="dropdown__food--left">
-                                <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                 <ul class="dropdown__list" >
                                     <li>Oaks Gourmet</li>
                                     <li>Little Fork</li>
@@ -491,7 +552,7 @@
 
                             </div>
                             <div class="dropdown__food--right">
-                                <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                 <ul class="dropdown__list">
                                     <li>Beverly Terrace Hotel</li>
                                     <li>Avalon Hotel</li>
@@ -537,7 +598,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Santa Monica</h3>
+                        <div class="dropdown__icon"><img src="img/2grey.svg" alt="2" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Santa Monica &mdash;</h3>
                         <p>If you start from Venice going up towards Santa Monica you'll get an opportunity to pass Venice Beach and the Boardwalk.
                             Between quirky tourist shops, you'll meet a very ecclectic crowd of artists, new agers, freaks and free spirits : 
                             that's the place to be to relive the hippie heyday.
@@ -553,14 +615,14 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Santa Monica</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Santa Monica &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
                     </div>
                 </div>
             </div>
-    
+
             <div class="dropdown__sideContent off hidden">
                     
                 <div class="dropdown__accomodation">
@@ -568,11 +630,13 @@
                         <div class="dropdown__wipe width"></div>
     
                         <div class="dropdown__triangle">
-                            <div class="dropdown__triangle--title">Our secret spot</div>
+                            <div class="dropdown__triangle--title">
+                                Our secret spot                                
+                            </div>
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Venice Canals</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Venice Canals &ndash;</h4></div>
                             <p>
                                 Even many Angelenos have no idea that just a couple of blocks away from Venice Beach madness sits a surprinsingly quiet and peaceful
                                 neighborhood. The Venice Canal Walk threads past a mix of quaint houses and other very modern ones, over bridges surrounded by palm trees 
@@ -584,12 +648,12 @@
                         <div class="dropdown__wipe width"></div>
     
                         <div class="dropdown__triangle">
-                            <div class="dropdown__triangle--title"> Top Choices to</div>
+                            <div class="dropdown__triangle--title"> Top Choices to</div>                            
                         </div>
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Cafe Crepe</li>
                                         <li>Curious palate</li>
@@ -601,7 +665,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Sea Blue Hotel</li>
                                         <li>Shore Hotel</li>
@@ -640,7 +704,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Malibu</h3>
+                        <div class="dropdown__icon"><img src="img/3grey.svg" alt="3" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Malibu &mdash;</h3>
                         <p> While you head towards Malibu, stop at the Getty Villa, this famous museum is a stunning 64-acres showcase for reek, Romand and Etruscan antiquities
                             amassed by J Paul Getty. 
                             Malibu is famous for the number of celebrities who resides in the area, and that's no wonder considering the incredible 
@@ -651,7 +716,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Malibu</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Malibu &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -670,7 +735,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Topanga Canyon</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Topanga Canyon &ndash;</h4></div>
                             <p>
                                 If you can, make a detour up the mountains towards Topana Canyon, a very scenic route. Topanga Canyon State Park 
                                 has 36 miles of hiking trails, most link with the Santa Monica Mountain's contiuous Backbone Trail, which means you can hike north and south to other
@@ -687,7 +752,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Cafe Habana</li>
                                         <li>Canyon Bistro</li>
@@ -699,7 +764,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Malibu Country Inn</li>
                                         <li>Malibu Beach Inn</li>
@@ -738,7 +803,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Santa Barbara</h3>
+                        <div class="dropdown__icon"><img src="img/4grey.svg" alt="4" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Santa Barbara &mdash;</h3>
                         <p>Santa Barbara County is a very pleasant area to putter around. Spend your morning
                             soaking up rays at East Beach, then walk out onto Stearns Wharf and down by the harbour. Visit downtown's museums,
                             landmarks and shops along State Street. For nice 360degrees views, stop at the county courthouse and climb up its clock tower
@@ -748,7 +814,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Santa Barbara</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Santa Barbara &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -767,7 +833,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Santa Barbara Botanic Garden</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Santa Barbara Botanic Garden &ndash;</h4></div>
                             <p>
                                 Dedicated to California's native flora, this botanic garden
                                 host a unique attraction : The Mission Dam.
@@ -786,7 +852,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Lark</li>
                                         <li>Lure Fish House</li>
@@ -798,7 +864,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Lemon Tree Inn</li>
                                         <li>Brisas del Mar</li>
@@ -836,7 +902,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Morro Bay</h3>
+                        <div class="dropdown__icon"><img src="img/5grey.svg" alt="5" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Morro Bay &mdash;</h3>
                         <p>
                             Just off Morro Bay's shore sits a massive, ancient volcanic plug known as Morro Rock rises 576 feet from the ocean, 
                             makin it impossible to mistake Morro Bay for any other California seaside town.
@@ -849,7 +916,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Morro Bay</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Morro Bay &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -868,7 +935,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Black Hill Trail</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Black Hill Trail &ndash;</h4></div>
                             <p>
                                 Of all the Morros in San Luis Obispo County, Black Hill is the easiest to summit.
                                  This 661-foot volcanic peak in Morro Bay State Park can be reached by hiking 0.6 miles 
@@ -886,7 +953,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>House of Juju</li>
                                         <li>Wee Shack</li>
@@ -898,7 +965,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Estero Inn</li>
                                         <li>Anderson Inn</li>
@@ -937,7 +1004,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Cambria and San Simeon</h3>
+                        <div class="dropdown__icon"><img src="img/6grey.svg" alt="6" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Cambria and San Simeon &mdash;</h3>
                         <p>
                             Cambria lies midway between Los Angeles and San Francisco. It's a picturesque village with a vibrant art community, fabulous restaurants and seaside vistas.
                             <br>
@@ -955,7 +1023,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Cambria</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Cambria &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -974,7 +1042,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Hearst Castle</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Hearst Castle &ndash;</h4></div>
                             <p>
                                 Hearst Castle’s history begins in 1865, when George Hearst purchased 40,000 acres of ranchland.
                                 William Randolph Hearst inherited thousands of acres around San Simeon and over time kept acquiring more.
@@ -992,7 +1060,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Robin's</li>
                                         <li>Indigo Moon</li>
@@ -1004,7 +1072,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Cambria Pines Lodge</li>
                                         <li>Fogcatcher Inn</li>
@@ -1043,7 +1111,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Big Sur</h3>
+                        <div class="dropdown__icon"><img src="img/7grey.svg" alt="7" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Big Sur &mdash;</h3>
                         <p>
                             Raw beauty and an intense maritime energy characterize this land shoehorned between 
                             the Santa Lucia Range and the Pacific Ocean, and a first glimpse of the craggy, 
@@ -1058,7 +1127,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Big Sur</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Big Sur &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -1077,7 +1146,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">McWay Falls</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; McWay Falls &ndash;</h4></div>
                             <p>
                                     McWay Falls is a beautiful and remarkable waterfall dropping into an untouched cove on the California coast. 
                                                                                     
@@ -1096,7 +1165,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Cafe Kevah</li>
                                         <li>Coast Gallery & Cafe</li>
@@ -1108,7 +1177,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Big Sur River Inn</li>
                                         <li>Big Sur Lodge</li>
@@ -1147,7 +1216,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Monterey Bay</h3>
+                        <div class="dropdown__icon"><img src="img/8grey.svg" alt="8" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Monterey Bay &mdash;</h3>
                         <p>
                         Wrapped by the Pacific on three sides, the Monterey Peninsula offers wind-tossed beaches and quiet coves, 
                         fine dining and casual eats, early history and postmodern art. World-renowned Monterey Bay Aquarium, 
@@ -1163,7 +1233,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Monterey Bay</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Monterey Bay &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -1182,7 +1252,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Point Lobos</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Point Lobos &ndash;</h4></div>
                             <p>This beautiful coastal state natural reserve feels a million miles away from anything tourist-y. 
                                 Walk the path to the tip of the park’s limestone point to look down into 
                                 turquoise-blue water. With binoculars, scan the water 
@@ -1199,7 +1269,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Rosine's Restaurant</li>
                                         <li>The Fish Hopper</li>
@@ -1211,7 +1281,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>The Monterey Hotel</li>
                                         <li>Monterey Tides</li>
@@ -1250,7 +1320,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">Santa Cruz</h3>
+                        <div class="dropdown__icon"><img src="img/9grey.svg" alt="9" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; Santa Cruz &mdash;</h3>
                         <p>
                             There're two sides to Santa Cruz : the family fun of the Santa Cruz Beach Boardwalk, 
                             an esplanade lined with classic coasters, arcade games, corn dogs, and a historic carousel. 
@@ -1263,7 +1334,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in Santa Cruz</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in Santa Cruz &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -1282,7 +1353,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">Santa Cruz Wine Country</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; Santa Cruz Wine Country &ndash;</h4></div>
                             <p> If you head inland just a bit, you can see the ancient trees at Big Basin Redwoods State Park, 
                                 located in the Santa Cruz Mountains. And there’s one other nature-inspired gem tucked 
                                 in these mountains: a generous selection of wineries (more than 70) most specializing in Pinot Noir, 
@@ -1299,7 +1370,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>Lago Di Como</li>
                                         <li>Harbor Cafe</li>
@@ -1311,7 +1382,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Bella Notte</li>
                                         <li>PacificBlue Inn</li>
@@ -1350,7 +1421,8 @@
                 <div class="dropdown__wipe width"></div>
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
-                        <h3 class="margin-bottom-medium">San Francisco</h3>
+                        <div class="dropdown__icon"><img src="img/10grey.svg" alt="10" class="dropdown__icon--img"></div>
+                        <h3 class="margin-bottom-medium">&mdash; San Francisco &mdash;</h3>
                         <p>
                             It may measure less than 50 square miles/130 square kilometers, but San Francisco ranks as one of the greatest 
                             cities in the world. One of the best way to visit it is by walking as parking is difficult, it'll also give you
@@ -1364,7 +1436,7 @@
                         </p>
                     </div>
                     <div class="dropdown__sideBar--weather">
-                        <div class="weather__title"><h4>Weather forecast in San Francisco</h4></div>
+                        <div class="weather__title"><h4>&ndash; Weather forecast in San Francisco &ndash;</h4></div>
                         <div class="weather__day weather__day--1"></div>
                         <div class="weather__day weather__day--2"></div>
                         <div class="weather__day weather__day--3"></div>
@@ -1383,7 +1455,7 @@
                         </div>
     
                         <div class="dropdown__spots--content">
-                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">The Walt Disney Family Museum</h4></div>
+                            <div class="dropdown__spots--title"><h4 class="margin-bottom-small">&ndash; The Walt Disney Family Museum &ndash;</h4></div>
                             <p> Although not very well-known, this museum situated by the Golen Gate Bridge is an absolute gem. Through a very well-presented and 
                                 dynamic exhibition, you get to learn how Walter Disney built his empire from scratch with very little if an absolute passion for
                                 entertainment and resiliance.                           
@@ -1399,7 +1471,7 @@
     
                         <div class="dropdown__food--content">
                                 <div class="dropdown__food--left">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Eat</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Eat &ndash;</h4></div>
                                     <ul class="dropdown__list" >
                                         <li>E'Tutto Qua</li>
                                         <li>Scoma's Restaurant</li>
@@ -1411,7 +1483,7 @@
     
                                 </div>
                                 <div class="dropdown__food--right">
-                                    <div class="dropdown__food--title margin-bottom-small"><h4>Sleep</h4></div>
+                                    <div class="dropdown__food--title margin-bottom-small"><h4>&ndash; Sleep &ndash;</h4></div>
                                     <ul class="dropdown__list">
                                         <li>Fairmont San Francisco</li>
                                         <li>Hilton Union Square</li>

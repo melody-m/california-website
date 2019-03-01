@@ -5,11 +5,12 @@ $color-grey-light2:#ebebeb;
 $color-grey-medium:#999999;
 $color-grey-dark:#666666;
 
-$color-one:#074684;
-$color-two: #0ea5c6;
-$color-three: #a0edf7;
 
-$color-four: #eef4f6;
+$color-one:#074684;
+$color-two: #1e98ee;
+$color-three: #b3e0ff;
+$color-four: #e5f3fc;
+$color-five: #429bda;
 
 //MARGINS
 
@@ -20,14 +21,13 @@ $color-four: #eef4f6;
     margin-bottom: 4rem;
 }
 .margin-top-big{
-    margin-top: 40rem;
+    margin-top: 25rem;
 }
 
 .left{
-    // margin-left: 3rem;
     text-align: left
 }
 .right{
-    // margin-right: 3rem;
     text-align: right;
+    float: right;
 }

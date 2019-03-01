@@ -29,10 +29,12 @@ h3{
     text-transform: lowercase;
     font-size: 3rem;
     font-weight: 300;
+    line-height: 5rem;
 }
 h4{
-    font-family: 'Open Sans', sans-serif;
-    //text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;    
+    font-variant: small-caps;    
+    letter-spacing: .18rem;
     font-weight: 300;
     font-size: 2.2rem;
 }
@@ -42,13 +44,48 @@ h4{
     &__text{
         text-align: justify;
     }
+    &__info{
+        text-align: center;
+        &--title{
+            font-family: 'Open Sans', sans-serif;    
+            font-variant: small-caps;    
+            letter-spacing: .18rem;
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+        &--num{
+            font-family: 'Major Mono Display', monospace;
+            text-transform: lowercase;
+            font-size: 3rem;
+        }
+    }
 }
 
-.dropdown__triangle--title{
+.dropdown{
+    &__triangle--title{
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
     font-size: 2.2rem;
     line-height: 3rem;
+    }
+    &__spots--content{
+        font-weight: 300;
+    }
+    &__food--content{
+        font-weight: 300;
+    }
+}
+
+.weather{
+    &__desc{
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__temp{
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 .trip{

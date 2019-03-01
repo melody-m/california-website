@@ -3,10 +3,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<g>
-	<path fill="none" stroke="#CCCCCC" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" d="M97.83,57.485
-		c-1.2-21.547-21.354-13.064-21.354-13.064C77.494,18.286,53.863,18.75,53.863,18.75c-25.754,1.571-23.536,17.882-23.888,17.566
-		c-11.541-10.354-26.221,2.359-26.9,13.051C1.629,72.165,21.405,73.96,21.405,73.96h60.078C81.482,73.96,95.755,72.361,97.83,57.485
-		z"/>
-</g>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M70.584,54.333
+	C74.084,32,53.342,31.201,53.342,31.201C40.422,30.454,35,39.438,34.75,44.375"/>
+<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37,48.083
+	C31.25,35.25,14.438,44,14.103,54.857c-1.118,17.613,14.161,19,14.161,19h46.417c0,0,11.024-1.234,12.631-12.729
+	c-0.931-16.646-16.498-10.096-16.498-10.096"/>
 </svg>
