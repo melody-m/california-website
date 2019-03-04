@@ -11,17 +11,23 @@
     
 
     &__closeBtn{
-        position: absolute;
+        position: fixed;
         top:2rem;
         right:4rem;
         font-size: 4rem;
         visibility: hidden;
         color: white;
+        z-index: 2000;
 
         background-color:transparent;
         border: none;
         cursor: pointer;
         z-index:15; 
+        @include respond(big-tab) {
+            color: $color-grey-medium; 
+            top:1rem;
+            right:2rem;               
+        }
     }
 
     &__wipe{
@@ -44,24 +50,54 @@
        
         transition: all .5s ease-out;
         position: relative;
-        
+
+        @include respond(big-tab) {
+            width: 100%;
+            height: auto;
+        }
 
         &--content{
             height: 70%;
             padding: 4rem;
-            
+            @include respond(big-tab) {
+                height: auto;
+                display: flex;
+            }    
+            @include respond(phone) {
+                flex-direction: column;
+            }        
         }
+
+        &--text{
+
+            @include respond(big-tab) {
+                width: 70%;
+            }    
+            @include respond(phone) {
+                width: 100%;
+            }          
+        }
+
         &--weather{
             height: 30%;
             text-align: center;
             background-color:white;
+            padding-bottom: 2rem;
+            @include respond(big-tab) {
+                display: flex;
+                align-items: center;
+            }
+
+            @include respond(phone) {
+                flex-direction: column;
+            }
+
         }
     }
     &__sideBarBox{
         width:100%;
         height: 100%;
         float: left;
-        
     }
 
     &__sideContent{
@@ -70,18 +106,40 @@
         height: 100%;
         float:left;
         transition: all .5s ease-out;
+
+        @include respond(big-tab) {
+            width: 100%;
+            height: auto;
+            overflow: scroll;
+        }
     }
 
     &__gallery{
         width: 100%;
         height: 60%;       
         position: relative;
+
+        @include respond(big-tab) {
+            height: 80rem;
+        }
+        @include respond(small-tab) {
+            height: 50rem;
+        }
     }
+
     &__accomodation{
         width: 100%;
         height: 40%;
-        display: flex;
+        display: flex;   
+        
+        @include respond(big-tab) {
+            height: auto;
+        }
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
+
     &__icon{
         width: 15rem;
         height: 15rem;
@@ -111,7 +169,10 @@
             top: 2rem;
             left: 2rem;
             text-align: left;
-            z-index: 50;        
+            z-index: 50;      
+                    @include respond(big-tab) {
+            height: 50rem;           
+        }  
         }
         &--icon{
             margin-top: 1.5rem;
@@ -120,7 +181,6 @@
 
     &__spots{
         width:50%;
-        height: 100%;
         padding: 3rem;        
         text-align: justify;
         color: white;
@@ -131,9 +191,12 @@
         align-items: center;
         justify-content: flex-end;
 
-        // float:left;
         position: relative;
         overflow: hidden;
+
+        @include respond(phone) {
+            width:100%;
+        }
         
         &--title{            
             text-align: right;  
@@ -142,9 +205,12 @@
         }
         &--content{
             width: 70%;
-            // float: right;  
             padding: 0 2rem;  
             font-weight: 300;
+
+            @include respond(phone) {
+                width:65%;
+            }
         }
     }
     &__list{
@@ -153,7 +219,6 @@
 
     &__food{
         width:50%;
-        height: 100%;
         padding: 6rem;        
         background-color: $color-one;
         color: white;
@@ -164,7 +229,10 @@
         position: relative;
         text-align: right;
         overflow: hidden;
-    
+
+        @include respond(phone) {
+            width:100%;
+        }    
 
         &--content{
             display: flex;
@@ -199,15 +267,40 @@
 
 .weather{
     &__title{
-        padding: 2rem 0;
+        padding-top: 2rem;
+        @include respond(big-tab) {
+            width: 20%;   
+            margin: 02rem;                  
+        }
+        @include respond(phone) {
+            width:100%;
+        }
     }
     &__day{
         width: 12rem;
         height: 12rem;
-        display: inline-block;   
+        display: inline-block;
+        
+        @include respond(big-tab) {
+            width: 30%;
+            display: flex;  
+            align-items: center;            
+        }
     }
+
     &__icon{
+        width: 12rem;
+        height: 12rem;
         margin-bottom: 1rem;
+
+        @include respond(big-tab) {
+            width: 8rem;
+            height: 8rem;            
+        }
+
+        &--img{
+            width: 100%;
+        }
     }
     &__desc{
         margin-bottom: 1rem;
@@ -223,7 +316,9 @@
         top: 0;
         left: 0; 
         transition: all 1s;
-                 
+        @include respond(big-tab) {
+           background-position: bottom;          
+        }                 
 
         &--1{
             background-image: url(../img/hollywood.jpg);
@@ -290,7 +385,11 @@
 
 .slideDown{    
     height: 100vh;
-    z-index: 10;    
+    z-index: 1000;    
+    @include respond(big-tab) {
+        height: 100%;        
+        overflow: scroll;       
+    } 
 }
 
 .width{

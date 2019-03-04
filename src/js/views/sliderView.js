@@ -129,13 +129,27 @@ export function closeSlider(){
         sliderOn[0].closeBtnOff();    
         sliderOn[0].opacityCont();
         sliderOn[0].displayCont();
-    }, 300);
+    }, 400);
 
     
     setTimeout(() =>{
         sliderOn.pop();     //remove object from array so that only one slider obj at any time -
         clearInterval(interval);   //clear interval to stop auto gallery
-    },1500);   
+    },1500);  
+
+    //Clear weather forecast in html so that it doesnt re-display it
+    const weatherList = sliderOn[0].dropdown.querySelectorAll('.weather__day--desc');
+    const weatherIcon = sliderOn[0].dropdown.querySelectorAll('.weather__icon');
+
+    weatherIcon.forEach((cur) =>{
+        cur.parentElement.removeChild(cur);
+    })
+    
+    weatherList.forEach((cur)=>{
+        while (cur.firstChild) {
+            cur.removeChild(cur.firstChild);
+        }
+    })
 
 }
 

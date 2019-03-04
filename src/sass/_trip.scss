@@ -1,28 +1,35 @@
 .roadtrip{
     position: relative; 
-    width: 100vw;
-}
-
-.test{
-    position: absolute;
-    top: 872px;
-    left: 1059.09375px;
-    width: 1rem;
-    height: 1rem;
-    background-color: red;
-    z-index: 500;
 }
 
 .trip{    
     margin: 0 auto;
     padding-top: 30rem;
     position: relative; 
+
+    @include respond(big-tab) {
+        padding-top: 20rem;
+    }  
+    @include respond(phone) {
+        padding-top: 5rem;
+    }  
     
     &__container{
         transition : all .5s ease-out;
         transform: translateY(50%);
         padding-bottom: 20rem;
         padding-left: 6rem;
+        position: relative;
+
+        @include respond(big-tab) {
+            padding-bottom: 10rem;
+        }  
+        @include respond(small-tab) {
+            padding-left: 0rem;
+        } 
+        @include respond(phone) {
+            padding-bottom: 5rem;
+        }
     }
     
     &__flexContainer{
@@ -30,6 +37,21 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+
+        &--master{
+            width: 100%;
+        }
+
+        &--child{
+            width: 80%;
+            padding: 3rem;
+            @include respond(big-tab) {
+                padding: 5rem;
+            }
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
     }
 
     &__icon{
@@ -40,28 +62,51 @@
         position: absolute;
         top: -30%;
         left: 50%;
-        transform: translate(-50%, -50%);         
+        transform: translate(-50%, -50%);    
+
+        @include respond(desktop) {
+            top: -20%;
+        }
+        @include respond(phone) {
+            top: -32%;
+            left: 20%;
+        }
+        
+        &--img{
+            width: 100%;
+        }
     }
 
     &__infoBox{
-        width: 30rem;  
-        padding-right: 6rem     ;
+        padding: 1rem;
+        padding-right: 6rem;
+        width: 20%;
         overflow: hidden;
 
+        @include respond(desktop) {
+            padding-right: 3rem;
+        }
+        @include respond(small-tab) {
+            padding: 0 3rem;
+        }
+        @include respond(phone) {
+            order: -1;
+            width: 100%;
+            padding-right: 5rem;
+        }
+
     }
-    &__dash{
-        width:4rem;
-        border-bottom: 1px solid $color-two;
-        position: absolute;
-        top: 0;
-        left: -9.5rem;
-        z-index: -20;
-    }
+
     &__info{  
         
         float : right;        
         transform: translateX(-100%);        
         transition : all .6s ease-out;
+
+        @include respond(phone) {
+            padding: 2rem;
+            background-color: $color-four;
+        }
        
 
         &--full{
@@ -83,8 +128,22 @@
         }        
     }
 
+    &__dash{
+        width:4rem;
+        border-bottom: 1px solid $color-two;
+        position: absolute;
+        top: 0;
+        left: -8rem;
+        z-index: -20;       
+    }
+
+
     &__photo{
-        width: 50%;     
+        width: 65%;   
+        @include respond(big-tab) {
+            width: 100%; 
+            padding: 0 3rem;
+        } 
                 
         &--img{
             width: 100%;         
@@ -93,15 +152,23 @@
             width: 50%;            
             margin-top: 4rem;
             border-bottom: 1px solid $color-grey-light;
+
+            @include respond(small-tab) {
+                width: 0;  
+            }         
         }   
 
     }
     &__desc{
         position: relative; 
-        margin: 3rem;
-        padding: 5rem 0;
+        padding: 5rem 3rem;
         border-top: 1px solid $color-grey-light;       
-        width: 25%;
+        width: 35%;
+
+        @include respond(big-tab) {
+            width: 100%; 
+            order: -1;
+        } 
         
     }
 
@@ -117,6 +184,9 @@
         &:hover{
             transform: scale(1.2);
         }
+        @include respond(small-tab) {
+            float: none;
+        } 
     }
 }
 

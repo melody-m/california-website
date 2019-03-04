@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>California roadtrip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Open+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
@@ -13,10 +33,50 @@
 
 <body>
 
-    <div class="landpage">
+    <div class="landpage" id="home">
         <div class="landpage__title">
             <h1>explore cAliforniA</h1>
             <h2>10 Incredible Stops on a Pacific Coast Highway Road Trip</h2>
+        </div>
+
+        <div class="navigation">
+
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">&nbsp;</span>
+                </label>
+    
+            <div class="navigation__background">    
+                <nav class="navigation__nav ">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">                           
+                            <a href="#home" class="navigation__link">home</a>
+                        </li>
+
+                        <li class="navigation__item">                            
+                            <a href="#about" class="navigation__link">About</a></li>
+                        <li class="navigation__item">                           
+                            <a href="#roadtrip" class="navigation__link" id="roadtrip-list">roAdtrip</a>
+                            <ul class="navigation__sublist listOff">
+                                <li class="navigation__subitem"><a href="#losangeles" class="navigation__sublink">1. Los Angeles</a></li>
+                                <li class="navigation__subitem"><a href="#santam" class="navigation__sublink">2. Santa Monica</a></li>
+                                <li class="navigation__subitem"><a href="#malibu" class="navigation__sublink">3. Malibu</a></li>
+                                <li class="navigation__subitem"><a href="#santab" class="navigation__sublink">4. Santa Barbara</a></li>
+                                <li class="navigation__subitem"><a href="#morrobay" class="navigation__sublink">5. Morro Bay</a></li>
+                                <li class="navigation__subitem"><a href="#cambria" class="navigation__sublink">6. Cambria - San Simeon</a></li>
+                                <li class="navigation__subitem"><a href="#bigsur" class="navigation__sublink">7. Big Sur</a></li>
+                                <li class="navigation__subitem"><a href="#monterey" class="navigation__sublink">8. Monterey</a></li>
+                                <li class="navigation__subitem"><a href="#santac" class="navigation__sublink">9. Santa Cruz</a></li>
+                                <li class="navigation__subitem"><a href="#sanfran" class="navigation__sublink">10. San Francisco</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                           
+                            <a href="#follow" class="navigation__link">follow us</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
         </div>
         
     </div>
@@ -25,29 +85,32 @@
 
         <div class="intro__map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d1394074.5866598743!2d-119.10702171873577!3d35.63106874295843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2sLos+Angeles+International+Airport!3m2!1d33.9415889!2d-118.40853!4m5!1s0x80c2a4cec2910019%3A0xb4170ab5ff23f5ab!2sSanta+Monica%2C+CA%2C+USA!3m2!1d34.0194543!2d-118.49119119999999!4m5!1s0x80e81da9f908d63f%3A0x93b72d71b2ea8c5a!2sMalibu%2C+CA%2C+USA!3m2!1d34.0259216!2d-118.7797571!4m5!1s0x80e914c76f2d83d5%3A0xc8d13a64d7ba7648!2sSanta+Barbara%2C+CA%2C+USA!3m2!1d34.4208305!2d-119.69819009999999!4m5!1s0x80ece10bb9b5aa93%3A0xaa1be219c181970c!2sMorro+Bay%2C+CA%2C+USA!3m2!1d35.3659445!2d-120.84999239999999!4m5!1s0x80ecd77a7b67481f%3A0xc4fd49cb873a8956!2sCambria%2C+CA%2C+USA!3m2!1d35.5641381!2d-121.0807468!4m5!1s0x808de8a7780e4d77%3A0x37e8d859caefac61!2sBig+Sur%2C+CA%2C+USA!3m2!1d36.3614749!2d-121.85626099999999!4m5!1s0x808de45270b5fb91%3A0xee484909d84a3d5e!2sMonterey%2C+CA%2C+USA!3m2!1d36.600237799999995!2d-121.8946761!4m5!1s0x808e441b7c36d549%3A0x52ca104b2ad7f985!2sSanta+Cruz%2C+CA%2C+USA!3m2!1d36.9741171!2d-122.03079629999999!4m5!1s0x808f778c55555555%3A0xe47189ad9eeadec8!2sSan+Francisco+International+Airport+Station!3m2!1d37.615982699999996!2d-122.392477!5e0!3m2!1sen!2suk!4v1551457261012"
-                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                 ></iframe>
 
         </div>
-        <div class="intro__text">
-            <p>                
-                The Pacific Coast Highway (PCH) was first started in the 1930s, 
-                and remains one of the most astoundingly scenic roads in the world, spreading over 600 miles (900 kilometers) of California’s 
-                beautiful coastlines. 
-                This very popular roadtrip roads is a fantastic opportunity to discover California, admiring the magnificiant landscapes,
-                pioneer outposts, surfing villages, while also making stops in major cities.
-                
-                Theoretically, the PCH goes all the way from San Diego to Vancouver, so quite a long way! However, we've created an itinary that 
-                goes from Los Angeles to San Francisco, with 10 incredible stops on the way, making it an easier roadtrip if you're flying in and out 
-                of California.
-            </p>
-        </div>
-      
-        <div class="intro__info">
-            <div class="intro__info--dist">                
-                <p class="intro__info--title">&ndash; Total distance &ndash;</p>
-                <p class="intro__info--num">~ 460 <span class="mini">miles</span></p>
-                <p class="intro__info--num">~ 10h00<span class="mini">min</span></p>
-            </div>                       
+
+        <div class="intro__flex">
+            <div class="intro__text" id="about">
+                <p>                
+                    The Pacific Coast Highway (PCH) was first started in the 1930s, 
+                    and remains one of the most astoundingly scenic roads in the world, spreading over 600 miles (900 kilometers) of California’s 
+                    beautiful coastlines. 
+                    This very popular roadtrip roads is a fantastic opportunity to discover California, admiring the magnificiant landscapes,
+                    pioneer outposts, surfing villages, while also making stops in major cities.
+                    
+                    Theoretically, the PCH goes all the way from San Diego to Vancouver, so quite a long way! However, we've created an itinary that 
+                    goes from Los Angeles to San Francisco, with 10 incredible stops on the way, making it an easier roadtrip if you're flying in and out 
+                    of California.
+                </p>
+            </div>
+          
+            <div class="intro__info">
+                <div class="intro__info--dist">                
+                    <p class="intro__info--title">&ndash; Total distance &ndash;</p>
+                    <p class="intro__info--num">~ 460 <span class="mini">miles</span></p>
+                    <p class="intro__info--num">~ 10h00<span class="mini">min</span></p>
+                </div>                       
+            </div>
         </div>
 
     </section>
@@ -61,37 +124,40 @@
         </div>
 
 
-        <div class="trip clearfix">   
-            <div class="trip__flag"></div>       
+        <div class="trip clearfix" id="roadtrip">   
+            <div class="trip__flag" id="losangeles"></div>       
 
 
             <div class="trip__container hidden">
-                
-                <div class="trip__flexContainer">
-        
-                    <div class="trip__photo">
-                        <img src="img/marina.png" alt="marina del rey photo" class="trip__photo--img">
-                        <div class="trip__photo--line"></div>
-                    </div>
-                    <div class="trip__desc left">
-                        <div class="trip__icon" id ="tripIcon-1"><img src="img/1.svg" alt="1"></div>
-                        <div class="trip__subtitle margin-bottom-medium">
-                            <h3>Starting point : 
-                                <br>                                
-                                &mdash; Los Angeles &mdash;</h3>
+
+                <div class="trip__flexContainer trip__flexContainer--master">
+                    <div class="trip__flexContainer trip__flexContainer--child">
+            
+                        <div class="trip__photo">
+                            <img src="img/marina.png" alt="marina del rey photo" class="trip__photo--img">
+                            <div class="trip__photo--line"></div>
                         </div>
-                        <div class="trip__text">
-                            <p>There is a lot to see and do in Los Angeles. We recommend that you stop in Marina Del Rey, just a stone throw
-                                away from the airport, one of the biggest marina in the world, full of incredible yachts.                         
-                                Then head on towards the quirky Venice, and stroll around the beautiful canals, a hidden gem just a few steps from
-                                beach but well worth a detour. Walk along the Hollywood Walk of Fame, drive down Sunset Boulevard and 
-                                stroll down Rodeo Drive. You could check out the awesome views of the Hollywood sign from Griffith Observatory.
-                                
-                            </p>
-                        </div> 
-                        <div><button class="trip__btn btn" id= "explore-1">Explore &rarr;</button></div>               
-                    </div>             
-                    
+                        <div class="trip__desc left">
+                            <div class="trip__icon" id ="tripIcon-1"><img src="img/1.svg" alt="1" class="trip__icon--img"></div>
+                            <div class="trip__subtitle margin-bottom-medium">
+                                <h3>Starting point : 
+                                    <br>                                
+                                    &mdash; Los Angeles &mdash;</h3>
+                            </div>
+                            <div class="trip__text">
+                                <p>There is a lot to see and do in Los Angeles. We recommend that you stop in Marina Del Rey, just a stone throw
+                                    away from the airport, one of the biggest marina in the world, full of incredible yachts.                         
+                                    Then head on towards the quirky Venice, and stroll around the beautiful canals, a hidden gem just a few steps from
+                                    beach but well worth a detour. Walk along the Hollywood Walk of Fame, drive down Sunset Boulevard and 
+                                    stroll down Rodeo Drive. You could check out the awesome views of the Hollywood sign from Griffith Observatory.
+                                    
+                                </p>
+                            </div> 
+                            <div><button class="trip__btn btn" id= "explore-1">Explore &rarr;</button></div>               
+                        </div>  
+                    </div>     
+    
+                   
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
@@ -104,34 +170,35 @@
                                 <p></p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
                             </div>                       
                         </div>
-                    </div>
-                   
-                    
-                    
-                </div>
+                    </div>               
+                </div>             
             </div>
-            <div class="trip__flag"></div>
-            <div class="trip__container hidden margin-top-big">
-                <div class="trip__flexContainer">
-                    <div class="trip__desc right">
-                        <div class="trip__icon"><img src="img/2.svg" alt="2"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Monica &mdash;</h3></div>
-                        <div class="trip__text">
-                            <p> With its “Baywatch” beaches, white sand and old-fashioned Pier, it is a really nice spot to spend a day. 
-                                It is quite easy to walk around in Santa Monica, you can also hire a bike, you'll see lots of people
-                                strolling by the beach, all the way from Venice beach. The Pier and 3rd Street Promenade are always buzzing with 
-                                loads of activities and plenty of shops. If you walk further away from the center towards the north, 
-                                you'll encounter incredible houses.                          
-                                
-                            </p>
-                        </div> 
-                        <div><button class="trip__btn btn" id= "explore-2">Explore &rarr;</button></div>      
-                    </div>
 
-                    <div class="trip__photo">
-                        <img src="img/santa-monica.png" alt="santa monica photo" class="trip__photo--img">
-                        <div class="trip__photo--line right"></div>
-                    </div>   
+
+            <div class="trip__flag" id="santam"></div>
+            <div class="trip__container hidden margin-top-big">
+                <div class="trip__flexContainer trip__flexContainer--master">
+                    <div class="trip__flexContainer trip__flexContainer--child">
+                        <div class="trip__desc right">
+                            <div class="trip__icon"><img src="img/2.svg" alt="2" class="trip__icon--img"></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Monica &mdash;</h3></div>
+                            <div class="trip__text">
+                                <p> With its “Baywatch” beaches, white sand and old-fashioned Pier, it is a really nice spot to spend a day. 
+                                    It is quite easy to walk around in Santa Monica, you can also hire a bike, you'll see lots of people
+                                    strolling by the beach, all the way from Venice beach. The Pier and 3rd Street Promenade are always buzzing with 
+                                    loads of activities and plenty of shops. If you walk further away from the center towards the north, 
+                                    you'll encounter incredible houses.                          
+
+                                </p>
+                            </div> 
+                            <div><button class="trip__btn btn" id= "explore-2">Explore &rarr;</button></div>      
+                        </div>
+
+                        <div class="trip__photo">
+                            <img src="img/santa-monica.png" alt="santa monica photo" class="trip__photo--img">
+                            <div class="trip__photo--line right"></div>
+                        </div>  
+                    </div> 
 
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
@@ -149,28 +216,29 @@
                 </div>
             </div>
 
-            <div class="trip__flag"></div>
+            <div class="trip__flag" id="malibu"></div>
             <div class="trip__container hidden margin-top-big">
                 
-                <div class="trip__flexContainer">
-        
-                    <div class="trip__photo">
-                        <img src="img/malibu.png" alt="malibu photo" class="trip__photo--img">
-                        <div class="trip__photo--line"></div>
-                    </div>
-                    <div class="trip__desc left">
-                            <div class="trip__icon"><img src="img/3.svg" alt="3"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Malibu &mdash;</h3></div>
-                        <div class="trip__text">
-                            <p> Malibu has incredible beaches, more natural than the slightly artificial look of the Santa Monica ones.
-                                Follow the signs to Point Dume and you’ll find a beautiful sandy beach, headlands, cliffs and rocky coves. 
-                                Take a walk around Malibu and you’ll find piers and super healthy restaurants.  
-                                Exit Malibu via the stunning Topanga Canyon – a popular weekend hideaway for Hollywood superstars for years. 
-                                Stay on Route 27 and you’ll come across offbeat stores, diners and ramshackle saloons along the roadside. 
-                                Get out at the top for an awesome view over the San Fernando Valley at the top of Topanga Overlook.                                
-                            </p>
-                        </div> 
-                        <div><button class="trip__btn btn" id= "explore-3">Explore &rarr;</button></div>               
+                <div class="trip__flexContainer trip__flexContainer--master">
+                    <div class="trip__flexContainer trip__flexContainer--child">        
+                        <div class="trip__photo">
+                            <img src="img/malibu.png" alt="malibu photo" class="trip__photo--img">
+                            <div class="trip__photo--line"></div>
+                        </div>
+                        <div class="trip__desc left">
+                                <div class="trip__icon"><img src="img/3.svg" alt="3" class="trip__icon--img"></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Malibu &mdash;</h3></div>
+                            <div class="trip__text">
+                                <p> Malibu has incredible beaches, more natural than the slightly artificial look of the Santa Monica ones.
+                                    Follow the signs to Point Dume and you’ll find a beautiful sandy beach, headlands, cliffs and rocky coves. 
+                                    Take a walk around Malibu and you’ll find piers and super healthy restaurants.  
+                                    Exit Malibu via the stunning Topanga Canyon – a popular weekend hideaway for Hollywood superstars for years. 
+                                    Stay on Route 27 and you’ll come across offbeat stores, diners and ramshackle saloons along the roadside. 
+                                    Get out at the top for an awesome view over the San Fernando Valley at the top of Topanga Overlook.                                
+                                </p>
+                            </div> 
+                            <div><button class="trip__btn btn" id= "explore-3">Explore &rarr;</button></div>               
+                        </div>
                     </div>
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
@@ -188,30 +256,32 @@
                 </div>
             </div>
 
-            <div class="trip__flag"></div>
+            <div class="trip__flag" id="santab"></div>
             <div class="trip__container hidden margin-top-big">
-                <div class="trip__flexContainer">
-                    <div class="trip__desc right">
-                        <div class="trip__icon"><img src="img/4.svg" alt="4"></div>
-                        <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Barbara &mdash;</h3></div>
-                        <div class="trip__text">
-                            <p> Santa Barbara has a really nice vibe, a perfect mix between casual beach, history and city attractions. 
+                <div class="trip__flexContainer trip__flexContainer--master">
+                    <div class="trip__flexContainer trip__flexContainer--child">
+                        <div class="trip__desc right">
+                            <div class="trip__icon"><img src="img/4.svg" alt="4" class="trip__icon--img"></div>
+                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Barbara &mdash;</h3></div>
+                            <div class="trip__text">
+                                <p> Santa Barbara has a really nice vibe, a perfect mix between casual beach, history and city attractions. 
 
-                                This is a city filled with adobe homes, Spanish Colonial Revival architecture and mansions, you can learn
-                                more about the city’s colonial history at the Old Mission Santa Barbara.  
-                                Shop and explore the city’s arts district known as the Funk Zone as well as the multiple crafty shops.
-                                Animal and flora lovers will enjoy Santa Barbara Zoo, Santa Barbara Botanic Garden and Lotusland. 
-                                The pier hosts plenty of restaurants with plenty of seafood choice.              
-                                
-                            </p>
-                        </div> 
-                        <div><button class="trip__btn btn" id= "explore-4">Explore &rarr;</button></div>      
+                                    This is a city filled with adobe homes, Spanish Colonial Revival architecture and mansions, you can learn
+                                    more about the city’s colonial history at the Old Mission Santa Barbara.  
+                                    Shop and explore the city’s arts district known as the Funk Zone as well as the multiple crafty shops.
+                                    Animal and flora lovers will enjoy Santa Barbara Zoo, Santa Barbara Botanic Garden and Lotusland. 
+                                    The pier hosts plenty of restaurants with plenty of seafood choice.              
+
+                                </p>
+                            </div> 
+                            <div><button class="trip__btn btn" id= "explore-4">Explore &rarr;</button></div>      
+                        </div>
+
+                        <div class="trip__photo">
+                            <img src="img/santa-barbara.png" alt="santa monica photo" class="trip__photo--img">
+                            <div class="trip__photo--line right"></div>
+                        </div>  
                     </div>
-
-                    <div class="trip__photo">
-                        <img src="img/santa-barbara.png" alt="santa monica photo" class="trip__photo--img">
-                        <div class="trip__photo--line right"></div>
-                    </div>  
                     <div class="trip__infoBox">
                         <div class="trip__info hidden">
                             <div class="trip__info--full">
@@ -228,33 +298,31 @@
                 </div>
             </div>
 
-            <div class="trip__flag"></div>
+            <div class="trip__flag" id="morrobay"></div>
             <div class="trip__container hidden margin-top-big">
                     
-                    <div class="trip__flexContainer">            
-                        <div class="trip__photo">
-                            <img src="img/morro-bay.png" alt="malibu photo" class="trip__photo--img">
-                            <div class="trip__photo--line"></div>
-                        </div>
-                        <div class="trip__desc left">
-                                <div class="trip__icon"><img src="img/5.svg" alt="5"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Morro Bay &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
-                                    
-                                    Morro Bay is a seaside fishing village with bustling waterfront and gorgeous natural setting.
-                                    Home to world-famous Morro Rock, this seaside destination serves as the backdrop to an abundance 
-                                    of year-round activities like boating, kayaking, surfing, golfing, hiking and biking.
+                    <div class="trip__flexContainer trip__flexContainer--master">   
+                        <div class="trip__flexContainer trip__flexContainer--child">         
+                            <div class="trip__photo">
+                                <img src="img/morro-bay.png" alt="malibu photo" class="trip__photo--img">
+                                <div class="trip__photo--line"></div>
+                            </div>
+                            <div class="trip__desc left">
+                                    <div class="trip__icon"><img src="img/5.svg" alt="5" class="trip__icon--img"></div>
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Morro Bay &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> Morro Bay is a seaside fishing village with bustling waterfront and gorgeous natural setting.
+                                        Home to world-famous Morro Rock, this seaside destination serves as the backdrop to an abundance 
+                                        of year-round activities like boating, kayaking, surfing, golfing, hiking and biking.
 
-                                    At Morro Bay State Park, you may see any number of wild animals 
-                                    including blue herons, monarch butterflies, hummingbirds and sea otters. The park offers trails, 
-                                    a small museum and picnic benches, making it a perfect road trip stop for when 
-                                    you need to stretch your legs.
-
-                                            
-                                </p>
-                            </div> 
-                            <div><button class="trip__btn btn" id= "explore-5">Explore &rarr;</button></div>               
+                                        At Morro Bay State Park, you may see any number of wild animals 
+                                        including blue herons, monarch butterflies, hummingbirds and sea otters. The park offers trails, 
+                                        a small museum and picnic benches, making it a perfect road trip stop for when 
+                                        you need to stretch your legs.
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-5">Explore &rarr;</button></div>               
+                            </div>
                         </div>
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
@@ -272,31 +340,33 @@
                     </div>
                 </div>
 
-                <div class="trip__flag"></div>
+                <div class="trip__flag" id="cambria"></div>
                 <div class="trip__container hidden margin-top-big">
-                    <div class="trip__flexContainer">
-                        <div class="trip__desc right">
-                            <div class="trip__icon"><img src="img/6.svg" alt="6"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Cambria and San Simeon &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
-                                    On the way into Cambria, stop at the Piedras Blancas Friends of the Elephant Seal rookery, 
-                                    where crowds of elephant seals mate and fight (don't get too close, they can be dangerous)
-                                    Continue to the charming seaside village, home to rocky shorelines, bluffs and tide pools teeming with sea life.
+                    <div class="trip__flexContainer trip__flexContainer--master">
+                        <div class="trip__flexContainer trip__flexContainer--child">
+                            <div class="trip__desc right">
+                                <div class="trip__icon"><img src="img/6.svg" alt="6" class="trip__icon--img"></div>    
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Cambria and San Simeon &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> 
+                                        On the way into Cambria, stop at the Piedras Blancas Friends of the Elephant Seal rookery, 
+                                        where crowds of elephant seals mate and fight (don't get too close, they can be dangerous)
+                                        Continue to the charming seaside village, home to rocky shorelines, bluffs and tide pools teeming with sea life.
+
+
+                                        When you hit San Simeon, make your way up to Hearst Castle on The Enchanted Hill and you can travel back 
+                                        in time as you make your way through more than 250,000 acres of rooms, suites, cottages, kitchens and grounds.                                       
                                     
-                                    
-                                    When you hit San Simeon, make your way up to Hearst Castle on The Enchanted Hill and you can travel back 
-                                    in time as you make your way through more than 250,000 acres of rooms, suites, cottages, kitchens and grounds.                                       
-                                   
-                                </p>
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-6">Explore &rarr;</button></div>      
+                            </div>
+                        
+                            <div class="trip__photo">
+                                <img src="img/san-simeon.png" alt="santa monica photo" class="trip__photo--img">
+                                <div class="trip__photo--line right"></div>
                             </div> 
-                            <div><button class="trip__btn btn" id= "explore-6">Explore &rarr;</button></div>      
                         </div>
-    
-                        <div class="trip__photo">
-                            <img src="img/san-simeon.png" alt="santa monica photo" class="trip__photo--img">
-                            <div class="trip__photo--line right"></div>
-                        </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
@@ -313,30 +383,31 @@
                     </div>
                 </div>
 
-                <div class="trip__flag"></div>
+                <div class="trip__flag" id="bigsur"></div>
                 <div class="trip__container hidden margin-top-big">
                     
-                    <div class="trip__flexContainer">
-            
-                        <div class="trip__photo">
-                            <img src="img/big-sur.png" alt="malibu photo" class="trip__photo--img">
-                            <div class="trip__photo--line"></div>
-                        </div>
-                        <div class="trip__desc left">
-                            <div class="trip__icon"><img src="img/7.svg" alt="7"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Big Sur &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
+                    <div class="trip__flexContainer trip__flexContainer--master">
+                        <div class="trip__flexContainer trip__flexContainer--child">            
+                            <div class="trip__photo">
+                                <img src="img/big-sur.png" alt="malibu photo" class="trip__photo--img">
+                                <div class="trip__photo--line"></div>
+                            </div>
+                            <div class="trip__desc left">
+                                <div class="trip__icon"><img src="img/7.svg" alt="7" class="trip__icon--img"></div>
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Big Sur &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> 
+
+                                    To get to the Big Sur you’ll travel over the Bixby Bridge –  one of the highest bridges of its kind in the world, 
+                                    soars 260 feet above the bottom of a steep canyon carved by Bixby Creek and one of the most photographed bridges on the West Coast. 
                                     
-                                To get to the Big Sur you’ll travel over the Bixby Bridge –  one of the highest bridges of its kind in the world, 
-                                soars 260 feet above the bottom of a steep canyon carved by Bixby Creek and one of the most photographed bridges on the West Coast. 
-                                
-                                There are many beautiful sights along the Big Sur – Pfeiffer Beach, McWay Falls, 
-                                Point Sur State Historic Park, Ragged Point – it’ll be hard to get any driving done 
-                                with all the lookout points. If you have time, take a few days to relax along the route.                                  
-                                </p>
-                            </div> 
-                            <div><button class="trip__btn btn" id= "explore-7">Explore &rarr;</button></div>               
+                                    There are many beautiful sights along the Big Sur – Pfeiffer Beach, McWay Falls, 
+                                    Point Sur State Historic Park, Ragged Point – it’ll be hard to get any driving done 
+                                    with all the lookout points. If you have time, take a few days to relax along the route.                                  
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-7">Explore &rarr;</button></div>               
+                            </div>
                         </div>
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
@@ -354,29 +425,33 @@
                     </div>
                 </div>
                 
-                <div class="trip__flag"></div>
+                <div class="trip__flag" id="monterey"></div>
                 <div class="trip__container hidden margin-top-big">
-                    <div class="trip__flexContainer">
-                        <div class="trip__desc right">
-                            <div class="trip__icon"><img src="img/8.svg" alt="8"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Monterey Bay &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
-                                    On your way to Monterey, check out the stunning Point Lobos State Natural Reserve and chill at the Old Fisherman’s Wharf. 
-                                    If you have time, stop by Carmel-by-the-Sea a nice seaside village with shops, cafes and restaurants.
-                                    Monterey is well known for its Aquarium (yes the one in Saving Nemo!) situated in Cannery Row where you can also find shops and restaurants.
-                                    Constantly surprising with new exhibits and programs, and with a dedication to marine education and conservation, 
-                                    the aquarium is ranked among the top attractions in the world and well worth a visit.                                   
-                                   
-                                </p>
+                    <div class="trip__flexContainer trip__flexContainer--master">
+                        <div class="trip__flexContainer trip__flexContainer--child">
+                            <div class="trip__desc right">
+                                <div class="trip__icon"><img src="img/8.svg" alt="8" class="trip__icon--img"></div>  
+
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Monterey Bay &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> 
+                                        On your way to Monterey, check out the stunning Point Lobos State Natural Reserve and chill at the Old Fisherman’s Wharf. 
+                                        If you have time, stop by Carmel-by-the-Sea a nice seaside village with shops, cafes and restaurants.
+                                        Monterey is well known for its Aquarium (yes the one in Saving Nemo!) situated in Cannery Row where you can also find shops and restaurants.
+                                        Constantly surprising with new exhibits and programs, and with a dedication to marine education and conservation, 
+                                        the aquarium is ranked among the top attractions in the world and well worth a visit.                                   
+                                    
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-8" class="trip__icon--img">Explore &rarr;</button></div>      
+                            </div>
+                        
+                            <div class="trip__photo">
+                                <img src="img/monterey.png" alt="Monterey Bay photo" class="trip__photo--img">
+                                <div class="trip__photo--line right"></div>
                             </div> 
-                            <div><button class="trip__btn btn" id= "explore-8">Explore &rarr;</button></div>      
+                            
                         </div>
-    
-                        <div class="trip__photo">
-                            <img src="img/monterey.png" alt="Monterey Bay photo" class="trip__photo--img">
-                            <div class="trip__photo--line right"></div>
-                        </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
@@ -393,28 +468,30 @@
                     </div>
                 </div>
 
-                <div class="trip__flag"></div>
+                <div class="trip__flag" id="santac"></div>
                 <div class="trip__container hidden margin-top-big">                    
-                    <div class="trip__flexContainer">            
-                        <div class="trip__photo">
-                            <img src="img/santa-cruz.png" alt="santa-cruz photo" class="trip__photo--img">
-                            <div class="trip__photo--line"></div>
-                        </div>
-                        <div class="trip__desc left">
-                            <div class="trip__icon"><img src="img/9.svg" alt="9"></div>
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Cruz &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
-                                Santa Cruz is a friendly beach town with gorgeous redwood trees and waves that surfers from all over flock to ride. 
-                                Founded in 1907, the Santa Cruz Boardwalk has an old-school Americana vibe 
-                                with its old-fashioned roller coasters and arcade. The Mystery Spot – a collection of strange phenomena from the last 70 years –
-                                also makes for an entertaining few hours.                                   
-  
-                                The Wharf is a great place to start for restaurants and shops and if you have the 
-                                time you can go on a whale watching boat or fishing expedition.                                 
-                                </p>
-                            </div> 
-                            <div><button class="trip__btn btn" id= "explore-9">Explore &rarr;</button></div>               
+                    <div class="trip__flexContainer trip__flexContainer--master">
+                        <div class="trip__flexContainer trip__flexContainer--child">            
+                            <div class="trip__photo">
+                                <img src="img/santa-cruz.png" alt="santa-cruz photo" class="trip__photo--img">
+                                <div class="trip__photo--line"></div>
+                            </div>
+                            <div class="trip__desc left">
+                                <div class="trip__icon"><img src="img/9.svg" alt="9" class="trip__icon--img"></div>
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; Santa Cruz &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> 
+                                    Santa Cruz is a friendly beach town with gorgeous redwood trees and waves that surfers from all over flock to ride. 
+                                    Founded in 1907, the Santa Cruz Boardwalk has an old-school Americana vibe 
+                                    with its old-fashioned roller coasters and arcade. The Mystery Spot – a collection of strange phenomena from the last 70 years –
+                                    also makes for an entertaining few hours.                                   
+                                    
+                                    The Wharf is a great place to start for restaurants and shops and if you have the 
+                                    time you can go on a whale watching boat or fishing expedition.                                 
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-9">Explore &rarr;</button></div>               
+                            </div>
                         </div>
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
@@ -432,29 +509,31 @@
                     </div>
                 </div>
 
-                <div class="trip__flag"></div>
+                <div class="trip__flag" id="sanfran"></div>
                 <div class="trip__container hidden margin-top-big">
-                    <div class="trip__flexContainer">
-                        <div class="trip__desc right">
-                            <div class="trip__icon"><img src="img/10.svg" alt="10"></div>    
-                            <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; San Francisco &mdash;</h3></div>
-                            <div class="trip__text">
-                                <p> 
-                                Take a drive over the Golden Gate Bridge and you’ll feel like you’ve well and truly arrived in San Francisco.
-                                There’s loads to do in San Francisco, but parking can be hard to find, so it's better to get around via the famous 
-                                San Francisco tram or walk. Spend some time in Fisherman’s Wharf and try some of the seafood.
-                                Book a visit to Alcatraz Island by ferry or just relax with a coffee in Union Square but make sure to walk down 
-                                crazy Lombard Street.                                                                                          
-                                   
-                                </p>
+                    <div class="trip__flexContainer trip__flexContainer--master">
+                        <div class="trip__flexContainer trip__flexContainer--child">
+                            <div class="trip__desc right">
+                                <div class="trip__icon"><img src="img/10.svg" alt="10" class="trip__icon--img"></div>    
+                                <div class="trip__subtitle margin-bottom-medium"><h3>&mdash; San Francisco &mdash;</h3></div>
+                                <div class="trip__text">
+                                    <p> 
+                                    Take a drive over the Golden Gate Bridge and you’ll feel like you’ve well and truly arrived in San Francisco.
+                                    There’s loads to do in San Francisco, but parking can be hard to find, so it's better to get around via the famous 
+                                    San Francisco tram or walk. Spend some time in Fisherman’s Wharf and try some of the seafood.
+                                    Book a visit to Alcatraz Island by ferry or just relax with a coffee in Union Square but make sure to walk down 
+                                    crazy Lombard Street.                                                                                          
+                                    
+                                    </p>
+                                </div> 
+                                <div><button class="trip__btn btn" id= "explore-10">Explore &rarr;</button></div>      
+                            </div>
+                        
+                            <div class="trip__photo">
+                                <img src="img/san-fran.png" alt="San Francisco photo" class="trip__photo--img">
+                                <div class="trip__photo--line right"></div>
                             </div> 
-                            <div><button class="trip__btn btn" id= "explore-10">Explore &rarr;</button></div>      
                         </div>
-    
-                        <div class="trip__photo">
-                            <img src="img/san-fran.png" alt="San Francisco photo" class="trip__photo--img">
-                            <div class="trip__photo--line right"></div>
-                        </div> 
                         <div class="trip__infoBox">
                             <div class="trip__info hidden">
                                 <div class="trip__info--full">
@@ -490,22 +569,24 @@
             <div class="dropdown__sideBarBox">
                 <div class="dropdown__sideBar--content">
                     <div class="dropdown__icon"><img src="img/1grey.svg" alt="1" class="dropdown__icon--img"></div>
-                    <h3 class="margin-bottom-medium">&mdash; Los Angeles &mdash;</h3>
-                    <p>Roughly six miles north of Los Angeles International Airport sits Marina del Rey, 
-                    a charming coastal community with sailboats, beaches, and bike paths. 
-                    Head towards Hollywood, on the way you'll go through Beverly Hills, take Rodeo Drive to go down Sunset Boulevard.
-                    Stroll down Hollywood Walk of Fame and stop by the TCL Chinese Theatre where you'll find celebrities hands and footprints.
-                    From Hollywood, get higher in the hill to access the Griffith Park and Observatory. The Observatory opens a window onto the universe
-                    with its planetarium, exhibitions and the opportunity to peer into the Zeist Telescope. You'll also enjoy some amazing views of the city especially
-                    at sunset. 
-                        <!-- Rent a bicycle and cruise north to Venice Beach where you'll find quirky tourist shops and Muscle Beach Gym. -->
-                    </p>
+
+                    <div class="dropdown__sideBar--text">
+                        <h3 class="margin-bottom-medium">&mdash; Los Angeles &mdash;</h3>
+                        <p>Roughly six miles north of Los Angeles International Airport sits Marina del Rey, 
+                        a charming coastal community with sailboats, beaches, and bike paths. 
+                        Head towards Hollywood, on the way you'll go through Beverly Hills, take Rodeo Drive to go down Sunset Boulevard.
+                        Stroll down Hollywood Walk of Fame and stop by the TCL Chinese Theatre where you'll find celebrities hands and footprints.
+                        From Hollywood, get higher in the hill to access the Griffith Park and Observatory. The Observatory opens a window onto the universe
+                        with its planetarium, exhibitions and the opportunity to peer into the Zeist Telescope. You'll also enjoy some amazing views of the city especially
+                        at sunset.                            
+                        </p>
+                    </div>
                 </div>
                 <div class="dropdown__sideBar--weather">
                     <div class="weather__title"><h4>&ndash; Weather forecast in Los Angeles &ndash;</h4></div>
-                    <div class="weather__day weather__day--1"></div>
-                    <div class="weather__day weather__day--2"></div>
-                    <div class="weather__day weather__day--3"></div>
+                    <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                    <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                    <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                 </div>
             </div>
         </div>
@@ -570,11 +651,7 @@
 
             <div class="dropdown__gallery off hidden">
                 <div class="dropdown__wipe width"></div>
-                <div class="gallery__square">
-                    <div class="gallery__imgBtn btn"></div>
-                    <div class="gallery__imgBtn btn"></div>
-                    <div class="gallery__imgBtn btn"></div>
-                </div>
+
                 <div class="gallery__img gallery__img--1"></div>
                 <div class="gallery__img gallery__img--2"></div>
                 <div class="gallery__img gallery__img--3"></div>
@@ -599,26 +676,25 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/2grey.svg" alt="2" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Santa Monica &mdash;</h3>
-                        <p>If you start from Venice going up towards Santa Monica you'll get an opportunity to pass Venice Beach and the Boardwalk.
-                            Between quirky tourist shops, you'll meet a very ecclectic crowd of artists, new agers, freaks and free spirits : 
-                            that's the place to be to relive the hippie heyday.
-                            <br>
-                            Following the beach towards the North, you'll arrive to Santa Monica and its famous pier. Once the very end of the mythical Route 66, 
-                            it's the city's most compelling landmark. There you can find a vintage carrousel, a Ferris wheel and a rollercoaster, arcades, restaurants and plenty of tourist
-                            stands. The surrounded beach is one of the nicest, with very fine white sand. 
-                            If you walk towards the center, you'll reach Third Street Promenade, a dynamic high street with plenty of street performers.
-            
 
-
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Santa Monica &mdash;</h3>
+                            <p>If you start from Venice going up towards Santa Monica you'll get an opportunity to pass Venice Beach and the Boardwalk.
+                                Between quirky tourist shops, you'll meet a very ecclectic crowd of artists, new agers, freaks and free spirits : 
+                                that's the place to be to relive the hippie heyday.
+                                <br>
+                                Following the beach towards the North, you'll arrive to Santa Monica and its famous pier. Once the very end of the mythical Route 66, 
+                                it's the city's most compelling landmark. There you can find a vintage carrousel, a Ferris wheel and a rollercoaster, arcades, restaurants and plenty of tourist
+                                stands. The surrounded beach is one of the nicest, with very fine white sand. 
+                                If you walk towards the center, you'll reach Third Street Promenade, a dynamic high street with plenty of street performers. 
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Santa Monica &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -683,11 +759,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--4"></div>
                     <div class="gallery__img gallery__img--5"></div>
                     <div class="gallery__img gallery__img--6"></div>
@@ -705,21 +777,20 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/3grey.svg" alt="3" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Malibu &mdash;</h3>
-                        <p> While you head towards Malibu, stop at the Getty Villa, this famous museum is a stunning 64-acres showcase for reek, Romand and Etruscan antiquities
-                            amassed by J Paul Getty. 
-                            Malibu is famous for the number of celebrities who resides in the area, and that's no wonder considering the incredible 
-                            coastal mountains, natural beaches : we recommend Westward Beach, Zuna and El Matador as well as Point Dume.
-
-
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Malibu &mdash;</h3>
+                            <p> While you head towards Malibu, stop at the Getty Villa, this famous museum is a stunning 64-acres showcase for reek, Romand and Etruscan antiquities
+                                amassed by J Paul Getty. 
+                                Malibu is famous for the number of celebrities who resides in the area, and that's no wonder considering the incredible 
+                                coastal mountains, natural beaches : we recommend Westward Beach, Zuna and El Matador as well as Point Dume.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Malibu &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -782,11 +853,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--7"></div>
                     <div class="gallery__img gallery__img--8"></div>
                     <div class="gallery__img gallery__img--9"></div>
@@ -804,20 +871,20 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/4grey.svg" alt="4" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Santa Barbara &mdash;</h3>
-                        <p>Santa Barbara County is a very pleasant area to putter around. Spend your morning
-                            soaking up rays at East Beach, then walk out onto Stearns Wharf and down by the harbour. Visit downtown's museums,
-                            landmarks and shops along State Street. For nice 360degrees views, stop at the county courthouse and climb up its clock tower
-                            For a tour of the vineyards, head up to Santa Barbara's Wine County, Foxen Canyon and the Santa Rita Hills are exceptionnally beutiful.
-
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Santa Barbara &mdash;</h3>
+                            <p>Santa Barbara County is a very pleasant area to putter around. Spend your morning
+                                soaking up rays at East Beach, then walk out onto Stearns Wharf and down by the harbour. Visit downtown's museums,
+                                landmarks and shops along State Street. For nice 360degrees views, stop at the county courthouse and climb up its clock tower
+                                For a tour of the vineyards, head up to Santa Barbara's Wine County, Foxen Canyon and the Santa Rita Hills are exceptionnally beutiful.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Santa Barbara &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -882,11 +949,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--10"></div>
                     <div class="gallery__img gallery__img--11"></div>
                     <div class="gallery__img gallery__img--12"></div>
@@ -903,23 +966,23 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/5grey.svg" alt="5" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Morro Bay &mdash;</h3>
-                        <p>
-                            Just off Morro Bay's shore sits a massive, ancient volcanic plug known as Morro Rock rises 576 feet from the ocean, 
-                            makin it impossible to mistake Morro Bay for any other California seaside town.
-                            Fishermen plied their trade in the shadow of Morro Rock for decades; today, 
-                            the town maintains its sea-faring charm with a full menu of activities added :                           
-                            from ocean-side golf, kayaking, sailing, hiking, fishing, surfing, biking, and bird watching, 
-                            to kite flying, shopping, dining, wine bars, local craft brews and miles of unspoiled beaches, 
-                            there is something for all ages to enjoy.
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Morro Bay &mdash;</h3>
+                            <p>Just off Morro Bay's shore sits a massive, ancient volcanic plug known as Morro Rock rises 576 feet from the ocean, 
+                                makin it impossible to mistake Morro Bay for any other California seaside town.
+                                Fishermen plied their trade in the shadow of Morro Rock for decades; today, 
+                                the town maintains its sea-faring charm with a full menu of activities added :                           
+                                from ocean-side golf, kayaking, sailing, hiking, fishing, surfing, biking, and bird watching, 
+                                to kite flying, shopping, dining, wine bars, local craft brews and miles of unspoiled beaches, 
+                                there is something for all ages to enjoy.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Morro Bay &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -983,11 +1046,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--13"></div>
                     <div class="gallery__img gallery__img--14"></div>
                     <div class="gallery__img gallery__img--15"></div>
@@ -1005,28 +1064,28 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/6grey.svg" alt="6" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Cambria and San Simeon &mdash;</h3>
-                        <p>
-                            Cambria lies midway between Los Angeles and San Francisco. It's a picturesque village with a vibrant art community, fabulous restaurants and seaside vistas.
-                            <br>
-                            Hearst Castle is an extravagent monument that is really worth a visit. On your way there through the winding
-                            ranch road, you might see zebras grazing on the Castle's land from Highway 1.
-                            <br>
-                            Carrying on along the coast, you'll reach the Elephant Seal Vista Point.                           
-                            The Piedras Blancas Rookery is the only elephant seal rookery in the world that is easily accessible, 
-                            free, and open to the public every day of the year.
-                            <br>
-                            On your way out of San Simeon, stop by Ragged Point for the breathtaking million dollar view atop rocky cliffs, 
-                            and a secret waterfall.
-                           
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Cambria and San Simeon &mdash;</h3>
+                            <p>
+                                Cambria lies midway between Los Angeles and San Francisco. It's a picturesque village with a vibrant art community, fabulous restaurants and seaside vistas.
+                                <br>
+                                Hearst Castle is an extravagent monument that is really worth a visit. On your way there through the winding
+                                ranch road, you might see zebras grazing on the Castle's land from Highway 1.
+                                <br>
+                                Carrying on along the coast, you'll reach the Elephant Seal Vista Point.                           
+                                The Piedras Blancas Rookery is the only elephant seal rookery in the world that is easily accessible, 
+                                free, and open to the public every day of the year.
+                                <br>
+                                On your way out of San Simeon, stop by Ragged Point for the breathtaking million dollar view atop rocky cliffs, 
+                                and a secret waterfall.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Cambria &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -1090,11 +1149,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--16"></div>
                     <div class="gallery__img gallery__img--17"></div>
                     <div class="gallery__img gallery__img--18"></div>
@@ -1112,25 +1167,25 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/7grey.svg" alt="7" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Big Sur &mdash;</h3>
-                        <p>
-                            Raw beauty and an intense maritime energy characterize this land shoehorned between 
-                            the Santa Lucia Range and the Pacific Ocean, and a first glimpse of the craggy, 
-                            unspoiled coastline is a special moment.
-                            simply, a place you want to be—bluffs, sea, and sky.
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Big Sur &mdash;</h3>
+                            <p> Raw beauty and an intense maritime energy characterize this land shoehorned between 
+                                the Santa Lucia Range and the Pacific Ocean, and a first glimpse of the craggy, 
+                                unspoiled coastline is a special moment.
+                                simply, a place you want to be—bluffs, sea, and sky.
 
-                            The classic drive through Big Sur, along twisting Highway 1, offers plenty of pullovers at places 
-                            like Bixby Bridge. Stop at parks along the coastline and look up to see endangered California condors, 
-                            North America’s largest birds, or look down to scan the swells for migrating whales or sea otters 
-                            floating among dense beds of kelp, California’s signature seaweed.
-                            
-                        </p>
+                                The classic drive through Big Sur, along twisting Highway 1, offers plenty of pullovers at places 
+                                like Bixby Bridge. Stop at parks along the coastline and look up to see endangered California condors, 
+                                North America’s largest birds, or look down to scan the swells for migrating whales or sea otters 
+                                floating among dense beds of kelp, California’s signature seaweed.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Big Sur &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -1195,11 +1250,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--19"></div>
                     <div class="gallery__img gallery__img--20"></div>
                     <div class="gallery__img gallery__img--21"></div>
@@ -1217,26 +1268,25 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/8grey.svg" alt="8" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Monterey Bay &mdash;</h3>
-                        <p>
-                        Wrapped by the Pacific on three sides, the Monterey Peninsula offers wind-tossed beaches and quiet coves, 
-                        fine dining and casual eats, early history and postmodern art. World-renowned Monterey Bay Aquarium, 
-                        is a must-visit, especially for families. 
-                        Step outside on Cannery Row and you'll find yourself among hotels, shops, and restaurants.                         
-                        For nature lovers, follow the coast south around the peninsula to Pacific Grove, Asilomar State Beach, 
-                        and the sea-and-spray beauty.
-                        On Monterey Peninsula’s south side, it's worth exploring artsy Carmel-by-the-Sea. 
-                        The Carmel Mission is one of the state’s most beautiful, and shady trails fan out from the site into lush 
-                        Mission Trail Nature Preserve. 
-
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Monterey Bay &mdash;</h3>
+                            <p> Wrapped by the Pacific on three sides, the Monterey Peninsula offers wind-tossed beaches and quiet coves, 
+                            fine dining and casual eats, early history and postmodern art. World-renowned Monterey Bay Aquarium, 
+                            is a must-visit, especially for families. 
+                            Step outside on Cannery Row and you'll find yourself among hotels, shops, and restaurants.                         
+                            For nature lovers, follow the coast south around the peninsula to Pacific Grove, Asilomar State Beach, 
+                            and the sea-and-spray beauty.
+                            On Monterey Peninsula’s south side, it's worth exploring artsy Carmel-by-the-Sea. 
+                            The Carmel Mission is one of the state’s most beautiful, and shady trails fan out from the site into lush 
+                            Mission Trail Nature Preserve. 
+                             </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Monterey Bay &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -1299,11 +1349,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--22"></div>
                     <div class="gallery__img gallery__img--23"></div>
                     <div class="gallery__img gallery__img--24"></div>
@@ -1321,23 +1367,22 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/9grey.svg" alt="9" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; Santa Cruz &mdash;</h3>
-                        <p>
-                            There're two sides to Santa Cruz : the family fun of the Santa Cruz Beach Boardwalk, 
-                            an esplanade lined with classic coasters, arcade games, corn dogs, and a historic carousel. 
-                            Then there’s the natural side of it, Santa Cruz is great spot to take a boat tour out from the wharf 
-                            for excellent whale-watching—grays, blues, or humpbacks, depending on the time of year.
-                            Santa Cruz is also the place where surfing was originally introduced in the U.S., and top surfers 
-                            know that the place to be is Steamer Lane.
-
-                            
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; Santa Cruz &mdash;</h3>
+                            <p> There're two sides to Santa Cruz : the family fun of the Santa Cruz Beach Boardwalk, 
+                                an esplanade lined with classic coasters, arcade games, corn dogs, and a historic carousel. 
+                                Then there’s the natural side of it, Santa Cruz is great spot to take a boat tour out from the wharf 
+                                for excellent whale-watching—grays, blues, or humpbacks, depending on the time of year.
+                                Santa Cruz is also the place where surfing was originally introduced in the U.S., and top surfers 
+                                know that the place to be is Steamer Lane.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in Santa Cruz &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -1400,11 +1445,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--25"></div>
                     <div class="gallery__img gallery__img--26"></div>
                     <div class="gallery__img gallery__img--27"></div>
@@ -1422,24 +1463,24 @@
                 <div class="dropdown__sideBarBox">
                     <div class="dropdown__sideBar--content">
                         <div class="dropdown__icon"><img src="img/10grey.svg" alt="10" class="dropdown__icon--img"></div>
-                        <h3 class="margin-bottom-medium">&mdash; San Francisco &mdash;</h3>
-                        <p>
-                            It may measure less than 50 square miles/130 square kilometers, but San Francisco ranks as one of the greatest 
-                            cities in the world. One of the best way to visit it is by walking as parking is difficult, it'll also give you
-                            a chance to really immerse yourself in this city with so many facets.
-                            Famous for grand-dame Victorians, classic cable cars, dynamic diversity, a beautiful waterfront, 
-                            and its red bridge, the “City by the Bay” truly has it all. 
-                            A nice circuit would be to start at the Walt Disney Museum, carry on towards the Palace of FineArts (or R2D2 building),
-                            carry on towards Fisherman’s Wharf to enjoy
-                            the many waterfront restaurants before heading inland towards landmarks like Lombard Street or the Coit Tower.
-     
-                        </p>
+                        <div class="dropdown__sideBar--text">
+                            <h3 class="margin-bottom-medium">&mdash; San Francisco &mdash;</h3>
+                            <p> It may measure less than 50 square miles/130 square kilometers, but San Francisco ranks as one of the greatest 
+                                cities in the world. One of the best way to visit it is by walking as parking is difficult, it'll also give you
+                                a chance to really immerse yourself in this city with so many facets.
+                                Famous for grand-dame Victorians, classic cable cars, dynamic diversity, a beautiful waterfront, 
+                                and its red bridge, the “City by the Bay” truly has it all. 
+                                A nice circuit would be to start at the Walt Disney Museum, carry on towards the Palace of FineArts (or R2D2 building),
+                                carry on towards Fisherman’s Wharf to enjoy
+                                the many waterfront restaurants before heading inland towards landmarks like Lombard Street or the Coit Tower.
+                            </p>
+                        </div>
                     </div>
                     <div class="dropdown__sideBar--weather">
                         <div class="weather__title"><h4>&ndash; Weather forecast in San Francisco &ndash;</h4></div>
-                        <div class="weather__day weather__day--1"></div>
-                        <div class="weather__day weather__day--2"></div>
-                        <div class="weather__day weather__day--3"></div>
+                        <div class="weather__day weather__day--1"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--2"><div class="weather__day--desc"></div></div>
+                        <div class="weather__day weather__day--3"><div class="weather__day--desc"></div></div>
                     </div>
                 </div>
             </div>
@@ -1501,11 +1542,7 @@
     
                 <div class="dropdown__gallery off hidden">
                     <div class="dropdown__wipe width"></div>
-                    <div class="gallery__square">
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                        <div class="gallery__imgBtn btn"></div>
-                    </div>
+
                     <div class="gallery__img gallery__img--28"></div>
                     <div class="gallery__img gallery__img--29"></div>
                     <div class="gallery__img gallery__img--30"></div>
@@ -1513,7 +1550,21 @@
             </div>       
         </div>
     
+        <section class="footer" id="follow">
+            <div class="footer__com">
 
+                <div class="footer__title">visit cAliforniA</div> 
+                <div class="footer__social">
+                        
+                    <div class="footer__subtitle">Follow us!</div> 
+                    <button class ="btn"><img src="img/fb-logo.png" alt="facebook" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/inst-logo.png" alt="facebook" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/twitter-logo.png" alt="facebook" class="footer__follow"></button>
+
+                </div>
+            </div>
+            <div class="footer__copyright">© Copyright 2019 All rights reserved.</div>
+        </section>
 
 
     <script type="text/javascript" src="js/bundle.js"></script>

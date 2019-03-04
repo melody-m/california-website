@@ -53,14 +53,14 @@ export function displayIcon(arr,container){
 
     days.forEach((cur, i)=>{
         cur.style.backgroundImage = imgArr[i];
-        cur.insertAdjacentHTML('beforeend', `<div class="weather__icon"><img src="${imgArr[i]}" alt=""></div>`);
+        cur.insertAdjacentHTML('afterbegin', `<div class="weather__icon"><img src="${imgArr[i]}" alt="" class="weather__icon--img"></div>`);
     }) 
 }
 
 export function displayInfo(arrDesc, arrTemp,container){
     
-    const days = container.querySelectorAll('.weather__day');   
-
+    const days = container.querySelectorAll('.weather__day--desc'); 
+    
     days.forEach((cur, i)=>{
         cur.insertAdjacentHTML('beforeend', `<div class="weather__desc">${arrDesc[i]}</div>`);
         cur.insertAdjacentHTML('beforeend', `<div class="weather__temp">${arrTemp[i]}</div>`);

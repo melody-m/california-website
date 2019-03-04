@@ -11,6 +11,9 @@ body{
 h1{
     font-family: 'Major Mono Display', monospace;
     font-size: 6rem;
+    @include respond(phone) {
+        font-size: 4rem;
+    }
     
 }
 
@@ -22,14 +25,22 @@ h2{
     font-weight: 300;
     text-transform: uppercase;
 
+    @include respond(phone) {
+        font-size: 1.8rem;
+    }
+
 }
 
 h3{
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     line-height: 5rem;
+    text-align: center;
+    @include respond(phone) {
+        font-size: 2.2rem;       
+    }
 }
 h4{
     font-family: 'Open Sans', sans-serif;    
@@ -37,6 +48,24 @@ h4{
     letter-spacing: .18rem;
     font-weight: 300;
     font-size: 2.2rem;
+    @include respond(small-tab) {
+        font-size: 1.8rem;
+    }
+}
+
+.navigation{
+    &__link{
+        font-family: 'Major Mono Display', monospace;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+    &__sublink{
+        font-family: 'Major Mono Display', monospace;
+        font-size: 1.6rem;
+        text-transform: lowercase;
+        text-decoration: none;
+
+    }
 }
 
 
@@ -52,11 +81,19 @@ h4{
             letter-spacing: .18rem;
             font-weight: 300;
             font-size: 2.5rem;
+            @include respond(small-tab) {
+                font-size: 1.6rem;
+                font-weight:400;
+            }
         }
         &--num{
             font-family: 'Major Mono Display', monospace;
             text-transform: lowercase;
             font-size: 3rem;
+
+            @include respond(small-tab) {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -67,6 +104,9 @@ h4{
     text-transform: lowercase;
     font-size: 2.2rem;
     line-height: 3rem;
+    @include respond(small-tab) {
+        font-size: 1.8rem;        
+    }
     }
     &__spots--content{
         font-weight: 300;
@@ -93,6 +133,9 @@ h4{
         font-family: 'Major Mono Display', monospace;
         text-transform: lowercase;
         font-size: 3.5rem;
+        @include respond(big-tab) {
+            font-size: 2.5rem;
+        }
 
         &--title{
             font-family: 'Open Sans', sans-serif;
@@ -107,4 +150,20 @@ h4{
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
     font-size: 1.5rem;
+    @include respond(small-tab) {
+        font-size: 1rem;
+    }
+}
+
+.footer{
+    &__title{
+        font-family: 'Major Mono Display', monospace;
+        font-size: 3rem;
+
+    }
+    &__subtitle{
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    }
 }

@@ -9,3 +9,55 @@
     background-size: cover;
     background-position: center;
 }
+
+//MIXINS MEDIA QUERIES
+
+// 0 - 600px :     Phone - max-width
+// 600 - 800px :   Tablet Portrait
+// 800 - 1200px :  Tablet landscape
+// 1200 - 1500px;  desktop
+// [1500-1800] is where our normal style apply
+// 1800px + :      Big desktop - min-width
+
+// @media screen and (orientation:portrait) { … }
+// @media screen and (orientation:landscape) { … }
+
+@mixin  respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content};   //600px
+    }
+
+    // @if $breakpoint == phone-port {        
+    //     @media screen and (max-width: 37.5em) and (orientation:portrait) {@content};
+    // }
+    // @if $breakpoint == phone-land {        
+    //     @media screen and (max-width: 56.25em) and (orientation:landscape) {@content};
+    // }
+
+    @if $breakpoint == small-tab {
+        @media (max-width: 56.25em) {@content};  //900px 
+    }
+
+    // @if $breakpoint == small-tab-port {
+    //     @media (max-width: 56.25em) and (orientation:portrait) {@content};  
+    // }
+    // @if $breakpoint == small-tab-land {
+    //     @media (max-width: 75em) and (orientation:landscape) {@content};  
+    // }    
+    
+    @if $breakpoint == big-tab {
+        @media (max-width: 81.25em) {@content};  //1300px
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 93.75em) {@content};  //1500px
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content};  //1800px
+    }
+
+    //No Hover touchscreen
+    @if $breakpoint == mobile {
+        @media (hover: none) {@content};
+    }
+    
+}

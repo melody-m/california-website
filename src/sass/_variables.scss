@@ -22,12 +22,29 @@ $color-five: #429bda;
 }
 .margin-top-big{
     margin-top: 25rem;
+    @include respond(big-tab) {
+        margin-top: 15rem;
+    }
+    @include respond(desktop) {
+        margin-top: 5rem;
+    }
 }
 
 .left{
-    text-align: left
+    text-align: left;
+    @include respond(phone) {
+        text-align: center;
+    } 
 }
 .right{
     text-align: right;
     float: right;
+
+    @include respond(small-tab) {
+        text-align: left;
+        float: left;
+    } 
+    @include respond(phone) {
+        text-align: center;
+    } 
 }

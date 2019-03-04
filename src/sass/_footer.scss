@@ -1,0 +1,35 @@
+.footer{
+    background-color: $color-grey-dark;
+    color: white;
+    padding: 5rem;
+    padding-bottom: 2rem;
+
+    &__title{
+        cursor: pointer;
+    }
+
+
+    &__com{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    
+    &__subtitle{
+        margin-bottom: 2rem;
+    }
+
+    &__follow{
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;        
+        display: flex;       
+        cursor: pointer; 
+    }
+
+    &__copyright{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}

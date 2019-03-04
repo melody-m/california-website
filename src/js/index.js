@@ -8,6 +8,12 @@ import {cityForecast} from './models/Weather';
 
 const exploreDOM = sliderView.exploreDOM; // for event listeners
 
+const roadtrip = document.getElementById('roadtrip-list');
+const roadtripList = document.querySelector('.navigation__sublist');
+const menu = document.getElementById('navi-toggle');
+const menuLinks = document.querySelectorAll('.navigation__item');
+const menuSublinks = document.querySelectorAll('.navigation__sublink');
+
 /********************************************************************************************************** */
 //Ajax call for weather and display
 
@@ -37,6 +43,32 @@ function setEventListeners() {
 
     // set the scroll display of the roadtrip stops
     window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 200));
+
+    //navigation sublist extend
+
+    roadtrip.addEventListener('click', () =>{
+        roadtripList.classList.replace('listOff', 'listOn');
+    })
+
+    menu.addEventListener('change', ()=>{
+        roadtripList.classList.replace('listOn', 'listOff'); //collapse roadtrips when unchecked
+    })
+
+
+    // menuLinks.forEach((cur) =>{
+    //     cur.addEventListener('click', () =>{                        
+    //         if(!cur.querySelector('.navigation__sublist')){
+    //             menu.checked = false;
+    //         }
+    //     });
+    // });
+    // menuSublinks.forEach((cur) =>{
+    //     cur.addEventListener('click', () =>{                               
+    //             menu.checked = false;
+    //     });
+    // });
+
+
 
     // set button matching dropdown
     sliderView.getMatch();
