@@ -1,8 +1,16 @@
 .landpage{
     height: 100vh;
     position: relative;
-    background-image: url(../img/landpage.jpg);
+    background-image: url(../img/landpage-large.jpg);
     @include background;
+
+    @include respond(small-tab) {
+        background-image: url(../img/landpage-medium.jpg);
+    }  
+
+    @include respond(phone) {
+        background-image: url(../img/landpage-small.jpg);
+    }  
 
 
     &__title{

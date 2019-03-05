@@ -41,6 +41,11 @@
         }
     }
 
+    &__opening{
+        color: $color-two;
+        margin-bottom: 2rem;   
+    }
+
     &__text{
         margin: 4rem; 
         @include respond(phone) {

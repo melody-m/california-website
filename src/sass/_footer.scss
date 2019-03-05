@@ -8,6 +8,11 @@
         cursor: pointer;
     }
 
+    &__link{
+        text-decoration: none;
+        color: white;
+    }
+
 
     &__com{
         display: flex;
