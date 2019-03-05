@@ -11,7 +11,6 @@ class Day {
         this.year = date.getFullYear();
     }
 }
-
 const dates = {
     today : new Date(),
     tomorrow : new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
@@ -28,11 +27,6 @@ const days = {
     day3Strg : `${day3.year}-${months[day3.month - 1]}-${daysArr[day3.day-1]} 12:00:00`,  
 }
 
-function formatTemp(num){
-    const tempCalc = (num - 273.15).toFixed(2);
-    return tempCalc;
-}
-
 
 export default class Weather {
     constructor(location) {
@@ -43,15 +37,14 @@ export default class Weather {
 
         try{
             const key = 'e79b88bcdd4110f3b77b07407f031ccd';            
-            const res = await axios(`https://api.openweathermap.org/data/2.5/forecast?id=${this.location}&appid=${key}`);//like fetch but work on all browsers and return json directly -better at error handling
-             
-            //console.log(res);
+            const res = await axios(`https://api.openweathermap.org/data/2.5/forecast?id=${this.location}&units=metric&appid=${key}`);//like fetch but work on all browsers and return json directly -better at error handling
+
 
             //1) Create forecast array and add today's weather/desc/temp
             this.weatherFrcst = [res.data.list[0].weather[0].icon];
             this.weatherDesc = [res.data.list[0].weather[0].description];    
 
-            const temp =  `${formatTemp(res.data.list[0].main.temp)}&deg;C`; // temperature conversion
+            const temp =  `${res.data.list[0].main.temp}&deg;C`; // temperature formatting
             this.weatherTemp = [temp];
 
     
@@ -59,19 +52,18 @@ export default class Weather {
                 //2) Loop through the list of forecast and push in array weather for next 2 days at 12.00        
     
                 if(cur.dt_txt === days.day2Strg){
-                    this.weatherFrcst.push(cur.weather[0].icon);       //icon: "02d"             
+                    this.weatherFrcst.push(cur.weather[0].icon);     
                     this.weatherDesc.push(cur.weather[0].description); 
 
-                     //3)convert temp in Celcius from Kelvin                    
-                     const temp2=`${formatTemp(cur.main.temp)}&deg;C`;
+                     //3)Format temperature                    
+                     const temp2=`${cur.main.temp}&deg;C`;
                      this.weatherTemp.push(temp2);
 
                 } else if(cur.dt_txt === days.day3Strg){
                     this.weatherFrcst.push(cur.weather[0].icon);                    
                     this.weatherDesc.push(cur.weather[0].description); 
-
-                    //3)convert temp in Celcius from Kelvin
-                    const temp2=`${formatTemp(cur.main.temp)}&deg;C`;
+                   
+                    const temp2=`${cur.main.temp}&deg;C`;
                     this.weatherTemp.push(temp2);
                 }        
             });
@@ -86,8 +78,8 @@ export default class Weather {
 
 
 export const citiesObj = {
-    wLosAngeles : new Weather('5368381'),
-    wMalibu : new Weather('4586163'),
+    wLosAngeles : new Weather('5368361'),
+    wMalibu : new Weather('5405889'), //Ventura coordinate - closer found
     wMorroBay : new Weather('5374920'),
     wMonterey : new Weather('5374376'),
     wSantaCruz : new Weather('5393068'),

@@ -22,10 +22,10 @@ async function forecast(cityID,dropID){
     weatherView.renderLoader(dropID);
 
     try {
-        // 2) Search for forecast
+        // Retrieve weather data
         await cityID.getForecast();
 
-        // 3) Render results on UI
+        //Pass it on to render weather on UI
         weatherView.clearLoader(dropID);
         weatherView.displayIcon(cityID.weatherFrcst,dropID);        
         weatherView.displayInfo(cityID.weatherDesc,cityID.weatherTemp,dropID);
@@ -41,10 +41,10 @@ async function forecast(cityID,dropID){
 
 function setEventListeners() {
 
-    // set the scroll display of the roadtrip stops
-    window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 200));
+    //1) Page Scroll 
+    window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 200)); // throttle check for scroll changes every .2s
 
-    //navigation sublist extend
+    //2) Menu : navigation sublist extend
 
     roadtrip.addEventListener('click', () =>{
         roadtripList.classList.replace('listOff', 'listOn');
@@ -54,23 +54,31 @@ function setEventListeners() {
         roadtripList.classList.replace('listOn', 'listOff'); //collapse roadtrips when unchecked
     })
 
+    //3) Menu : cancel scroll anim on menu calls so that trip is immediately visible
 
-    // menuLinks.forEach((cur) =>{
-    //     cur.addEventListener('click', () =>{                        
-    //         if(!cur.querySelector('.navigation__sublist')){
-    //             menu.checked = false;
-    //         }
-    //     });
-    // });
-    // menuSublinks.forEach((cur) =>{
-    //     cur.addEventListener('click', () =>{                               
-    //             menu.checked = false;
-    //     });
-    // });
+    menuSublinks.forEach((cur) => {        
+        cur.addEventListener('click', tripView.fastDisplay);
+    });
+    
+    
+    //4) Menu : check if phone - if yes -> auto close menu as it'd be full screen
 
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        menuLinks.forEach((cur) =>{
+            cur.addEventListener('click', () =>{                        
+                if(!cur.querySelector('.navigation__sublist')){
+                    menu.checked = false;
+                }
+            });
+        });
+        menuSublinks.forEach((cur) =>{
+            cur.addEventListener('click', () =>{                               
+                    menu.checked = false;
+            });
+        });
+    }
 
-
-    // set button matching dropdown
+    //5) Dropdown Sliders: set trip button matching dropdown
     sliderView.getMatch();
 
     exploreDOM.btnExplore.forEach((cur) => {
@@ -83,13 +91,14 @@ function setEventListeners() {
 
             sliderView.exploreSlider(dropID);
 
-
-            const wCityID = cityForecast.get(target); //get city matching explore btn
+            //get city matching explore btn to call forecast on it
+            const wCityID = cityForecast.get(target); 
             
             forecast(wCityID, container);
         })
     })
 
+    //6) Dropdown Sliders : set close button
     exploreDOM.closeExplore.forEach((cur) => {
         cur.addEventListener('click', sliderView.closeSlider)
     });     
@@ -101,5 +110,6 @@ function init(){
 
 
 init();
+
 
 

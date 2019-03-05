@@ -45,8 +45,7 @@ class Slider {
 
     wipeOn(){
         
-        this.wipeArr.forEach((cur) => {
-            // cur.style.transition = "all .5s";
+        this.wipeArr.forEach((cur) => {            
             cur.classList.replace('slideSideBar','width'); 
         })     
     }
@@ -59,7 +58,6 @@ class Slider {
 
 }
 
-//DOM FOR EVENT LISTENER
 export const exploreDOM = {
     btnExplore : document.querySelectorAll('.trip__btn'),
     dropExplore : document.querySelectorAll('.dropdown'), 
@@ -72,7 +70,6 @@ let indexImg = 0;
 let interval = null;
 let sliderOn =[];
 
-//FUNCTIONS
 
 export function getMatch(){
     for (let i=0; i < exploreDOM.dropExplore.length; i++){
@@ -97,18 +94,13 @@ function slideDown(sliderObj){
 
 export function exploreSlider(id){    
 
-    //Create new Slider object
-
     const slider = new Slider(id);
-    sliderOn.push(slider); // keep track of slider currently on
+    sliderOn.push(slider); // to keep track of slider currently on
 
-    //Slide down pannel with all animations
     slideDown(slider);
 
-    //Set auto gallery
-    
+    //Set auto gallery    
     interval = setInterval(() => {
-        console.log('img');
         displayGallery(indexImg);
         if(indexImg < sliderOn[0].galleryArr.length-1){
             indexImg ++;
@@ -119,8 +111,6 @@ export function exploreSlider(id){
 }
 
 export function closeSlider(){
-
-    //Select slider obj stored in array and kick animations
     
     sliderOn[0].wipeOn();
 
@@ -133,8 +123,8 @@ export function closeSlider(){
 
     
     setTimeout(() =>{
-        sliderOn.pop();     //remove object from array so that only one slider obj at any time -
-        clearInterval(interval);   //clear interval to stop auto gallery
+        sliderOn.pop();     //remove object from array to have only one slider obj at a time
+        clearInterval(interval);   //clear interval to stop auto gallery from playing in the background
     },1500);  
 
     //Clear weather forecast in html so that it doesnt re-display it
@@ -156,7 +146,6 @@ export function closeSlider(){
 
 function displayGallery(index) {   
 
-    //console.log(sliderOn[0].galleryArr);
     sliderOn[0].galleryArr.forEach((cur) =>{       
         if(!cur.classList.contains('hidden')){
             cur.classList.add('hidden');
@@ -165,59 +154,5 @@ function displayGallery(index) {
     sliderOn[0].galleryArr[index].classList.replace('hidden','visible');        
 }
 
-function btnScaleUp(e){
-    galleryBtnArr.forEach((cur) =>{
-        if(cur != e.target){
-            cur.classList.remove('scaleUp');
-        }
-    })
-    e.target.classList.add('scaleUp');
-}
-
-function getID(e){
-    const fullID = e.target.id;
-    const splitID = fullID.split('-');
-    const ID = splitID[1]; 
-    return ID;
-
-}
-
-//////////////////////
 
 
-// function setEventListeners() {
-
-//     // 1) set button matching dropdown
-//     getMatch();
-
-//     exploreDOM.btnExplore.forEach((cur) => {
-//         cur.addEventListener('click', (e) => {
-
-//             //2) Find button id and retrieve matching dropdown
-//             const target = e.target.id;
-//             const dropID = explore.get(target); 
-            
-//             exploreSlider(dropID);
-//         })
-//     })
-
-//     exploreDOM.closeExplore.forEach((cur) => {
-//         cur.addEventListener('click', closeSlider)
-//     });     
-// }
-
-// export function init(){
-//     setEventListeners();
-// }
-
-
-
-////////////////////////////////////////////////////////////////////
-
-    // galleryBtnArr.forEach((cur, i) =>{    
-    //     cur.addEventListener('click', (e) => {             
-    //         btnScaleUp(e);
-    //         clearInterval(interval);     
-    //         displayGallery(i);    
-    //     });
-    // });

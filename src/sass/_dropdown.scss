@@ -59,6 +59,7 @@
         &--content{
             height: 70%;
             padding: 4rem;
+            overflow-y: auto;
             @include respond(big-tab) {
                 height: auto;
                 display: flex;
