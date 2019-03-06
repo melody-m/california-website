@@ -65,8 +65,9 @@ export function displayIcon(arr,container){
     //Select weather div under the selected dropdown and assign img
 
     const days = container.querySelectorAll('.weather__day'); 
+    const daysArr = Array.from(days); // IE SUPPORT
 
-    days.forEach((cur, i)=>{
+    daysArr.forEach((cur, i)=>{
         cur.style.backgroundImage = imgArr[i];
         cur.insertAdjacentHTML('afterbegin', `<div class="weather__icon"><img src="${imgArr[i]}" alt="" class="weather__icon--img"></div>`);
     }) 
@@ -78,8 +79,9 @@ export function displayInfo(arrDesc, arrTemp,container){
 
     const daysWeek = getDaysName();
     const days = container.querySelectorAll('.weather__day--desc'); 
+    const daysArr = Array.from(days); // IE SUPPORT
 
-    days.forEach((cur, i)=>{
+    daysArr.forEach((cur, i)=>{
         cur.insertAdjacentHTML('beforeend', `<div class="weather__dayName">${daysWeek[i]}</div>`);
         cur.insertAdjacentHTML('beforeend', `<div class="weather__desc">${arrDesc[i]}</div>`);
         cur.insertAdjacentHTML('beforeend', `<div class="weather__temp">${arrTemp[i]}</div>`);

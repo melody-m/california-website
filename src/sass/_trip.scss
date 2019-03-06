@@ -184,8 +184,8 @@
         &:hover{
             transform: scale(1.2);
         }
-        @include respond(small-tab) {
-            float: none;
+        @include respond(big-tab) {
+            float: left;
         } 
     }
 }

@@ -7,16 +7,24 @@ const menuTrips = document.querySelectorAll('.navigation__sublink');
 const tripMatch = new Map();
 const menuMatch = new Map();
 
+//SUPPORT FOR IE - doesnt loop through nodeList correctly
+const tripContArr = Array.from(tripCont);
+const tripFlagArr = Array.from(tripFlag);
+const tripInfoArr = Array.from(tripInfo);
+const menuTripsArr = Array.from(menuTrips);
+
+
 function getTripMatch(){
-    for (let i=0; i < tripCont.length; i++){
-        tripMatch.set(tripFlag[i], tripCont[i])
+    for (let i=0; i < tripContArr.length; i++){
+        tripMatch.set(tripFlagArr[i], tripContArr[i])
     }
 }
 function getMenuMatch(){
-    for (let i=0; i < tripCont.length; i++){
-        menuMatch.set(menuTrips[i], tripCont[i])
+    for (let i=0; i < tripContArr.length; i++){
+        menuMatch.set(menuTripsArr[i], tripContArr[i])
     }
 }
+
 
 function isInViewport(elem){
     //get position data of element in the page
@@ -40,11 +48,12 @@ export function throttle(fn, wait) {
     }
   }
 
+
 export function displayTrip(){
     //set flag - container match in map
     getTripMatch();
 
-    tripFlag.forEach((cur) => {
+    tripFlagArr.forEach((cur) => {
         if (isInViewport(cur)) {            
             const box = tripMatch.get(cur);
             box.classList.remove('hidden');
@@ -52,7 +61,7 @@ export function displayTrip(){
         }
     })
     
-    tripInfo.forEach((cur) => {
+    tripInfoArr.forEach((cur) => {
         if (isInViewport(cur)) {
             cur.classList.remove('hidden');
             cur.style.transform = 'translateX(0)';
@@ -61,12 +70,11 @@ export function displayTrip(){
 }
 
 
-
 export function fastDisplay(){
     //set menu sublink - container match in map
     getMenuMatch();
     
-    menuTrips.forEach((cur) =>{
+    menuTripsArr.forEach((cur) =>{
         const box = menuMatch.get(cur);
         box.classList.remove('hidden');
         box.style.transform = 'translate(0)';
@@ -76,6 +84,4 @@ export function fastDisplay(){
         infoTrip.style.transform = 'translateX(0)';
     })
 }
-
-
 

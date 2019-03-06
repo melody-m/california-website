@@ -22,7 +22,7 @@
 .right {
   text-align: right;
   float: right; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 81.25em) {
     .right {
       text-align: left;
       float: left; } }
@@ -212,10 +212,15 @@ body {
       flex-direction: column;
       padding: 4rem; } }
   .intro__flex {
-    width: 70%;
+    width: 50%;
+    margin-right: 5rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between; }
+    align-items: center; }
+    @supports (justify-content: space-between) {
+      .intro__flex {
+        justify-content: space-between;
+        width: 60%;
+        margin-right: 0; } }
     @media (max-width: 37.5em) {
       .intro__flex {
         width: 100%;
@@ -595,9 +600,9 @@ h1 {
     transition: all .3s; }
     .trip__btn:hover {
       transform: scale(1.2); }
-    @media (max-width: 56.25em) {
+    @media (max-width: 81.25em) {
       .trip__btn {
-        float: none; } }
+        float: left; } }
 
 .rightInline {
   text-align: right; }
@@ -722,13 +727,21 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%;
-    height: 65%;
+    width: 25%;
+    height: 45%;
     background-color: rgba(255, 255, 255, 0.3);
-    clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
     transform: translateX(-100%);
     transition: all 1s;
-    transition-delay: .8s; }
+    transition-delay: .8s;
+    background-position: left;
+    background-repeat: no-repeat; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .dropdown__triangle {
+        -webkit-clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+        background-image: none;
+        width: 40%;
+        height: 65%; } }
     .dropdown__triangle--title {
       width: 50%;
       position: absolute;

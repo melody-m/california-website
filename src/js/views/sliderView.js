@@ -37,7 +37,8 @@ class Slider {
         for(let i=0; i < this.wipeArr.length; i++){
             ((i) => {
                 setTimeout(() => {
-                    this.wipeArr[i].classList.replace('width','slideSideBar'); //replace width 100% by slidesidebar 0%
+                    this.wipeArr[i].classList.remove('width'); //replace not supported with IE
+                    this.wipeArr[i].classList.add('slideSideBar'); 
                 }, 200*i);                           
             })(i);
         }
@@ -46,7 +47,8 @@ class Slider {
     wipeOn(){
         
         this.wipeArr.forEach((cur) => {            
-            cur.classList.replace('slideSideBar','width'); 
+            cur.classList.remove('slideSideBar'); 
+            cur.classList.add('width'); 
         })     
     }
 
@@ -64,6 +66,13 @@ export const exploreDOM = {
     closeExplore: document.querySelectorAll('.dropdown__closeBtn') 
 }
 
+//SUPPORT FOR IE
+
+export const buttonsExp = Array.from(exploreDOM.btnExplore);
+export const buttonsClose = Array.from(exploreDOM.closeExplore);
+export const buttonsDrop = Array.from(exploreDOM.dropExplore);
+
+
 export const explore = new Map();
 
 let indexImg = 0;
@@ -71,9 +80,9 @@ let interval = null;
 let sliderOn =[];
 
 
-export function getMatch(){
-    for (let i=0; i < exploreDOM.dropExplore.length; i++){
-        explore.set(exploreDOM.btnExplore[i].id, exploreDOM.dropExplore[i].id)
+export function getMatch(){   
+    for (let i=0; i < buttonsDrop.length; i++){
+        explore.set(buttonsExp[i].id, buttonsDrop[i].id)
     }
 }
 
@@ -110,6 +119,7 @@ export function exploreSlider(id){
     },3000);   
 }
 
+
 export function closeSlider(){
     
     sliderOn[0].wipeOn();
@@ -131,11 +141,14 @@ export function closeSlider(){
     const weatherList = sliderOn[0].dropdown.querySelectorAll('.weather__day--desc');
     const weatherIcon = sliderOn[0].dropdown.querySelectorAll('.weather__icon');
 
-    weatherIcon.forEach((cur) =>{
+    const weatherListArr = Array.from(weatherList);
+    const weatherIconArr = Array.from(weatherIcon);
+
+    weatherIconArr.forEach((cur) =>{
         cur.parentElement.removeChild(cur);
     })
     
-    weatherList.forEach((cur)=>{
+    weatherListArr.forEach((cur)=>{
         while (cur.firstChild) {
             cur.removeChild(cur.firstChild);
         }
@@ -151,8 +164,6 @@ function displayGallery(index) {
             cur.classList.add('hidden');
         }
     });    
-    sliderOn[0].galleryArr[index].classList.replace('hidden','visible');        
+    sliderOn[0].galleryArr[index].classList.remove('hidden');        //replace not supported with IE
+    sliderOn[0].galleryArr[index].classList.add('visible');   //replace not supported with IE     
 }
-
-
-

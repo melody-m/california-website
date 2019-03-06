@@ -40,7 +40,7 @@ $color-five: #429bda;
     text-align: right;
     float: right;
 
-    @include respond(small-tab) {
+    @include respond(big-tab) {
         text-align: left;
         float: left;
     } 

@@ -13,10 +13,17 @@
     }
     
     &__flex{
-        width: 70%;
+        width: 50%;
+        margin-right: 5rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        
+
+        @supports (justify-content: space-between){
+            justify-content: space-between;     
+            width: 60%;                
+            margin-right: 0;
+        }
 
         
         @include respond(phone) {

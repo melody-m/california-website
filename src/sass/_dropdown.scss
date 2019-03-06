@@ -155,14 +155,25 @@
         position: absolute;
         top:0;
         left:0;
-        width: 40%;
-        height: 65%;
+        width: 25%;
+        height: 45%;
         background-color: rgba(white, .3);
-        clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
         transform: translateX(-100%);
         transition: all 1s;
         transition-delay: .8s;
+        
+        background-position: left;
+        background-repeat: no-repeat;
 
+            @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+                -webkit-clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+                clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);                
+                background-image: none;
+                width: 40%;
+                height: 65%;
+            }
+
+        
 
         &--title{
             width: 50%;            
