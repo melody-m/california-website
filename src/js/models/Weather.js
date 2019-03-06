@@ -39,6 +39,7 @@ export default class Weather {
             const key = 'e79b88bcdd4110f3b77b07407f031ccd';            
             const res = await axios(`https://api.openweathermap.org/data/2.5/forecast?id=${this.location}&units=metric&appid=${key}`);//like fetch but work on all browsers and return json directly -better at error handling
 
+            console.log(res);
 
             //1) Create forecast array and add today's weather/desc/temp
             this.weatherFrcst = [res.data.list[0].weather[0].icon];
