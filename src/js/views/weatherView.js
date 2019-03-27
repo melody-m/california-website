@@ -2,11 +2,11 @@
 const weatherDesc = new Map();
 
 weatherDesc.set('01d','img/icons/clearSky.svg')
-weatherDesc.set('01n','img/icons/clearSky.svg')
+weatherDesc.set('01n','img/icons/clearSkyN.svg')
 weatherDesc.set('02d','img/icons/fewClouds.svg')
-weatherDesc.set('02n','img/icons/fewClouds.svg')
+weatherDesc.set('02n','img/icons/fewCloudsN.svg')
 weatherDesc.set('03d','img/icons/scatteredClouds.svg')
-weatherDesc.set('03n','img/icons/scatteredClouds.svg')
+weatherDesc.set('03n','img/icons/scatteredCloudsN.svg')
 weatherDesc.set('04d','img/icons/brokenClouds.svg')
 weatherDesc.set('04n','img/icons/brokenClouds.svg')
 weatherDesc.set('09d','img/icons/showerRain.svg')

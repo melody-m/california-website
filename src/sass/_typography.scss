@@ -22,7 +22,7 @@ h2{
     color: white;
     font-size: 2.2rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
 
     @include respond(phone) {
@@ -36,7 +36,7 @@ h3{
     text-transform: lowercase;
     font-size: 2.5rem;
     font-weight: 300;
-    line-height: 5rem;
+    line-height: 4rem;
     text-align: center;
     @include respond(phone) {
         font-size: 2.2rem;       
@@ -70,10 +70,6 @@ h4{
 
 
 .intro{
-    &__opening{        
-        font-size: 2rem; 
-        font-style:italic;    
-    }
     &__text{
         text-align: justify;
     }

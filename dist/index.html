@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>California roadtrip</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>California roadtrip</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Open+Sans:300,400,400i" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Open+Sans:300,400,400i" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
-<body>
+    </head>
+
+<body class="noscroll">
+
+    <div class="loader load">
+            <div id="overlay" class="load"></div>
+            <div id="spinner" class="load"></div>
+    </div>
 
     <div class="landpage" id="home">
         <div class="landpage__title">
@@ -90,7 +95,7 @@
 
         <div class="intro__flex">
             <div class="intro__text" id="about">
-                <p class="intro__opening">From Los Angeles to San Francisco</p>
+                <h2 class="intro__opening">From Los Angeles to San Francisco</h2>
                 <p>                
                     The Pacific Coast Highway (PCH) was first started in the 1930s, 
                     and remains one of the most astoundingly scenic roads in the world, spreading over 600 miles (900 kilometers) of California’s 
@@ -119,8 +124,7 @@
     <section class="roadtrip clearfix">
         <div class="progress">
             <div class="progress__container clearfix"></div>
-                <div class="progress__dot progress__dot--1"></div>                           
-            </div>   
+            <div class="progress__dot progress__dot--1"></div>                                        
         </div>
 
 
@@ -170,10 +174,9 @@
                                 <p class="trip__info--title">&ndash; In total &ndash;</p>
                                 <p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
                             </div>
-                            <div class="trip__info--dist">
-                                <div class="trip__dash"></div>
+                            <div class="trip__info--dist">                                
                                 <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                <p></p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
+                                <p>0 <span class="mini">min</span><br>0 <span class="mini">mi</span></p>
                             </div>                       
                         </div>
                     </div>               
@@ -216,10 +219,9 @@
                                 <p class="trip__info--title">&ndash; In total &ndash;</p>
                                 <p>28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span></p>                               
                             </div>
-                            <div class="trip__info--dist">
-                                <div class="trip__dash"></div>
+                            <div class="trip__info--dist">                                
                                 <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                <p></p>28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span></p>
+                                <p>28 <span class="mini">min</span><br>8.1 <span class="mini">mi</span></p>
                             </div>
                         </div> 
                     </div>                                
@@ -260,10 +262,9 @@
                                 <p class="trip__info--title">&ndash; In total &ndash;</p>
                                 <p>58 <span class="mini">min</span><br>26.5 <span class="mini">mi</span></p>                               
                             </div>
-                            <div class="trip__info--dist">
-                                <div class="trip__dash"></div>
+                            <div class="trip__info--dist">                                
                                 <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                <p></p>30 <span class="mini">min</span><br>18.4 <span class="mini">mi</span></p>
+                                <p>30 <span class="mini">min</span><br>18.4 <span class="mini">mi</span></p>
                             </div>
                         </div> 
                     </div>                 
@@ -306,10 +307,9 @@
                                 <p class="trip__info--title">&ndash; In total &ndash;</p>
                                 <p>2h11 <span class="mini">min</span><br>93.4 <span class="mini">mi</span></p>                               
                             </div>
-                            <div class="trip__info--dist">
-                                <div class="trip__dash"></div>
+                            <div class="trip__info--dist">                                
                                 <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                <p></p>1h13 <span class="mini">min</span><br>66.9 <span class="mini">mi</span></p>
+                                <p>1h13 <span class="mini">min</span><br>66.9 <span class="mini">mi</span></p>
                             </div>
                         </div> 
                     </div>                                  
@@ -352,10 +352,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>4h06 <span class="mini">min</span><br>213.4 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                    
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>1h55 <span class="mini">min</span><br>120 <span class="mini">mi</span></p>
+                                    <p>1h55 <span class="mini">min</span><br>120 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                 
@@ -399,10 +398,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>4h32 <span class="mini">min</span><br>234.1 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                   
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>26 <span class="mini">min</span><br>20.7 <span class="mini">mi</span></p>
+                                    <p>26 <span class="mini">min</span><br>20.7 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                                       
@@ -445,10 +443,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>7h03 <span class="mini">min</span><br>323.4 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                    
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>2h31 <span class="mini">min</span><br>89.3 <span class="mini">mi</span></p>
+                                    <p>2h31 <span class="mini">min</span><br>89.3 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                   
@@ -473,7 +470,7 @@
                                     
                                     </p>
                                 </div> 
-                                <div><button class="trip__btn btn" id= "explore-8" class="trip__icon--img">Explore &rarr;</button></div>      
+                                <div><button class="trip__btn btn" id= "explore-8" >Explore &rarr;</button></div>      
                             </div>
                         
                             <div class="trip__photo">
@@ -492,10 +489,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>8h10 <span class="mini">min</span><br>351.8 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                    
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>1h07 <span class="mini">min</span><br>28.4 <span class="mini">mi</span></p>
+                                    <p>1h07 <span class="mini">min</span><br>28.4 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                                           
@@ -537,10 +533,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>9h00 <span class="mini">min</span><br>395.4 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                    
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>50 <span class="mini">min</span><br>43.6 <span class="mini">mi</span></p>
+                                    <p>50 <span class="mini">min</span><br>43.6 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                 
@@ -582,10 +577,9 @@
                                     <p class="trip__info--title">&ndash; In total &ndash;</p>
                                     <p>10h04 <span class="mini">min</span><br>456.5 <span class="mini">mi</span></p>                               
                                 </div>
-                                <div class="trip__info--dist">
-                                    <div class="trip__dash"></div>
+                                <div class="trip__info--dist">                                    
                                     <p class="trip__info--title">&ndash; Since the last point &ndash;</p>
-                                    <p></p>1h04 <span class="mini">min</span><br>61.1 <span class="mini">mi</span></p>
+                                    <p>1h04 <span class="mini">min</span><br>61.1 <span class="mini">mi</span></p>
                                 </div>
                             </div> 
                         </div>                                        
@@ -1599,17 +1593,17 @@
                     <a href="#home" class="footer__link">visit cAliforniA</a></div> 
                 <div class="footer__social">
                         
-                    <div class="footer__subtitle">Follow us!</div> 
+                    <div class="footer__subtitle"><h3>Follow us</h3></div>
                     <button class ="btn"><img src="img/fb-logo.png" alt="facebook" class="footer__follow"></button>
-                    <button class ="btn"><img src="img/inst-logo.png" alt="facebook" class="footer__follow"></button>
-                    <button class ="btn"><img src="img/twitter-logo.png" alt="facebook" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/inst-logo.png" alt="instagram" class="footer__follow"></button>
+                    <button class ="btn"><img src="img/twitter-logo.png" alt="twitter" class="footer__follow"></button>
 
                 </div>
             </div>
             <div class="footer__copyright">© Copyright 2019 All rights reserved.</div>
         </section>
     
-    <script type="text/javascript" src="js/bundle.js"></script>
+    <script src="js/bundle.js"></script>
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.from%2CArray.prototype.%40%40iterator%2CArray.prototype.forEach%2CCustomEvent%2CDOMTokenList%2CDOMTokenList.prototype.%40%40iterator%2CDate.now%2CElement%2CElement.prototype.classList%2CElement.prototype.matches%2CElement.prototype.remove%2CEvent%2CEvent.hashchange%2CEventSource%2CHTMLDocument%2CMap%2CNodeList.prototype.%40%40iterator%2CNodeList.prototype.forEach%2CObject.create%2CObject.assign%2CObject.getPrototypeOf%2CObject.keys%2CPromise%2CPromise.prototype.finally%2CSet%2CSymbol.match%2CSymbol.replace%2CSymbol.split%2CWindow%2Cdocument%2Cdocument.querySelector%2CElement.prototype.replaceWith"></script>
 </body>
 </html>

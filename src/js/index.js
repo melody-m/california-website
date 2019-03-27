@@ -46,6 +46,19 @@ async function forecast(cityID,dropID){
 
 function setEventListeners() {
 
+    //Loader
+
+    window.addEventListener("load", () => {
+
+        const loaders = document.querySelectorAll('.load');
+        const loadersArr = Array.from(loaders);
+
+        loadersArr.forEach((cur)=>{
+            cur.style.display = "none";
+        })
+        document.querySelector('body').classList.remove('noscroll');
+    });
+
     //1) Page Scroll 
   
     window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 400)); // throttle check for scroll changes every .4s
