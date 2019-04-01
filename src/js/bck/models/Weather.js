@@ -1,20 +1,16 @@
 import axios from 'axios';
 
 
+const months = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+const daysArr = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'];
+
 class Day {
     constructor (date) {
-        this.day = this.prettyNumber(date.getDate());
-        this.month = this.prettyNumber(date.getMonth() + 1);
+        this.day = date.getDate();
+        this.month = date.getMonth() + 1;
         this.year = date.getFullYear();
     }
-    // Format day and months to get 02 and not 2 to match API results
-    prettyNumber(num) {
-        let strNum = num.toString();
-        return strNum.padStart(2, "0");
-    }
 }
-
-
 const dates = {
     today : new Date(),
     tomorrow : new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
@@ -26,10 +22,10 @@ const day2 = new Day(dates.tomorrow);
 const day3 = new Day(dates.next);
 
 const days = {
-    day1Strg: `${day1.year}-${day1.month}-${day1.day}`,
-    day2Strg: `${day2.year}-${day2.month}-${day2.day} 21:00:00`,
-    day3Strg: `${day3.year}-${day3.month}-${day3.day} 21:00:00`,
-};
+    day1Strg : `${day1.year}-${months[day1.month - 1]}-${daysArr[day1.day-1]}`, //format day and months to get 02 and not 2 to match API results
+    day2Strg : `${day2.year}-${months[day2.month - 1]}-${daysArr[day2.day-1]} 21:00:00`,
+    day3Strg : `${day3.year}-${months[day3.month - 1]}-${daysArr[day3.day-1]} 21:00:00`,  
+}
 
 
 export default class Weather {

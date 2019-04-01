@@ -34,13 +34,10 @@ h2{
 h3{
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 300;
     line-height: 4rem;
     text-align: center;
-    @include respond(phone) {
-        font-size: 2.2rem;       
-    }
 }
 h4{
     font-family: 'Open Sans', sans-serif;    
@@ -104,6 +101,12 @@ h4{
     text-transform: lowercase;
     font-size: 2.2rem;
     line-height: 3rem;
+    @include respond(laptop) {
+        font-size: 1.8rem;
+    }
+    @include respond(big-tab) {
+        font-size: 2.2rem;        
+    }
     @include respond(small-tab) {
         font-size: 1.8rem;        
     }
@@ -117,6 +120,13 @@ h4{
 }
 
 .weather{
+
+    &__dayName{
+        @include respond(laptop) {
+            font-size: 1.5rem;           
+        }
+
+    }
     &__desc{
         text-transform: capitalize;
         font-size: 1.2rem;
@@ -125,6 +135,9 @@ h4{
     &__temp{
         font-size: 2rem;
         text-align: center;
+        @include respond(laptop) {
+            font-size: 1.5rem;           
+        }
     }
 }
 
@@ -159,7 +172,9 @@ h4{
     &__title{
         font-family: 'Major Mono Display', monospace;
         font-size: 3rem;
-
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
     &__subtitle{
     font-family: 'Major Mono Display', monospace;

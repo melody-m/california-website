@@ -7,7 +7,7 @@ const menuTrips = document.querySelectorAll('.navigation__sublink');
 const tripMatch = new Map();
 const menuMatch = new Map();
 
-// SUPPORT FOR IE - doesnt loop through nodeList correctly
+//SUPPORT FOR IE - doesnt loop through nodeList correctly
 const tripContArr = Array.from(tripCont);
 const tripFlagArr = Array.from(tripFlag);
 const tripInfoArr = Array.from(tripInfo);
@@ -19,8 +19,6 @@ function getTripMatch(){
         tripMatch.set(tripFlagArr[i], tripContArr[i])
     }
 }
-
-
 function getMenuMatch(){
     for (let i=0; i < tripContArr.length; i++){
         menuMatch.set(menuTripsArr[i], tripContArr[i])
@@ -29,7 +27,7 @@ function getMenuMatch(){
 
 
 function isInViewport(elem){
-    // Get position data of element in the page
+    //get position data of element in the page
     let bounding = elem.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
@@ -37,7 +35,7 @@ function isInViewport(elem){
         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-}
+};
 
 // Function throttle to reduce number of calls
 export function throttle(fn, wait) {
@@ -52,17 +50,17 @@ export function throttle(fn, wait) {
 
 
 export function displayTrip(){
-    // Set flag - container match in map
+    //set flag - container match in map
     getTripMatch();
 
     tripFlagArr.forEach((cur) => {
-        if (isInViewport(cur)) {
+        if (isInViewport(cur)) {            
             const box = tripMatch.get(cur);
             box.classList.remove('hidden');
             box.style.transform = 'translate(0)';
         }
-    });
-
+    })
+    
     tripInfoArr.forEach((cur) => {
         if (isInViewport(cur)) {
             cur.classList.remove('hidden');
@@ -75,7 +73,7 @@ export function displayTrip(){
 export function fastDisplay(){
     //set menu sublink - container match in map
     getMenuMatch();
-
+    
     menuTripsArr.forEach((cur) =>{
         const box = menuMatch.get(cur);
         box.classList.remove('hidden');

@@ -144,6 +144,9 @@
             width: 100%; 
             padding: 0 3rem;
         } 
+        @include respond(phone) {
+            padding: 0;
+        }
                 
         &--img{
             width: 100%;         

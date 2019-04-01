@@ -42,9 +42,8 @@ async function forecast(cityID, dropID){
 }
 
 
-/********************************************************************************************************** */
-// Event listeners set up
-
+/*************************************************************************************************************************************************************/  
+//Event listeners set up
 
 function setEventListeners() {
 
@@ -57,51 +56,51 @@ function setEventListeners() {
 
         loadersArr.forEach((cur)=>{
             cur.style.display = "none";
-        });
+        })
         document.querySelector('body').classList.remove('noscroll');
     });
 
     //1) Page Scroll 
-
-    // throttle check for scroll changes every .4s
-    window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 400));
+  
+    window.addEventListener('scroll', tripView.throttle(tripView.displayTrip, 400)); // throttle check for scroll changes every .4s
         
     //2) Menu : navigation sublist extend
 
-    indexDOM.roadtrip.addEventListener('click', () => {
+    indexDOM.roadtrip.addEventListener('click', () =>{
         indexDOM.roadtripList.classList.remove('listOff');
         indexDOM.roadtripList.classList.add('listOn');
-    });
+    })
 
-    indexDOM.menu.addEventListener('change', ()=> {
+    indexDOM.menu.addEventListener('change', ()=>{
         indexDOM.roadtripList.classList.remove('listOn'); //collapse roadtrips when unchecked
         indexDOM.roadtripList.classList.add('listOff');
-    });
+    })
 
     //3) Menu : cancel scroll anim on menu calls so that trip is immediately visible
 
-    menuSubLArr.forEach((cur) => {
+    menuSubLArr.forEach((cur) => {        
         cur.addEventListener('click', tripView.fastDisplay);
     });
-
-    //4) Menu : check if phone - if yes -> auto close menu as it will be full screen
+    
+    
+    //4) Menu : check if phone - if yes -> auto close menu as it'd be full screen
 
     if (window.matchMedia('(max-width: 600px)').matches) {
-        menuLinksArr.forEach((cur) => {
-            cur.addEventListener('click', () => {
+        menuLinksArr.forEach((cur) =>{
+            cur.addEventListener('click', () =>{                        
                 if(!cur.querySelector('.navigation__sublist')){
                     indexDOM.menu.checked = false;
                 }
             });
         });
         menuSubLArr.forEach((cur) =>{
-            cur.addEventListener('click', () => {
+            cur.addEventListener('click', () =>{                               
                 indexDOM.menu.checked = false;
             });
         });
     }
 
-    // 5) Dropdown Sliders: set trip button matching dropdown
+    //5) Dropdown Sliders: set trip button matching dropdown
     sliderView.getMatch();
 
     buttonsExp.forEach((cur) => {
@@ -110,21 +109,21 @@ function setEventListeners() {
             //Find button id and retrieve matching dropdown
             const target = e.target.id;
             const dropID = sliderView.explore.get(target); 
-            const container = document.getElementById(dropID);
+            const container = document.getElementById(dropID);            
 
             sliderView.exploreSlider(dropID);
 
-            // Get city matching explore btn to call forecast on it
+            //get city matching explore btn to call forecast on it
             const wCityID = cityForecast.get(target); 
             
             forecast(wCityID, container);
         })
-    });
+    })
 
-    // 6) Dropdown Sliders : set close button
+    //6) Dropdown Sliders : set close button
     buttonsClose.forEach((cur) => {
         cur.addEventListener('click', sliderView.closeSlider)
-    });
+    });     
 }
 
 function init(){
@@ -133,3 +132,4 @@ function init(){
 
 
 init();
+

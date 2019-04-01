@@ -28,6 +28,7 @@
         
         @include respond(phone) {
             width: 100%;
+            flex-direction: column;
             order: -1;
         }
     }
@@ -40,6 +41,7 @@
 
         @include respond(phone) {
             width: 100%;
+            margin: 3rem 0; 
         }
 
         & iframe{
@@ -56,13 +58,20 @@
     &__text{
         margin: 4rem; 
         @include respond(phone) {
-            margin-left: 0;
+            margin: 3rem 0; 
         }
     }
 
     &__info{
         width: 30%;
         border-left: 1px dashed $color-one;
+
+        @include respond(phone) {
+            border-left: none;
+            border-top: 1px dashed $color-one;
+            border-bottom: 1px dashed $color-one;
+        }
+
         &--dist{
             padding: 2rem; 
         }

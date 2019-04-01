@@ -3,6 +3,9 @@
     color: white;
     padding: 5rem;
     padding-bottom: 2rem;
+    @include respond(phone) {
+        padding: 3rem;
+    }
 
     &__title{
         cursor: pointer;

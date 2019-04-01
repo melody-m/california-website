@@ -23,6 +23,10 @@
         border: none;
         cursor: pointer;
         z-index:15; 
+        @include respond(laptop) {
+            top:0;
+            right:1rem;            
+        }
         @include respond(big-tab) {
             color: $color-grey-medium; 
             top:1rem;
@@ -130,7 +134,9 @@
         width: 100%;
         height: 60%;       
         position: relative;
-
+        @include respond(laptop) {
+            height: 50%;
+        }
         @include respond(big-tab) {
             height: 80rem;
         }
@@ -142,8 +148,10 @@
     &__accomodation{
         width: 100%;
         height: 40%;
-        display: flex;   
-        
+        display: flex;  
+        @include respond(laptop) {
+            height: 50%;
+        }        
         @include respond(big-tab) {
             height: auto;
         }
@@ -182,6 +190,14 @@
                 background-image: none;
                 width: 40%;
                 height: 65%;
+                @include respond(laptop) {
+                    width: 40%;
+                    height: 60%;         
+                }
+                @include respond(ipad-pro) {
+                    width: 50%;
+                    height: 50%;         
+                }
             }
 
         
@@ -230,7 +246,25 @@
             width: 70%;
             padding: 0 2rem;  
             font-weight: 300;
+            overflow-y: auto;
 
+            &::-webkit-scrollbar {
+                width: .5rem;
+            }
+            &::-webkit-scrollbar-track{
+                background-color: $color-grey-dark;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color-two; 
+            }
+
+            @include respond(laptop) {
+                width:70%;
+                padding: 0;
+            }
+            @include respond(big-tab) {
+                padding: 0 2rem;
+            }
             @include respond(phone) {
                 width:65%;
             }
@@ -252,7 +286,12 @@
         position: relative;
         text-align: right;
         overflow: hidden;
-
+        @include respond(laptop) {
+            padding: 4rem;     
+        }
+        @include respond(big-tab) {
+            padding: 6rem;     
+        }
         @include respond(phone) {
             width:100%;
         }    
@@ -292,41 +331,61 @@
     &__title{
         padding-top: 2rem;
         @include respond(big-tab) {
-            width: 20%;   
-            margin: 02rem;                  
+            width: 20%;                   
         }
+        @include respond(ipad-pro) {
+            padding: 2rem 0;
+        }
+
         @include respond(phone) {
-            width:100%;
+            width:100%;            
         }
     }
     &__day{
         width: 12rem;
         height: 12rem;
-        display: inline-block;
+        display: inline-block;       
         
         @include respond(big-tab) {
             width: 30%;
             display: flex;  
-            align-items: center;            
+            align-items: center;  
+            justify-content: center;          
+        }
+        
+        @include respond(phone) {
+            width: 35%;    
         }
     }
 
     &__icon{
-        width: 12rem;
-        height: 12rem;
-        margin-bottom: 1rem;
-
-        @include respond(big-tab) {
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem;
+        @include respond(laptop) {
+            margin: 0 auto;
             width: 8rem;
             height: 8rem;            
         }
+        @include respond(big-tab) {
+            margin: 1rem;         
+        }
+
+        @include respond(phone) {
+            width: 15rem;      
+        }
+
 
         &--img{
             width: 100%;
+            margin: 0 auto;
         }
     }
     &__desc{
         margin-bottom: 1rem;
+        @include respond(laptop) {
+            margin-bottom: 0;   
+        }
     }
 }
 .gallery{
@@ -344,183 +403,183 @@
         }                 
 
         &--1{
-            background-image: url(../img/losAngeles-1.jpg);   
+            background-image: url(../img/gallery/losAngeles-1.jpg);   
             @include respond(phone) {
-                background-image: url(../img/losAngeles-1-small.jpg);
+                background-image: url(../img/gallery/losAngeles-1-small.jpg);
             }            
         }
         &--2{
-            background-image: url(../img/losAngeles-2.jpg);      
+            background-image: url(../img/gallery/losAngeles-2.jpg);      
             @include respond(phone) {
-                background-image: url(../img/losAngeles-2-small.jpg);
+                background-image: url(../img/gallery/losAngeles-2-small.jpg);
             }        
         }
         &--3{
-            background-image: url(../img/losAngeles-3.jpg);
+            background-image: url(../img/gallery/losAngeles-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/losAngeles-3-small.jpg);
+                background-image: url(../img/gallery/losAngeles-3-small.jpg);
             }  
         }
         &--4{
-            background-image: url(../img/santaMo-1.jpg);
+            background-image: url(../img/gallery/santaMo-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaMo-1-small.jpg);
+                background-image: url(../img/gallery/santaMo-1-small.jpg);
             }   
         }
         &--5{
-            background-image: url(../img/santaMo-2.jpg);
+            background-image: url(../img/gallery/santaMo-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaMo-2-small.jpg);
+                background-image: url(../img/gallery/santaMo-2-small.jpg);
             }   
         }
         &--6{
-            background-image: url(../img/santaMo-3.jpg);
+            background-image: url(../img/gallery/santaMo-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaMo-3-small.jpg);
+                background-image: url(../img/gallery/santaMo-3-small.jpg);
             }   
         }
         &--7{
-            background-image: url(../img/malibu-1.jpg);
+            background-image: url(../img/gallery/malibu-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/malibu-1-small.jpg);
+                background-image: url(../img/gallery/malibu-1-small.jpg);
             }   
         }
         &--8{
-            background-image: url(../img/malibu-2.jpg);
+            background-image: url(../img/gallery/malibu-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/malibu-2-small.jpg);
+                background-image: url(../img/gallery/malibu-2-small.jpg);
             }  
         }
         &--9{
-            background-image: url(../img/malibu-3.jpg);
+            background-image: url(../img/gallery/malibu-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/malibu-3-small.jpg);
+                background-image: url(../img/gallery/malibu-3-small.jpg);
             }  
         }
         &--10{
-            background-image: url(../img/santaB-1.jpg);
+            background-image: url(../img/gallery/santaB-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaB-1-small.jpg);
+                background-image: url(../img/gallery/santaB-1-small.jpg);
             }  
         }
         &--11{
-            background-image: url(../img/santaB-2.jpg);
+            background-image: url(../img/gallery/santaB-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaB-2-small.jpg);
+                background-image: url(../img/gallery/santaB-2-small.jpg);
             }  
         }
         &--12{
-            background-image: url(../img/santaB-3.jpg);
+            background-image: url(../img/gallery/santaB-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaB-3-small.jpg);
+                background-image: url(../img/gallery/santaB-3-small.jpg);
             }  
         }
         &--13{
-            background-image: url(../img/morroB-1.jpg);
+            background-image: url(../img/gallery/morroB-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/morroB-1-small.jpg);
+                background-image: url(../img/gallery/morroB-1-small.jpg);
             }  
         }
         &--14{
-            background-image: url(../img/morroB-2.jpg);
+            background-image: url(../img/gallery/morroB-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/morroB-2-small.jpg);
+                background-image: url(../img/gallery/morroB-2-small.jpg);
             }  
         }
         &--15{
-            background-image: url(../img/morroB-3.jpg);
+            background-image: url(../img/gallery/morroB-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/morroB-3-small.jpg);
+                background-image: url(../img/gallery/morroB-3-small.jpg);
             }  
         }
         &--16{
-            background-image: url(../img/cambria-1.jpg);
+            background-image: url(../img/gallery/cambria-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/cambria-1-small.jpg);
+                background-image: url(../img/gallery/cambria-1-small.jpg);
             }  
         }
         &--17{
-            background-image: url(../img/cambria-2.jpg);
+            background-image: url(../img/gallery/cambria-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/cambria-2-small.jpg);
+                background-image: url(../img/gallery/cambria-2-small.jpg);
             }  
         }
         &--18{
-            background-image: url(../img/cambria-3.jpg);
+            background-image: url(../img/gallery/cambria-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/cambria-3-small.jpg);
+                background-image: url(../img/gallery/cambria-3-small.jpg);
             }  
         }
         &--19{
-            background-image: url(../img/bigSur-1.jpg);
+            background-image: url(../img/gallery/bigSur-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/bigSur-1-small.jpg);
+                background-image: url(../img/gallery/bigSur-1-small.jpg);
             } 
         }
         &--20{
-            background-image: url(../img/bigSur-2.jpg);
+            background-image: url(../img/gallery/bigSur-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/bigSur-2-small.jpg);
+                background-image: url(../img/gallery/bigSur-2-small.jpg);
             } 
         }
         &--21{
-            background-image: url(../img/bigSur-3.jpg);
+            background-image: url(../img/gallery/bigSur-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/bigSur-3-small.jpg);
+                background-image: url(../img/gallery/bigSur-3-small.jpg);
             } 
         }
         &--22{
-            background-image: url(../img/monterey-1.jpg);
+            background-image: url(../img/gallery/monterey-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/monterey-1-small.jpg);
+                background-image: url(../img/gallery/monterey-1-small.jpg);
             } 
         }
         &--23{
-            background-image: url(../img/monterey-2.jpg);
+            background-image: url(../img/gallery/monterey-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/monterey-2-small.jpg);
+                background-image: url(../img/gallery/monterey-2-small.jpg);
             } 
         }
         &--24{
-            background-image: url(../img/monterey-3.jpg);
+            background-image: url(../img/gallery/monterey-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/monterey-3-small.jpg);
+                background-image: url(../img/gallery/monterey-3-small.jpg);
             } 
         }        
         &--25{
-            background-image: url(../img/santaCruz-1.jpg);
+            background-image: url(../img/gallery/santaCruz-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaCruz-1-small.jpg);
+                background-image: url(../img/gallery/santaCruz-1-small.jpg);
             } 
         }
         &--26{
-            background-image: url(../img/santaCruz-2.jpg);
+            background-image: url(../img/gallery/santaCruz-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaCruz-2-small.jpg);
+                background-image: url(../img/gallery/santaCruz-2-small.jpg);
             } 
         }
         &--27{
-            background-image: url(../img/santaCruz-3.jpg);
+            background-image: url(../img/gallery/santaCruz-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/santaCruz-3-small.jpg);
+                background-image: url(../img/gallery/santaCruz-3-small.jpg);
             } 
         }
         &--28{
-            background-image: url(../img/sanFran-1.jpg);
+            background-image: url(../img/gallery/sanFran-1.jpg);
             @include respond(phone) {
-                background-image: url(../img/sanFran-1-small.jpg);
+                background-image: url(../img/gallery/sanFran-1-small.jpg);
             } 
         }
         &--29{
-            background-image: url(../img/sanFran-2.jpg);
+            background-image: url(../img/gallery/sanFran-2.jpg);
             @include respond(phone) {
-                background-image: url(../img/sanFran-2-small.jpg);
+                background-image: url(../img/gallery/sanFran-2-small.jpg);
             } 
         }
         &--30{
-            background-image: url(../img/sanFran-3.jpg);
+            background-image: url(../img/gallery/sanFran-3.jpg);
             @include respond(phone) {
-                background-image: url(../img/sanFran-3-small.jpg);
+                background-image: url(../img/gallery/sanFran-3-small.jpg);
             } 
         }
     }
