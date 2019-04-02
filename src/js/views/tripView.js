@@ -6,6 +6,19 @@ const menuTrips = document.querySelectorAll('.navigation__sublink');
 
 const tripMatch = new Map();
 const menuMatch = new Map();
+const imgAlt = new Map();
+
+imgAlt.set(0, 'Marina Del Rey Harbour');
+imgAlt.set(1, 'Santa Monica Pier');
+imgAlt.set(2, 'Malibu Beach');
+imgAlt.set(3, 'Santa Barabara');
+imgAlt.set(4, 'Morro Bay');
+imgAlt.set(5, 'San Simeon');
+imgAlt.set(6, 'Big Sur');
+imgAlt.set(7, 'Monterey Bay');
+imgAlt.set(8, 'Santa Cruz');
+imgAlt.set(9, 'San Francisco');
+
 
 // SUPPORT FOR IE - doesnt loop through nodeList correctly
 const tripContArr = Array.from(tripCont);
@@ -55,11 +68,21 @@ export function displayTrip(){
     // Set flag - container match in map
     getTripMatch();
 
-    tripFlagArr.forEach((cur) => {
+    tripFlagArr.forEach((cur, i) => {
         if (isInViewport(cur)) {
             const box = tripMatch.get(cur);
             box.classList.remove('hidden');
             box.style.transform = 'translate(0)';
+
+            const img = `<img srcset="img/trips/${i}-S.jpg 480w, img/trips/${i}-L.jpg 900w"
+            sizes="(max-width:56.25em) 66vw,(max-width: 37.5em) 80vw"
+            alt="${imgAlt.get(i)}"
+            class="trip__photo--img"
+            src="img/trips/${i}-L.jpg">`
+
+            if(!box.querySelector('.trip__photo--img')){
+                box.querySelector('.trip__photo').insertAdjacentHTML('afterbegin',img);
+            }
         }
     });
 

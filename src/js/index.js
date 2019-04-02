@@ -50,7 +50,7 @@ function setEventListeners() {
 
     //Loader
 
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
 
         const loaders = document.querySelectorAll('.load');
         const loadersArr = Array.from(loaders);
