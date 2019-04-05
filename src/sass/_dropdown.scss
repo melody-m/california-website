@@ -23,11 +23,13 @@
         border: none;
         cursor: pointer;
         z-index:15; 
+
         @include respond(laptop) {
-            top:0;
-            right:1rem;            
+            color: $color-grey-medium; 
+            top:1rem;
+            right:2rem;               
         }
-        @include respond(big-tab) {
+        @include respond(ipad-pro) {
             color: $color-grey-medium; 
             top:1rem;
             right:2rem;               
@@ -54,6 +56,10 @@
        
         transition: all .5s ease-out;
         position: relative;
+        @include respond(laptop) {
+            width: 100%;
+            height: auto;
+        }
 
         @include respond(big-tab) {
             width: 100%;
@@ -74,6 +80,10 @@
             &::-webkit-scrollbar-thumb {
                 background: $color-two; 
             }
+            @include respond(laptop) {
+                height: auto;
+                display: flex;
+            }  
 
             @include respond(big-tab) {
                 height: auto;
@@ -81,16 +91,21 @@
             }    
             @include respond(phone) {
                 flex-direction: column;
+                padding: 5rem;
             }        
         }
 
         &--text{
-
+            @include respond(laptop) {
+                width: 70%;
+                padding-right: 5rem;
+            }  
             @include respond(big-tab) {
                 width: 70%;
             }    
             @include respond(phone) {
                 width: 100%;
+                padding-right: 0;
             }          
         }
 
@@ -99,9 +114,15 @@
             text-align: center;
             background-color:white;
             padding-bottom: 2rem;
+            @include respond(laptop) {
+                display: flex;
+                align-items: center;
+                padding: 5rem;
+            }
             @include respond(big-tab) {
                 display: flex;
                 align-items: center;
+                padding: 5rem;
             }
 
             @include respond(phone) {
@@ -122,6 +143,11 @@
         height: 100%;
         float:left;
         transition: all .5s ease-out;
+        @include respond(laptop) {
+            width: 100%;
+            height: auto;
+            overflow: scroll;
+        }
 
         @include respond(big-tab) {
             width: 100%;
@@ -136,6 +162,9 @@
         position: relative;
         @include respond(laptop) {
             height: 50%;
+        }
+        @include respond(laptop) {
+            height: 80rem;
         }
         @include respond(big-tab) {
             height: 80rem;
@@ -192,6 +221,10 @@
                 height: 65%;
                 @include respond(laptop) {
                     width: 40%;
+                    height: 50%;         
+                }
+                @include respond(laptop) {
+                    width: 40%;
                     height: 60%;         
                 }
                 @include respond(ipad-pro) {
@@ -208,8 +241,13 @@
             top: 2rem;
             left: 2rem;
             text-align: left;
-            z-index: 50;      
-                    @include respond(big-tab) {
+            z-index: 50;
+            
+            @include respond(laptop) {
+                width: 45%;         
+            }
+
+            @include respond(big-tab) {
             height: 50rem;           
         }  
         }
@@ -330,13 +368,14 @@
 .weather{
     &__title{
         padding-top: 2rem;
-        @include respond(big-tab) {
-            width: 20%;                   
-        }
-        @include respond(ipad-pro) {
-            padding: 2rem 0;
+        @include respond(laptop) {
+            padding: 2rem;
         }
 
+        @include respond(big-tab) {
+            width: 20%; 
+            padding: 2rem;                  
+        }
         @include respond(phone) {
             width:100%;            
         }
@@ -344,7 +383,14 @@
     &__day{
         width: 12rem;
         height: 12rem;
-        display: inline-block;       
+        display: inline-block;   
+        
+        @include respond(laptop) {
+            width: 30%;
+            display: flex;  
+            align-items: center;  
+            justify-content: center;          
+        }
         
         @include respond(big-tab) {
             width: 30%;
@@ -354,7 +400,7 @@
         }
         
         @include respond(phone) {
-            width: 35%;    
+            width: 50%;    
         }
     }
 
@@ -363,9 +409,7 @@
         height: 10rem;
         margin: 1rem;
         @include respond(laptop) {
-            margin: 0 auto;
-            width: 8rem;
-            height: 8rem;            
+            margin: 1rem;         
         }
         @include respond(big-tab) {
             margin: 1rem;         
@@ -611,7 +655,11 @@
 
 .slideDown{    
     height: 100vh;
-    z-index: 1000;    
+    z-index: 1000; 
+    @include respond(laptop) {
+        height: 100%;        
+        overflow: scroll;       
+    }    
     @include respond(big-tab) {
         height: 100%;        
         overflow: scroll;       
